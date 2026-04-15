@@ -1197,7 +1197,8 @@
                             <iconify-icon icon="lucide:lock-open" class="text-sm"></iconify-icon>
                             100% gratuito
                         </div>
-                        <a href="#cta-final" class="cta-secondary">
+                        <a href="#" onclick="openLeadModal();return false;" class="cta-secondary"
+                            style="cursor:pointer;">
                             Baixe Gratuitamente
                             <iconify-icon icon="lucide:download" class="text-sm"></iconify-icon>
                         </a>
@@ -1503,7 +1504,7 @@
         <div class="reveal is-visible d400 flex flex-col items-center gap-6 text-center">
             <p class="font-geist text-sm text-secondary/50 uppercase tracking-widest">Pronto para estruturar sua captação?</p>
             <div class="relative inline-flex">
-                <a href="#cta-final" class="cta-primary" id="cta-solucao">
+                <a href="#" onclick="openLeadModal();return false;" class="cta-primary" id="cta-solucao">
                     <span class="flex items-center gap-2.5">
                         <iconify-icon icon="lucide:book-open" style="font-size:1.1rem;"></iconify-icon>
                         Acessar o Playbook
@@ -1804,7 +1805,7 @@
                     <p class="font-geist text-[.65rem] font-bold uppercase tracking-widest text-secondary/40 mb-1">Ainda tem dúvidas?</p>
                     <p class="font-jakarta font-semibold text-white text-base leading-snug">Acesse o material e tire suas dúvidas no conteúdo.</p>
                 </div>
-                <a href="#cta-final" class="faq-cta-btn flex-shrink-0">
+                <a href="#" onclick="openLeadModal();return false;" class="faq-cta-btn flex-shrink-0">
                     <span>
                         <iconify-icon icon="lucide:book-open" style="font-size:1rem;"></iconify-icon>
                         Acessar o Playbook
@@ -2007,16 +2008,34 @@
             if (e.key === 'Escape' && overlay.classList.contains('lm-visible')) closeModal();
         });
 
-        /* Form submit */
+        /* Form submit — redirect to obrigado page */
         form.addEventListener('submit', e => {
             e.preventDefault();
-            /* Hide fields + button */
-            form.querySelectorAll('.lm-row').forEach(r => r.style.display = 'none');
-            form.querySelector('.lm-submit').style.display = 'none';
-            /* Show success */
-            success.style.display = 'block';
-            /* Auto-close after 2.2s */
-            setTimeout(closeModal, 2200);
+            /* Basic client-side validation */
+            const required = form.querySelectorAll('[required]');
+            let valid = true;
+            required.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'rgba(255,77,77,.6)';
+                    field.style.boxShadow  = '0 0 0 3px rgba(255,77,77,.12)';
+                    valid = false;
+                    setTimeout(() => {
+                        field.style.borderColor = '';
+                        field.style.boxShadow  = '';
+                    }, 2500);
+                }
+            });
+            if (!valid) return;
+            /* Show loading state */
+            const btn = form.querySelector('.lm-submit');
+            const lbl = document.getElementById('lm-submit-label');
+            if (lbl) lbl.innerHTML = '<iconify-icon icon="lucide:loader-circle" style="font-size:1.1rem;animation:spin 1s linear infinite;"></iconify-icon> Liberando...';
+            btn.style.opacity = '.8';
+            btn.disabled = true;
+            /* Redirect after brief delay */
+            setTimeout(() => {
+                window.location.href = 'https://isca-chi.vercel.app/obrigado.html';
+            }, 600);
         });
     })();
 </script>
@@ -2072,15 +2091,12 @@
                     <label class="lm-label" for="lm-setor">Setor de Atuação <span class="lm-req">*</span></label>
                     <select class="lm-input lm-select" id="lm-setor" required>
                         <option value="" disabled selected>Selecione um setor...</option>
-                        <option value="construcao">Construção Civil</option>
-                        <option value="saude">Saúde e Bem-estar</option>
-                        <option value="educacao">Educação</option>
-                        <option value="tecnologia">Tecnologia</option>
+                        <option value="servico">Serviço</option>
                         <option value="varejo">Varejo</option>
-                        <option value="servicos">Serviços B2B</option>
                         <option value="industria">Indústria</option>
-                        <option value="imobiliario">Imobiliário</option>
-                        <option value="financeiro">Financeiro</option>
+                        <option value="ecommerce">E-commerce</option>
+                        <option value="saas">SAAS</option>
+                        <option value="educacao">Educação</option>
                         <option value="outro">Outro</option>
                     </select>
                 </div>
@@ -2088,11 +2104,13 @@
                     <label class="lm-label" for="lm-fat">Faturamento Mensal <span class="lm-req">*</span></label>
                     <select class="lm-input lm-select" id="lm-fat" required>
                         <option value="" disabled selected>Aproximado...</option>
-                        <option value="ate30k">Até R$30.000</option>
-                        <option value="30-100k">R$30.000 – R$100.000</option>
-                        <option value="100-300k">R$100.000 – R$300.000</option>
-                        <option value="300k-1m">R$300.000 – R$1 milhão</option>
-                        <option value="acima1m">Acima de R$1 milhão</option>
+                        <option value="ate30k">Até 30 mil</option>
+                        <option value="31-50k">De 31 mil a 50 mil</option>
+                        <option value="51-100k">De 51 mil a 100 mil</option>
+                        <option value="101-300k">De 101 mil a 300 mil</option>
+                        <option value="301k-1m">De 301 mil a 1 milhão</option>
+                        <option value="1m-4m">De 1 milhão a 4 milhões</option>
+                        <option value="acima4m">Mais de 4 milhões</option>
                     </select>
                 </div>
             </div>
@@ -2101,7 +2119,7 @@
             <button type="submit" class="lm-submit" id="lm-submit-btn">
                 <span id="lm-submit-label" class="flex items-center justify-center gap-2">
                     <iconify-icon icon="lucide:unlock" style="font-size:1.1rem;"></iconify-icon>
-                    Liberar Meu Playbook Agora
+                    LIBERAR PLAYBOOK AGORA
                 </span>
             </button>
 
