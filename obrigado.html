@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação Recebida – Playbook Rugido</title>
+    <meta name="description" content="Obrigado! Sua solicitação foi recebida. Em breve um especialista da Rugido entrará em contato para confirmar sua Sessão Estratégica Gratuita.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Scripts & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary:   '#7A32C7',
+                        secondary: '#9D78E9',
+                        accent:    '#E1D4FB',
+                        dark:      '#231431',
+                        bg:        '#0d0714',
+                        border:    '#3D2B4A',
+                    },
+                    fontFamily: {
+                        jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        geist:   ['Geist', 'sans-serif'],
+                        inter:   ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* ═══════════════════════════════════════════════════════
+           DESIGN TOKENS  (idêntico ao index.html)
+        ═══════════════════════════════════════════════════════ */
+        :root {
+            --bg:           #0d0714;
+            --card-bg:      #231431;
+            --border:       #3D2B4A;
+            --primary:      #7A32C7;
+            --secondary:    #9D78E9;
+            --accent:       #E1D4FB;
+            --green-dim:    #4DFFB4;
+            --green-muted:  rgba(77,255,180,.06);
+            --green-border: rgba(77,255,180,.2);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: #fff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           KEYFRAMES
+        ═══════════════════════════════════════════════════════ */
+        @keyframes pageIn    { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
+        @keyframes fadeUp    { from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes fadeIn    { from{opacity:0} to{opacity:1} }
+        @keyframes shimmer   { 0%{background-position:-200% center} 100%{background-position:200% center} }
+        @keyframes pulseGlow { 0%,100%{box-shadow:0 0 6px 1px rgba(122,50,199,.5)} 50%{box-shadow:0 0 20px 5px rgba(122,50,199,.9)} }
+        @keyframes dotPulse  { 0%,100%{box-shadow:0 0 6px 1px rgba(122,50,199,.5)} 50%{box-shadow:0 0 18px 5px rgba(122,50,199,.9)} }
+        @keyframes orbFloat  { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-16px) scale(1.04)} }
+        @keyframes rotateBeam{ 0%{transform:rotate(0deg)} 100%{transform:rotate(360deg)} }
+        @keyframes beam      { 0%{opacity:0;transform:scaleX(0);transform-origin:left} 60%{opacity:1} 100%{opacity:1;transform:scaleX(1)} }
+        @keyframes pulseRing { 0%{transform:scale(1);opacity:.6} 100%{transform:scale(1.55);opacity:0} }
+        @keyframes checkPop  { 0%{transform:scale(0) rotate(-12deg);opacity:0} 70%{transform:scale(1.18) rotate(3deg);opacity:1} 100%{transform:scale(1) rotate(0deg);opacity:1} }
+        @keyframes particleRise { 0%{transform:translateY(0) scale(1);opacity:0} 15%{opacity:.7} 85%{opacity:.4} 100%{transform:translateY(-120px) scale(.3);opacity:0} }
+        @keyframes float     { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-14px) rotate(1deg)} }
+        @keyframes slideDown { from{opacity:0;transform:translateY(-8px)} to{opacity:1;transform:translateY(0)} }
+
+        body { animation: pageIn .6s cubic-bezier(.16,1,.3,1) both; }
+
+        /* ─ Scroll-reveal ─ */
+        .reveal { opacity: 0; }
+        .reveal.visible { animation: fadeUp .9s cubic-bezier(.16,1,.3,1) forwards; }
+        .reveal.visible.slide-left  { animation: slideLeft  .9s cubic-bezier(.16,1,.3,1) forwards; }
+        .reveal.visible.slide-right { animation: slideRight .9s cubic-bezier(.16,1,.3,1) forwards; }
+        @keyframes slideLeft  { from{opacity:0;transform:translateX(-30px)} to{opacity:1;transform:translateX(0)} }
+        @keyframes slideRight { from{opacity:0;transform:translateX( 30px)} to{opacity:1;transform:translateX(0)} }
+
+        .d0   { animation-delay:  0ms; }
+        .d100 { animation-delay:100ms; }
+        .d200 { animation-delay:200ms; }
+        .d300 { animation-delay:300ms; }
+        .d400 { animation-delay:400ms; }
+        .d500 { animation-delay:500ms; }
+        .d600 { animation-delay:600ms; }
+        .d700 { animation-delay:700ms; }
+
+        /* ─ Hero anim ─ */
+        .anim-fade-up { animation: fadeUp  .85s cubic-bezier(.16,1,.3,1) both; }
+        .anim-fade-in { animation: fadeIn  1s ease both; }
+
+        /* ─ Shared utilities ─ */
+        .h-divider { height:1px; background:linear-gradient(90deg,transparent,rgba(122,50,199,.35),transparent); }
+        .divider   { height:1px; background:linear-gradient(90deg,transparent,rgba(122,50,199,.4),transparent); }
+
+        .headline-gradient {
+            background:linear-gradient(135deg,#ffffff 25%,#E1D4FB 60%,#9D78E9 100%);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .headline-accent {
+            background:linear-gradient(90deg,#9D78E9,#E1D4FB);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .accent-text {
+            background:linear-gradient(90deg,#9D78E9,#E1D4FB);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .font-jakarta { font-family:'Plus Jakarta Sans',sans-serif !important; }
+        .font-geist   { font-family:'Geist',sans-serif !important; }
+
+        /* ─ Grid bg overlay ─ */
+        .grid-bg {
+            position:absolute; inset:0; pointer-events:none; z-index:0;
+            background-image:
+                linear-gradient(rgba(157,120,233,.04) 1px,transparent 1px),
+                linear-gradient(90deg,rgba(157,120,233,.04) 1px,transparent 1px);
+            background-size:3.5rem 3.5rem;
+            mask-image:radial-gradient(ellipse 75% 75% at 50% 50%,black,transparent);
+            -webkit-mask-image:radial-gradient(ellipse 75% 75% at 50% 50%,black,transparent);
+        }
+
+        /* ─ Orbs ─ */
+        .deco-orb {
+            position:absolute; border-radius:50%; pointer-events:none;
+            animation:orbFloat 8s ease-in-out infinite;
+        }
+
+        /* ─ Tag pill ─ */
+        .tag-pill {
+            display:inline-flex; align-items:center; gap:.5rem;
+            background:rgba(35,20,49,.75);
+            border:1px solid rgba(122,50,199,.4);
+            border-radius:9999px;
+            padding:.375rem 1rem;
+            font-family:'Geist',sans-serif;
+            font-size:.7rem; font-weight:600;
+            letter-spacing:.14em; text-transform:uppercase;
+            color:var(--secondary);
+            backdrop-filter:blur(8px);
+        }
+        .tag-dot {
+            width:6px; height:6px; border-radius:50%;
+            background:var(--primary);
+            animation:dotPulse 2.4s infinite;
+        }
+        .tag-ok {
+            display:inline-flex; align-items:center; gap:.4rem;
+            background:rgba(77,255,180,.07);
+            border:1px solid rgba(77,255,180,.2);
+            border-radius:9999px;
+            padding:.3rem .9rem;
+            font-family:'Geist',sans-serif;
+            font-size:.65rem; font-weight:700;
+            letter-spacing:.12em; text-transform:uppercase;
+            color:var(--green-dim);
+        }
+
+        /* ─ CTA primary ─ */
+        .cta-primary {
+            position:relative;
+            display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+            padding:.9rem 2.25rem;
+            border-radius:9999px;
+            font-family:'Geist',sans-serif;
+            font-size:.95rem; font-weight:700;
+            color:#fff; cursor:pointer; border:none; outline:none;
+            transition:transform .2s,filter .2s; text-decoration:none;
+        }
+        .cta-primary::before {
+            content:'';
+            position:absolute; inset:0; border-radius:inherit;
+            background:linear-gradient(135deg,#7A32C7,#9D78E9,#7A32C7);
+            background-size:200%; animation:shimmer 3s linear infinite;
+        }
+        .cta-primary::after {
+            content:'';
+            position:absolute; inset:0; border-radius:inherit;
+            box-shadow:0 0 0 1px rgba(157,120,233,.6),0 0 28px rgba(122,50,199,.55);
+            pointer-events:none;
+        }
+        .cta-primary span { position:relative; z-index:1; }
+        .cta-primary:hover  { transform:scale(1.04); filter:brightness(1.1); }
+        .cta-primary:active { transform:scale(.97); }
+        .cta-glow {
+            position:absolute; bottom:-14px; left:50%; transform:translateX(-50%);
+            width:70%; height:22px;
+            background:rgba(157,120,233,.35);
+            border-radius:50%; filter:blur(14px);
+            pointer-events:none;
+        }
+
+        /* ─ Glass card ─ */
+        .glass-card {
+            background:rgba(35,20,49,.55); backdrop-filter:blur(16px);
+            border:1px solid rgba(61,43,74,.7); border-radius:1.5rem;
+        }
+
+        /* ─ Avatar ring ─ */
+        .avatar-ring {
+            width:42px; height:42px; border-radius:50%;
+            border:2px solid rgba(122,50,199,.5);
+            background:var(--card-bg); overflow:hidden;
+            display:flex; align-items:center; justify-content:center;
+            margin-left:-10px; flex-shrink:0;
+            transition:transform .22s cubic-bezier(.16,1,.3,1), box-shadow .22s;
+        }
+        .avatar-ring:first-child { margin-left:0; }
+        .avatar-ring:hover { transform:translateY(-4px) scale(1.08); box-shadow:0 8px 20px rgba(122,50,199,.35); z-index:5; }
+        .avatar-initials { font-family:'Geist',sans-serif; font-size:.65rem; font-weight:700; color:var(--secondary); }
+
+        /* ─ Badge free ─ */
+        .badge-free {
+            display:inline-flex; align-items:center; gap:.4rem;
+            background:rgba(122,50,199,.12);
+            border:1px solid rgba(122,50,199,.3);
+            border-radius:6px;
+            padding:.25rem .75rem;
+            font-family:'Geist',sans-serif;
+            font-size:.7rem; font-weight:600;
+            letter-spacing:.08em; text-transform:uppercase;
+            color:#E1D4FB;
+        }
+        .verified-pill {
+            display:inline-flex; align-items:center; gap:.4rem;
+            background:rgba(77,255,180,.07);
+            border:1px solid rgba(77,255,180,.2);
+            border-radius:9999px;
+            padding:.25rem .8rem;
+            font-family:'Geist',sans-serif;
+            font-size:.65rem; font-weight:700;
+            letter-spacing:.1em; text-transform:uppercase;
+            color:#4DFFB4;
+        }
+
+        /* ─ Steps / feature cards ─ */
+        .fw-card {
+            border-radius:1.5rem; border:1px solid rgba(61,43,74,.7);
+            background:rgba(35,20,49,.5); padding:2.25rem 2rem;
+            position:relative; overflow:hidden;
+            display:flex; flex-direction:column; gap:1.5rem;
+            transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s;
+            cursor:default;
+        }
+        .fw-card:hover {
+            transform:translateY(-6px); border-color:rgba(122,50,199,.45);
+            box-shadow:0 30px 80px -10px rgba(13,7,20,.7),0 0 40px rgba(122,50,199,.12),inset 0 1px 0 rgba(157,120,233,.15);
+        }
+        .fw-card-featured {
+            border-color:rgba(122,50,199,.5);
+            background:linear-gradient(160deg,rgba(61,27,100,.55),rgba(35,20,49,.6));
+            box-shadow:0 0 60px rgba(122,50,199,.15),inset 0 1px 0 rgba(157,120,233,.2);
+        }
+        .fw-card-featured:hover {
+            border-color:rgba(157,120,233,.65);
+            box-shadow:0 30px 80px -10px rgba(13,7,20,.8),0 0 50px rgba(122,50,199,.25),inset 0 1px 0 rgba(157,120,233,.25);
+        }
+        .fw-card::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:180px;
+            background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(122,50,199,.13) 0%,transparent 70%);
+            pointer-events:none;
+        }
+        .fw-card-featured::before {
+            background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(122,50,199,.22) 0%,transparent 70%);
+        }
+        .card-beam {
+            position:absolute; top:0; left:0; right:0; height:2px;
+            animation:beam .8s cubic-bezier(.16,1,.3,1) forwards; opacity:0;
+        }
+        .beam-1 { background:linear-gradient(90deg,transparent,rgba(122,50,199,.6),transparent); animation-delay:.1s; }
+        .beam-2 { background:linear-gradient(90deg,transparent,var(--secondary),transparent);   animation-delay:.2s; }
+        .beam-3 { background:linear-gradient(90deg,transparent,rgba(122,50,199,.5),transparent); animation-delay:.3s; }
+        .beam-4 { background:linear-gradient(90deg,transparent,rgba(122,50,199,.4),transparent); animation-delay:.4s; }
+        .card-icon {
+            width:52px; height:52px; border-radius:.875rem;
+            display:flex; align-items:center; justify-content:center;
+            position:relative; flex-shrink:0;
+        }
+        .card-icon-1 { background:rgba(122,50,199,.15); border:1px solid rgba(122,50,199,.3); }
+        .card-icon-2 { background:rgba(157,120,233,.18); border:1px solid rgba(157,120,233,.35); }
+        .card-icon-3 { background:rgba(122,50,199,.12); border:1px solid rgba(122,50,199,.25); }
+        .card-icon-4 { background:rgba(77,255,180,.1);  border:1px solid rgba(77,255,180,.25); }
+        .card-num {
+            font-family:'Geist',sans-serif; font-size:.65rem; font-weight:700;
+            letter-spacing:.18em; text-transform:uppercase; color:rgba(157,120,233,.4);
+        }
+        .connector { width:32px; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+        .connector-line {
+            width:100%; height:1px;
+            background:linear-gradient(90deg,rgba(122,50,199,.35),rgba(157,120,233,.5),rgba(122,50,199,.35));
+            position:relative;
+        }
+        .connector-arrow {
+            position:absolute; right:-4px; top:-3px;
+            width:7px; height:7px; border-radius:50%;
+            background:var(--secondary); box-shadow:0 0 8px rgba(157,120,233,.7);
+        }
+
+        /* ─ Item rows (checklist) ─ */
+        .item-row {
+            display:flex; align-items:flex-start; gap:1rem;
+            padding:1.1rem 1.25rem; border-radius:.875rem;
+            border:1px solid transparent;
+            transition:background .25s,border-color .25s;
+            position:relative; overflow:hidden;
+        }
+        .item-ideal { background:var(--green-muted); border-color:rgba(77,255,180,.12); }
+        .item-ideal:hover { background:rgba(77,255,180,.1); border-color:rgba(77,255,180,.22); }
+        .icon-badge {
+            width:34px; height:34px; border-radius:.6rem;
+            display:flex; align-items:center; justify-content:center;
+            flex-shrink:0; margin-top:1px;
+        }
+        .icon-badge-ideal { background:rgba(77,255,180,.12); border:1px solid rgba(77,255,180,.25); color:var(--green-dim); }
+
+        /* ─ Stat blocks ─ */
+        .stat-block {
+            text-align:center; padding:1.25rem 1rem; border-radius:.875rem;
+            background:rgba(35,20,49,.5); border:1px solid rgba(61,43,74,.7);
+            transition:border-color .25s,background .25s;
+        }
+        .stat-block:hover { border-color:rgba(122,50,199,.4); background:rgba(35,20,49,.7); }
+        .stat-pill {
+            display:inline-flex; align-items:center; gap:.6rem;
+            background:rgba(122,50,199,.12); border:1px solid rgba(122,50,199,.25);
+            border-radius:.75rem; padding:.75rem 1.25rem;
+        }
+        .authority-strip {
+            border-radius:1.25rem; padding:1.5rem 2rem;
+            background:rgba(35,20,49,.55); border:1px solid rgba(61,43,74,.7);
+            backdrop-filter:blur(12px); position:relative; overflow:hidden;
+        }
+        .authority-strip::before {
+            content:''; position:absolute; top:0; left:0; width:100%; height:2px;
+            background:linear-gradient(90deg,var(--primary),var(--secondary),rgba(225,212,251,.4));
+        }
+
+        /* ─ CTA section ─ */
+        .cta-outer-section { position:relative; overflow:hidden; }
+        .cta-bg-gradient {
+            position:absolute; inset:0; z-index:0;
+            background:
+                radial-gradient(ellipse 90% 60% at 50% 0%,rgba(122,50,199,.22) 0%,transparent 65%),
+                radial-gradient(ellipse 70% 50% at 50% 100%,rgba(122,50,199,.12) 0%,transparent 65%),
+                linear-gradient(180deg,#0d0714 0%,#130920 40%,#0d0714 100%);
+        }
+        .cta-ring-spin {
+            position:absolute; top:50%; left:50%;
+            width:700px; height:700px;
+            transform:translate(-50%,-50%);
+            border-radius:50%;
+            background:conic-gradient(from 0deg,transparent 0%,rgba(122,50,199,.07) 20%,rgba(157,120,233,.04) 40%,transparent 60%,rgba(122,50,199,.06) 80%,transparent 100%);
+            animation:rotateBeam 18s linear infinite;
+            pointer-events:none; z-index:0;
+        }
+        .cta-card {
+            position:relative; z-index:10;
+            max-width:740px; width:100%; margin:0 auto;
+            padding:4rem 3rem; border-radius:2rem;
+            background:rgba(35,20,49,.55); border:1px solid rgba(122,50,199,.35);
+            backdrop-filter:blur(20px);
+            box-shadow:0 0 0 1px rgba(157,120,233,.1),0 40px 100px -20px rgba(13,7,20,.9),0 0 80px rgba(122,50,199,.12),inset 0 1px 0 rgba(157,120,233,.15);
+            text-align:center;
+        }
+        .cta-card::before {
+            content:'';
+            position:absolute; top:0; left:10%; right:10%; height:2px;
+            background:linear-gradient(90deg,transparent,var(--secondary),var(--accent),var(--secondary),transparent);
+            border-radius:9999px; animation:shimmer 3s linear infinite; background-size:200%;
+        }
+        .cta-btn {
+            position:relative;
+            display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+            padding:1.1rem 2.75rem; border-radius:9999px;
+            font-family:'Geist',sans-serif; font-size:1rem; font-weight:700;
+            color:#fff; text-decoration:none; border:none; outline:none; cursor:pointer;
+            transition:transform .2s cubic-bezier(.16,1,.3,1),filter .2s; z-index:1;
+        }
+        .cta-btn::before {
+            content:''; position:absolute; inset:0; border-radius:inherit;
+            background:linear-gradient(135deg,#7A32C7,#9D78E9,#7A32C7);
+            background-size:200%; animation:shimmer 2.8s linear infinite;
+        }
+        .cta-btn::after {
+            content:''; position:absolute; inset:0; border-radius:inherit;
+            box-shadow:0 0 0 1px rgba(157,120,233,.6),0 0 40px rgba(122,50,199,.65),0 8px 30px rgba(13,7,20,.5);
+            pointer-events:none;
+        }
+        .cta-btn span { position:relative; z-index:1; display:flex; align-items:center; gap:.55rem; }
+        .cta-btn:hover  { transform:scale(1.05); filter:brightness(1.12); }
+        .cta-btn:active { transform:scale(.97); }
+        .cta-btn-wrap { position:relative; display:inline-flex; }
+        .pulse-ring {
+            position:absolute; inset:-4px; border-radius:9999px;
+            border:1.5px solid rgba(157,120,233,.4);
+            animation:pulseRing 2.4s cubic-bezier(.16,1,.3,1) infinite;
+            pointer-events:none;
+        }
+        .pulse-ring:nth-child(2) { animation-delay:.8s; }
+        .pulse-ring:nth-child(3) { animation-delay:1.6s; }
+        .cta-btn-glow {
+            position:absolute; bottom:-20px; left:50%; transform:translateX(-50%);
+            width:70%; height:28px; background:rgba(157,120,233,.4);
+            border-radius:50%; filter:blur(16px); pointer-events:none; z-index:0;
+        }
+        .trust-pill {
+            display:inline-flex; align-items:center; gap:.45rem;
+            padding:.5rem 1.1rem; border-radius:9999px;
+            font-family:'Geist',sans-serif; font-size:.75rem; font-weight:600;
+            background:rgba(35,20,49,.7); border:1px solid rgba(61,43,74,.8);
+            color:rgba(157,120,233,.75);
+            transition:border-color .2s,color .2s;
+        }
+        .trust-pill:hover { border-color:rgba(122,50,199,.5); color:#E1D4FB; }
+        .cta-particle {
+            position:absolute;
+            width:4px; height:4px;
+            border-radius:50%;
+            background:rgba(157,120,233,.55);
+            pointer-events:none; z-index:1;
+            animation:particleRise var(--dur,5s) ease-in var(--delay,0s) infinite;
+        }
+
+        /* ─ Founder quote ─ */
+        .founder-quote {
+            position:relative; padding:1.5rem 1.75rem; border-radius:1.1rem;
+            background:rgba(35,20,49,.5); border:1px solid rgba(61,43,74,.7);
+            border-left:3px solid var(--primary);
+        }
+        .founder-quote::before {
+            content:'\201C';
+            position:absolute; top:-8px; left:16px;
+            font-size:4rem; line-height:1;
+            color:rgba(122,50,199,.3); font-family:Georgia,serif;
+        }
+
+        /* ─ Check circle ─ */
+        .check-circle-wrap {
+            animation:checkPop .8s cubic-bezier(.16,1,.3,1) 0.3s both;
+        }
+
+        /* ─ Portrait card (founder) ─ */
+        .name-card {
+            margin-top:1.25rem; padding:1.1rem 1.5rem; border-radius:1rem;
+            background:rgba(35,20,49,.7); border:1px solid rgba(61,43,74,.8);
+            backdrop-filter:blur(12px);
+            display:flex; align-items:center; justify-content:space-between; gap:1rem;
+        }
+
+        /* ─ Scrollbar ─ */
+        ::-webkit-scrollbar { width:5px; }
+        ::-webkit-scrollbar-track { background:var(--bg); }
+        ::-webkit-scrollbar-thumb { background:linear-gradient(180deg,var(--primary),var(--secondary)); border-radius:3px; }
+        * { scrollbar-width:thin; scrollbar-color:var(--primary) var(--bg); }
+        ::selection { background:rgba(122,50,199,.4); color:#fff; }
+
+        @media(max-width:768px) { .cta-card { padding:2.5rem 1.5rem; } }
+    </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     § 1 — HERO — OBRIGADO
+════════════════════════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-center overflow-hidden" id="topo">
+
+    <!-- Ambient bg -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <div class="absolute inset-0" style="background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(122,50,199,.18) 0%,transparent 60%);"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-64" style="background:radial-gradient(ellipse 100% 80% at 50% 100%,rgba(122,50,199,.08) 0%,transparent 70%);"></div>
+        <div class="absolute top-1/4 right-0 w-[600px] h-[600px] opacity-30" style="background:radial-gradient(circle,rgba(122,50,199,.35) 0%,transparent 70%);filter:blur(40px);"></div>
+        <div class="absolute top-1/3 left-0 w-[300px] h-[300px] opacity-20" style="background:radial-gradient(circle,rgba(157,120,233,.3) 0%,transparent 70%);filter:blur(60px);"></div>
+    </div>
+    <!-- Grid -->
+    <div class="absolute inset-0 z-0 pointer-events-none" style="background-image:linear-gradient(rgba(157,120,233,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(157,120,233,.04) 1px,transparent 1px);background-size:4rem 4rem;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black,transparent);-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black,transparent);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-36 w-full">
+        <div class="flex flex-col items-center text-center max-w-3xl mx-auto">
+
+            <!-- Tag -->
+            <div class="anim-fade-up d100 flex justify-center mb-8">
+                <div class="tag-pill">
+                    <iconify-icon icon="lucide:check-circle-2" style="font-size:.85rem;"></iconify-icon>
+                    Solicitação Recebida
+                    <span class="tag-dot"></span>
+                </div>
+            </div>
+
+            <!-- Check icon animated -->
+            <div class="check-circle-wrap anim-fade-in d200 mb-8">
+                <div style="width:88px;height:88px;border-radius:50%;background:rgba(122,50,199,.12);border:1.5px solid rgba(122,50,199,.45);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 1px rgba(157,120,233,.15),0 0 40px rgba(122,50,199,.2);margin:0 auto;">
+                    <iconify-icon icon="lucide:check" style="font-size:2.5rem;color:#9D78E9;"></iconify-icon>
+                </div>
+            </div>
+
+            <!-- Headline -->
+            <div class="anim-fade-up d200 mb-6">
+                <p class="font-geist text-xs font-semibold uppercase tracking-[.18em] text-secondary/60 mb-3">Playbook de Geração de Demanda Qualificada</p>
+                <h1 class="font-jakarta font-bold leading-[1.0] tracking-tight">
+                    <span class="block text-4xl md:text-5xl lg:text-6xl headline-gradient">Recebemos sua</span>
+                    <span class="block text-4xl md:text-5xl lg:text-6xl headline-gradient">solicitação</span>
+                    <span class="block text-4xl md:text-5xl lg:text-6xl headline-accent">com sucesso!</span>
+                </h1>
+            </div>
+
+            <div class="anim-fade-up d300 divider mb-8" style="width:100%;"></div>
+
+            <p class="anim-fade-up d300 font-jakarta text-lg md:text-xl leading-relaxed text-secondary/75 mb-10 max-w-xl">
+                Em breve um especialista da <strong style="color:#fff;">Rugido</strong> vai entrar em contato para confirmar sua <strong style="color:#E1D4FB;">Sessão Estratégica Gratuita</strong> e garantir que você tire o máximo dela.
+            </p>
+
+            <!-- CTAs -->
+            <div class="anim-fade-up d400 flex flex-col sm:flex-row items-center gap-5 justify-center mb-10">
+                <div class="relative">
+                    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="cta-primary" id="cta-wa-btn">
+                        <span class="flex items-center gap-2">
+                            <iconify-icon icon="lucide:message-circle" class="text-lg"></iconify-icon>
+                            Falar pelo WhatsApp
+                            <iconify-icon icon="lucide:arrow-right" class="text-lg"></iconify-icon>
+                        </span>
+                    </a>
+                    <div class="cta-glow"></div>
+                </div>
+                <div class="hidden sm:block w-px h-10 bg-primary/20"></div>
+                <div class="flex flex-col items-center sm:items-start gap-2">
+                    <div class="badge-free">
+                        <iconify-icon icon="lucide:clock" class="text-sm"></iconify-icon>
+                        Resposta em até 24h
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social proof -->
+            <div class="anim-fade-up d500 flex flex-col sm:flex-row items-center gap-4 justify-center">
+                <div class="flex items-center">
+                    <div class="avatar-ring"><img src="assets/c867b9fe-6a6a-4535-8e07-c8b4ed747cb1.jpg" alt="Cliente Rugido" class="w-full h-full object-cover rounded-full" onerror="this.style.background='rgba(122,50,199,.2)'"></div>
+                    <div class="avatar-ring"><img src="assets/e4c605a6-7463-47d9-82b7-778c47c7b7eb.jpg" alt="Cliente Rugido" class="w-full h-full object-cover rounded-full" onerror="this.style.background='rgba(122,50,199,.15)'"></div>
+                    <div class="avatar-ring"><img src="assets/eec6cf5b-00d3-4e60-adb2-1cb95f36a117.jpg" alt="Cliente Rugido" class="w-full h-full object-cover rounded-full" onerror="this.style.background='rgba(122,50,199,.1)'"></div>
+                    <div class="avatar-ring" style="background:rgba(122,50,199,.2);border-color:rgba(122,50,199,.4);"><span class="avatar-initials" style="color:#E1D4FB;">+</span></div>
+                </div>
+                <div class="text-center sm:text-left">
+                    <p class="font-geist text-sm font-semibold text-white leading-snug">+R$50M gerados em faturamento</p>
+                    <p class="font-geist text-xs text-secondary/60 mt-0.5">Empresários confiam na Rugido</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 h-px z-10" style="background:linear-gradient(90deg,transparent,rgba(122,50,199,.25),transparent);"></div>
+</section>
+
+<div class="h-divider"></div>
+
+<!-- ════════════════════════════════════════════════════════
+     § 2 — PRÓXIMOS PASSOS
+════════════════════════════════════════════════════════ -->
+<section class="relative py-28 lg:py-36 overflow-hidden" id="proximos-passos">
+
+    <div class="grid-bg"></div>
+    <div class="deco-orb" style="top:5%;left:5%;width:420px;height:420px;background:radial-gradient(circle,rgba(122,50,199,.14) 0%,transparent 70%);filter:blur(50px);animation-delay:0s;"></div>
+    <div class="deco-orb" style="bottom:10%;right:8%;width:320px;height:320px;background:radial-gradient(circle,rgba(157,120,233,.1) 0%,transparent 70%);filter:blur(60px);animation-delay:3s;"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="text-center mb-20">
+            <div class="reveal flex justify-center mb-6 d0">
+                <div class="tag-pill">
+                    <iconify-icon icon="lucide:list-checks" style="font-size:.85rem;"></iconify-icon>
+                    O que acontece agora
+                </div>
+            </div>
+            <h2 class="reveal fade-up d100 font-jakarta font-bold text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.0] mb-6">
+                <span class="headline-gradient">Próximos</span><br>
+                <span class="headline-gradient">Passos</span>
+            </h2>
+            <p class="reveal fade-up d200 font-jakarta text-lg md:text-xl text-secondary/70 leading-relaxed max-w-2xl mx-auto">
+                Veja exatamente o que vai acontecer a partir de agora até a sua Sessão Estratégica.
+            </p>
+        </div>
+
+        <!-- Cards dos passos -->
+        <div class="flex flex-col lg:flex-row items-stretch gap-6 mb-14">
+
+            <!-- Passo 1 -->
+            <div class="fw-card flex-1 reveal d100">
+                <div class="card-beam beam-1"></div>
+                <div class="flex items-start justify-between gap-4">
+                    <div class="card-icon card-icon-1">
+                        <iconify-icon icon="lucide:search" style="font-size:1.5rem;color:#9D78E9;"></iconify-icon>
+                    </div>
+                    <span class="card-num">01 / Passo</span>
+                </div>
+                <div class="flex flex-col gap-3 flex-1">
+                    <h3 class="font-jakarta font-bold text-2xl lg:text-3xl text-white tracking-tight leading-tight">Análise da<br>sua empresa</h3>
+                    <p class="font-jakarta text-base text-secondary/70 leading-relaxed">Nosso especialista vai analisar as informações que você preencheu para chegar na sessão já com <strong class="text-white/90 font-semibold">insights sobre o seu negócio</strong>.</p>
+                </div>
+                <div class="flex items-center gap-2 pt-4" style="border-top:1px solid rgba(61,43,74,.6);">
+                    <iconify-icon icon="lucide:arrow-right" style="font-size:.85rem;color:rgba(157,120,233,.5);"></iconify-icon>
+                    <span class="font-geist text-xs text-secondary/40 uppercase tracking-widest">Ocorre imediatamente</span>
+                </div>
+            </div>
+
+            <div class="connector hidden lg:flex"><div class="connector-line"><div class="connector-arrow"></div></div></div>
+
+            <!-- Passo 2 (featured) -->
+            <div class="fw-card fw-card-featured flex-1 reveal d200">
+                <div class="card-beam beam-2"></div>
+                <div class="absolute top-4 right-4 px-2.5 py-1 rounded-full font-geist text-[.6rem] font-bold uppercase tracking-widest" style="background:rgba(122,50,199,.25);border:1px solid rgba(157,120,233,.35);color:#E1D4FB;">Em breve</div>
+                <div class="flex items-start justify-between gap-4">
+                    <div class="card-icon card-icon-2">
+                        <iconify-icon icon="lucide:phone" style="font-size:1.5rem;color:#E1D4FB;"></iconify-icon>
+                    </div>
+                    <span class="card-num">02 / Passo</span>
+                </div>
+                <div class="flex flex-col gap-3 flex-1">
+                    <h3 class="font-jakarta font-bold text-2xl lg:text-3xl tracking-tight leading-tight">
+                        <span class="accent-text">Confirmação</span><br><span class="accent-text">do agendamento</span>
+                    </h3>
+                    <p class="font-jakarta text-base text-secondary/75 leading-relaxed">Você vai receber uma mensagem no WhatsApp com os detalhes — <strong class="text-white/90 font-semibold">data, horário e link</strong> de acesso à sessão.</p>
+                </div>
+                <div class="flex items-center gap-2 pt-4" style="border-top:1px solid rgba(122,50,199,.25);">
+                    <iconify-icon icon="lucide:arrow-right" style="font-size:.85rem;color:rgba(157,120,233,.6);"></iconify-icon>
+                    <span class="font-geist text-xs uppercase tracking-widest" style="color:rgba(157,120,233,.55);">Em até 24 horas</span>
+                </div>
+            </div>
+
+            <div class="connector hidden lg:flex"><div class="connector-line"><div class="connector-arrow"></div></div></div>
+
+            <!-- Passo 3 -->
+            <div class="fw-card flex-1 reveal d300">
+                <div class="card-beam beam-3"></div>
+                <div class="flex items-start justify-between gap-4">
+                    <div class="card-icon card-icon-3">
+                        <iconify-icon icon="lucide:target" style="font-size:1.5rem;color:#9D78E9;"></iconify-icon>
+                    </div>
+                    <span class="card-num">03 / Passo</span>
+                </div>
+                <div class="flex flex-col gap-3 flex-1">
+                    <h3 class="font-jakarta font-bold text-2xl lg:text-3xl text-white tracking-tight leading-tight">Sua Sessão<br>Estratégica</h3>
+                    <p class="font-jakarta text-base text-secondary/70 leading-relaxed">Vamos diagnosticar sua estratégia e montar um <strong class="text-white/90 font-semibold">plano prático de ação</strong> para você vender mais, medindo cada real investido.</p>
+                </div>
+                <div class="flex items-center gap-2 pt-4" style="border-top:1px solid rgba(61,43,74,.6);">
+                    <iconify-icon icon="lucide:arrow-right" style="font-size:.85rem;color:rgba(157,120,233,.5);"></iconify-icon>
+                    <span class="font-geist text-xs text-secondary/40 uppercase tracking-widest">Sessão 100% gratuita</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Stats strip -->
+        <div class="authority-strip reveal d400">
+            <div class="flex flex-wrap items-center justify-center gap-6">
+                <div class="stat-pill">
+                    <iconify-icon icon="lucide:trending-up" style="font-size:1.1rem;color:#9D78E9;"></iconify-icon>
+                    <span class="font-geist text-sm font-bold text-white">+R$50M</span>
+                    <span class="font-geist text-xs text-secondary/50">em faturamento gerado</span>
+                </div>
+                <div class="stat-pill">
+                    <iconify-icon icon="lucide:users" style="font-size:1.1rem;color:#9D78E9;"></iconify-icon>
+                    <span class="font-geist text-sm font-bold text-white">60 dias</span>
+                    <span class="font-geist text-xs text-secondary/50">para construir sua máquina</span>
+                </div>
+                <div class="stat-pill">
+                    <iconify-icon icon="lucide:shield-check" style="font-size:1.1rem;color:#9D78E9;"></iconify-icon>
+                    <span class="font-geist text-sm font-bold text-white">100% Resultado</span>
+                    <span class="font-geist text-xs text-secondary/50">sem métricas de vaidade</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="h-divider"></div>
+
+<!-- ════════════════════════════════════════════════════════
+     § 3 — O QUE VOCÊ VAI RECEBER NA SESSÃO
+════════════════════════════════════════════════════════ -->
+<section class="relative py-28 lg:py-36 overflow-hidden" id="entregas">
+
+    <div class="grid-bg"></div>
+    <div class="deco-orb" style="top:20%;right:5%;width:500px;height:500px;background:radial-gradient(circle,rgba(122,50,199,.1) 0%,transparent 70%);filter:blur(60px);animation-delay:1s;"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="text-center mb-20">
+            <div class="reveal flex justify-center mb-6 d0">
+                <div class="tag-pill">
+                    <iconify-icon icon="lucide:gift" style="font-size:.85rem;"></iconify-icon>
+                    O que está por vir
+                    <span class="tag-dot"></span>
+                </div>
+            </div>
+            <h2 class="reveal d100 font-jakarta font-bold text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.0] mb-6">
+                <span class="headline-gradient">Sua Sessão vai</span><br>
+                <span class="headline-gradient">entregar:</span>
+            </h2>
+        </div>
+
+        <!-- Checklist items -->
+        <div class="max-w-3xl mx-auto flex flex-col gap-4">
+
+            <div class="item-row item-ideal reveal d100">
+                <div class="icon-badge icon-badge-ideal">
+                    <iconify-icon icon="lucide:check" style="font-size:1rem;"></iconify-icon>
+                </div>
+                <div>
+                    <p class="font-jakarta font-bold text-white mb-1">Diagnóstico real da sua estratégia de vendas</p>
+                    <p class="font-jakarta text-sm text-secondary/65 leading-relaxed">Identificamos os gargalos que estão travando seu crescimento e custando dinheiro sem retorno.</p>
+                </div>
+            </div>
+
+            <div class="item-row item-ideal reveal d200">
+                <div class="icon-badge icon-badge-ideal">
+                    <iconify-icon icon="lucide:check" style="font-size:1rem;"></iconify-icon>
+                </div>
+                <div>
+                    <p class="font-jakarta font-bold text-white mb-1">Plano de ação para o próximo trimestre</p>
+                    <p class="font-jakarta text-sm text-secondary/65 leading-relaxed">Não saídas genéricas — um plano específico para o seu segmento e momento de negócio.</p>
+                </div>
+            </div>
+
+            <div class="item-row item-ideal reveal d300">
+                <div class="icon-badge icon-badge-ideal">
+                    <iconify-icon icon="lucide:check" style="font-size:1rem;"></iconify-icon>
+                </div>
+                <div>
+                    <p class="font-jakarta font-bold text-white mb-1">Passo a passo de implementação</p>
+                    <p class="font-jakarta text-sm text-secondary/65 leading-relaxed">O que fazer primeiro para gerar resultados mais rápidos com o menor investimento possível.</p>
+                </div>
+            </div>
+
+            <div class="item-row item-ideal reveal d400">
+                <div class="icon-badge icon-badge-ideal">
+                    <iconify-icon icon="lucide:check" style="font-size:1rem;"></iconify-icon>
+                </div>
+                <div>
+                    <p class="font-jakarta font-bold text-white mb-1">Fale com um especialista de verdade</p>
+                    <p class="font-jakarta text-sm text-secondary/65 leading-relaxed">Não um vendedor disfarçado. Alguém que vai mergulhar no seu negócio e apontar caminhos reais.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<div class="h-divider"></div>
+
+<!-- ════════════════════════════════════════════════════════
+     § 4 — FUNDADOR
+════════════════════════════════════════════════════════ -->
+<section class="relative py-28 lg:py-36 overflow-hidden" id="fundador">
+
+    <div class="grid-bg"></div>
+    <div class="deco-orb" style="top:10%;left:10%;width:450px;height:450px;background:radial-gradient(circle,rgba(122,50,199,.12) 0%,transparent 70%);filter:blur(50px);animation-delay:2s;"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Left — text -->
+            <div class="reveal slide-left">
+                <div class="flex justify-center lg:justify-start mb-8">
+                    <div class="tag-pill">
+                        <iconify-icon icon="lucide:user-check" style="font-size:.85rem;"></iconify-icon>
+                        Quem está por trás
+                    </div>
+                </div>
+                <h2 class="font-jakarta font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.05] mb-6">
+                    <span class="headline-gradient">Quem vai conduzir</span><br>
+                    <span class="headline-gradient">sua sessão?</span>
+                </h2>
+                <p class="font-jakarta text-lg text-secondary/70 leading-relaxed mb-8">
+                    Tudo o que você verá nesta sessão foi testado e validado em operações reais que geraram mais de
+                    <strong class="font-semibold" style="color:#E1D4FB;">R$50 milhões</strong>
+                    em faturamento. Não é teoria acadêmica. É o que funciona na prática, todos os dias.
+                </p>
+
+                <div class="founder-quote mb-8 reveal d200">
+                    <p class="font-jakarta text-base text-secondary/80 leading-relaxed mt-4">
+                        "Tudo que eu mostro não é teoria. É baseado no que funciona todos os dias dentro da minha empresa e nos negócios dos meus clientes."
+                    </p>
+                    <p class="font-geist text-sm font-semibold text-white mt-4">Lucas Felix</p>
+                    <p class="font-geist text-xs text-secondary/50">Fundador da Rugido</p>
+                </div>
+
+                <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+                    <div class="verified-pill">
+                        <iconify-icon icon="lucide:shield-check" style="font-size:.85rem;"></iconify-icon>
+                        Método validado
+                    </div>
+                    <div class="verified-pill">
+                        <iconify-icon icon="lucide:trending-up" style="font-size:.85rem;"></iconify-icon>
+                        +R$50M gerados
+                    </div>
+                    <div class="verified-pill">
+                        <iconify-icon icon="lucide:layers" style="font-size:.85rem;"></iconify-icon>
+                        Vários segmentos
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right — stat blocks -->
+            <div class="reveal slide-right d100">
+                <div class="glass-card p-8 mb-6">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-full overflow-hidden border border-primary/40 flex-shrink-0" style="background:rgba(122,50,199,.15);">
+                            <img src="assets/especialista-1024x703-1.png" alt="Lucas Felix – Fundador da Rugido" class="w-full h-full object-cover" onerror="this.style.background='rgba(122,50,199,.2)'">
+                        </div>
+                        <div>
+                            <p class="font-jakarta font-bold text-white text-lg">Lucas Felix</p>
+                            <p class="font-geist text-xs uppercase tracking-widest text-secondary/60">Fundador da Rugido</p>
+                        </div>
+                    </div>
+                    <p class="font-jakarta text-base text-secondary/70 leading-relaxed">
+                        Engenheiro civil de formação, empreendedor desde os 17 anos. Fundei a Agência Rugido que fatura múltiplos 6 dígitos mensais atendendo clientes reais — de software a confeitarias.
+                    </p>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="stat-block">
+                        <p class="font-jakarta font-bold text-2xl text-white mb-1" style="background:linear-gradient(135deg,#fff 25%,#E1D4FB 60%,#9D78E9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">+R$50M</p>
+                        <p class="font-geist text-xs text-secondary/50 leading-snug">Faturamento<br>gerado</p>
+                    </div>
+                    <div class="stat-block">
+                        <p class="font-jakarta font-bold text-2xl text-white mb-1" style="background:linear-gradient(135deg,#fff 25%,#E1D4FB 60%,#9D78E9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">60 dias</p>
+                        <p class="font-geist text-xs text-secondary/50 leading-snug">Para sua<br>máquina rodar</p>
+                    </div>
+                    <div class="stat-block">
+                        <p class="font-jakarta font-bold text-2xl text-white mb-1" style="background:linear-gradient(135deg,#fff 25%,#E1D4FB 60%,#9D78E9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">100%</p>
+                        <p class="font-geist text-xs text-secondary/50 leading-snug">Foco em<br>resultado real</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="h-divider"></div>
+
+<!-- ════════════════════════════════════════════════════════
+     § 5 — CTA FINAL
+════════════════════════════════════════════════════════ -->
+<section class="cta-outer-section relative py-28 lg:py-40" id="cta-final">
+    <div class="cta-bg-gradient"></div>
+    <div class="cta-ring-spin"></div>
+
+    <!-- Particles -->
+    <div class="cta-particle" style="left:15%;bottom:20%;--dur:6s;--delay:0s;"></div>
+    <div class="cta-particle" style="left:30%;bottom:15%;--dur:8s;--delay:1.5s;"></div>
+    <div class="cta-particle" style="left:55%;bottom:25%;--dur:5s;--delay:.8s;"></div>
+    <div class="cta-particle" style="left:70%;bottom:18%;--dur:7s;--delay:2.2s;"></div>
+    <div class="cta-particle" style="left:85%;bottom:22%;--dur:9s;--delay:.4s;"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="cta-card reveal">
+
+            <!-- Heading -->
+            <div class="reveal d0 mb-6">
+                <div class="flex justify-center mb-6">
+                    <div class="tag-pill">
+                        <iconify-icon icon="lucide:clock" style="font-size:.85rem;"></iconify-icon>
+                        Enquanto você aguarda
+                    </div>
+                </div>
+                <h2 class="font-jakarta font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.05] mb-4">
+                    <span class="headline-gradient">A diferença não é</span><br>
+                    <span class="headline-gradient">o orçamento.</span><br>
+                    <span class="headline-accent">É a comunicação.</span>
+                </h2>
+                <p class="font-jakarta text-lg md:text-xl text-secondary/70 leading-relaxed max-w-2xl mx-auto">
+                    Enquanto aguarda o contato, lembre: a maioria das empresas paga por cliques de curiosos enquanto seu concorrente atrai decisores com dinheiro e urgência. Você deu o primeiro passo para mudar isso.
+                </p>
+            </div>
+
+            <!-- CTA btn -->
+            <div class="flex justify-center mb-10 reveal d200">
+                <div class="cta-btn-wrap">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="cta-btn" id="cta-bottom-btn">
+                        <span>
+                            <iconify-icon icon="lucide:message-circle" style="font-size:1.1rem;"></iconify-icon>
+                            Falar com especialista agora
+                            <iconify-icon icon="lucide:arrow-right" style="font-size:1rem;"></iconify-icon>
+                        </span>
+                    </a>
+                    <div class="cta-btn-glow"></div>
+                </div>
+            </div>
+
+            <!-- Trust pills -->
+            <div class="reveal d300 flex flex-wrap items-center justify-center gap-3">
+                <div class="trust-pill">
+                    <iconify-icon icon="lucide:shield-check" style="font-size:.9rem;"></iconify-icon>
+                    Sessão 100% gratuita
+                </div>
+                <div class="trust-pill">
+                    <iconify-icon icon="lucide:lock" style="font-size:.9rem;"></iconify-icon>
+                    Sem SPAM
+                </div>
+                <div class="trust-pill">
+                    <iconify-icon icon="lucide:zap" style="font-size:.9rem;"></iconify-icon>
+                    Resposta em até 24h
+                </div>
+                <div class="trust-pill">
+                    <iconify-icon icon="lucide:layers" style="font-size:.9rem;"></iconify-icon>
+                    Diagnóstico prático
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer class="relative py-8 text-center" style="border-top:1px solid rgba(61,43,74,.5);">
+    <p class="font-geist text-xs" style="color:rgba(61,43,74,.9);">Copyright 2025 – Grupo Rugido | Todos os direitos reservados.</p>
+</footer>
+
+
+<!-- ════════════════════════════════════════════════════════
+     JS — SCROLL REVEAL
+════════════════════════════════════════════════════════ -->
+<script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                io.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => io.observe(el));
+
+    // Lazy image loader
+    document.querySelectorAll('img').forEach(img => {
+        if (img.complete) img.classList.add('loaded');
+        else img.addEventListener('load', () => img.classList.add('loaded'));
+    });
+</script>
+
+</body>
+</html>
