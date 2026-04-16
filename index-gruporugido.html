@@ -1,0 +1,2318 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/favicon.webp">
+    <link rel="shortcut icon" type="image/webp" href="assets/favicon.webp">
+    <link rel="apple-touch-icon" type="image/webp" href="assets/favicon.webp">
+
+    <!-- Metadados SEO -->
+    <title>Playbook Rugido – Geração de Demanda Qualificada | Baixe Grátis</title>
+    <meta name="title" content="Playbook Rugido – Geração de Demanda Qualificada">
+    <meta name="description" content="O Playbook de Geração de Demanda Qualificada da Rugido revela o sistema completo para construir uma máquina de captação que filtra curiosos e entrega ao seu comercial apenas quem tem perfil, recurso e urgência para comprar. Baixe grátis.">
+    <meta name="keywords" content="geração de demanda, marketing digital, leads qualificados, playbook, rugido, marketing b2b, captação de clientes, funil de vendas">
+    <meta name="author" content="Rugido Assessoria">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gruporugido.com/obrigado/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gruporugido.com/obrigado/">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gruporugido.com/obrigado/">
+    <meta property="twitter:title" content="Playbook Rugido – Geração de Demanda Qualificada">
+    <meta property="twitter:description" content="O Playbook de Geração de Demanda Qualificada da Rugido revela o sistema completo para construir uma máquina de captação. Baixe grátis!">
+    <meta property="twitter:image" content="https://gruporugido.com/wp-content/uploads/2026/04/Group-56.webp">
+
+    <!-- Scripts & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary:   '#7A32C7',
+                        secondary: '#9D78E9',
+                        accent:    '#E1D4FB',
+                        dark:      '#231431',
+                        bg:        '#0d0714',
+                        border:    '#3D2B4A',
+                    },
+                    fontFamily: {
+                        jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        geist:   ['Geist', 'sans-serif'],
+                        inter:   ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* ═══════════════════════════════════════════════════════
+           DESIGN SYSTEM TOKENS
+        ═══════════════════════════════════════════════════════ */
+        :root {
+            --bg:           #0d0714;
+            --card-bg:      #231431;
+            --border:       #3D2B4A;
+            --primary:      #7A32C7;
+            --secondary:    #9D78E9;
+            --accent:       #E1D4FB;
+            --red-dim:      #FF4D4D;
+            --red-muted:    rgba(255,77,77,.08);
+            --red-border:   rgba(255,77,77,.2);
+            --green-dim:    #4DFFB4;
+            --green-muted:  rgba(77,255,180,.06);
+            --green-border: rgba(77,255,180,.2);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: #fff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           KEYFRAME ANIMATIONS
+        ═══════════════════════════════════════════════════════ */
+        @keyframes fadeUp {
+            from { opacity:0; transform:translateY(26px); }
+            to   { opacity:1; transform:translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity:0; } to { opacity:1; }
+        }
+        @keyframes slideLeft {
+            from { opacity:0; transform:translateX(-30px); }
+            to   { opacity:1; transform:translateX(0); }
+        }
+        @keyframes slideRight {
+            from { opacity:0; transform:translateX(30px); }
+            to   { opacity:1; transform:translateX(0); }
+        }
+        @keyframes shimmer {
+            0%   { background-position:-200% center; }
+            100% { background-position: 200% center; }
+        }
+        @keyframes pulseGlow {
+            0%,100% { box-shadow:0 0 6px 1px rgba(122,50,199,.5); }
+            50%      { box-shadow:0 0 20px 5px rgba(122,50,199,.9); }
+        }
+        @keyframes dotPulse {
+            0%,100% { box-shadow:0 0 6px 1px rgba(122,50,199,.5); }
+            50%      { box-shadow:0 0 18px 5px rgba(122,50,199,.9); }
+        }
+        @keyframes float {
+            0%,100% { transform:translateY(0) rotate(-1deg); }
+            50%      { transform:translateY(-14px) rotate(1deg); }
+        }
+        @keyframes floatReverse {
+            0%,100% { transform:translateY(0) rotate(2deg) scale(.95); }
+            50%      { transform:translateY(-10px) rotate(-1deg) scale(.95); }
+        }
+        @keyframes orbFloat {
+            0%,100% { transform:translateY(0) scale(1); }
+            50%      { transform:translateY(-16px) scale(1.04); }
+        }
+        @keyframes scan-line {
+            0%   { top:0%; } 100% { top:100%; }
+        }
+        @keyframes scanLine {
+            0%   { top:-8%; } 100% { top:108%; }
+        }
+        @keyframes portraitGlow {
+            0%,100% { box-shadow:0 0 40px 8px rgba(122,50,199,.2), 0 30px 80px rgba(13,7,20,.8); }
+            50%      { box-shadow:0 0 70px 16px rgba(122,50,199,.35), 0 30px 80px rgba(13,7,20,.8); }
+        }
+        @keyframes pulseRing {
+            0%   { transform:scale(1);    opacity:.6; }
+            100% { transform:scale(1.55); opacity:0; }
+        }
+        @keyframes rotateBeam {
+            0%   { transform:rotate(0deg); }
+            100% { transform:rotate(360deg); }
+        }
+        @keyframes beam {
+            0%  { opacity:0; transform:scaleX(0); transform-origin:left; }
+            60% { opacity:1; }
+            100%{ opacity:1; transform:scaleX(1); }
+        }
+        @keyframes slideDown {
+            from { opacity:0; transform:translateY(-8px); }
+            to   { opacity:1; transform:translateY(0); }
+        }
+        @keyframes countUp {
+            from { opacity:0; transform:translateY(8px); }
+            to   { opacity:1; transform:translateY(0); }
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           SCROLL REVEAL  (unified — supports multiple class names)
+        ═══════════════════════════════════════════════════════ */
+        .reveal { opacity: 0; }
+
+        /* hero uses anim-* prefix */
+        .anim-fade-up  { animation: fadeUp  .85s cubic-bezier(.16,1,.3,1) both; }
+        .anim-fade-in  { animation: fadeIn  1s ease both; }
+
+        /* other sections use .reveal + direction modifier */
+        .reveal.is-visible,
+        .reveal.visible { animation: fadeUp .9s cubic-bezier(.16,1,.3,1) forwards; }
+
+        .reveal.is-visible.fade-up,
+        .reveal.visible.fade-up    { animation: fadeUp    .9s cubic-bezier(.16,1,.3,1) forwards; }
+        .reveal.is-visible.slide-left,
+        .reveal.visible.slide-left { animation: slideLeft .9s cubic-bezier(.16,1,.3,1) forwards; }
+        .reveal.is-visible.slide-right,
+        .reveal.visible.slide-right{ animation: slideRight .9s cubic-bezier(.16,1,.3,1) forwards; }
+
+        .d0   { animation-delay:  0ms; }
+        .d100 { animation-delay:100ms; }
+        .d200 { animation-delay:200ms; }
+        .d300 { animation-delay:300ms; }
+        .d400 { animation-delay:400ms; }
+        .d500 { animation-delay:500ms; }
+        .d600 { animation-delay:600ms; }
+        .d700 { animation-delay:700ms; }
+
+        .float-1 { animation: float        7s ease-in-out infinite; }
+        .float-2 { animation: floatReverse 9s ease-in-out infinite; animation-delay:1.5s; }
+        .float-3 { animation: float        5s ease-in-out infinite; animation-delay:3s; }
+
+        /* ═══════════════════════════════════════════════════════
+           SHARED UTILITIES
+        ═══════════════════════════════════════════════════════ */
+        .h-divider {
+            height:1px;
+            background:linear-gradient(90deg,transparent,rgba(122,50,199,.35),transparent);
+        }
+        .divider { height:1px; background:linear-gradient(90deg,transparent,rgba(122,50,199,.4),transparent); }
+
+        .headline-gradient {
+            background:linear-gradient(135deg,#ffffff 25%,#E1D4FB 60%,#9D78E9 100%);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .headline-accent {
+            background:linear-gradient(90deg,#9D78E9,#E1D4FB);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .accent-text {
+            background:linear-gradient(90deg,#9D78E9,#E1D4FB);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .vs-text {
+            background:linear-gradient(90deg,#7A32C7,#9D78E9);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .desc-highlight {
+            display:inline;
+            background:linear-gradient(90deg,rgba(122,50,199,.25),rgba(157,120,233,.15));
+            border-radius:4px; padding:1px 6px; color:var(--accent);
+        }
+
+        .font-jakarta { font-family:'Plus Jakarta Sans',sans-serif !important; }
+        .font-geist   { font-family:'Geist',sans-serif !important; }
+
+        /* ── Grid bg overlay (used in all sections) ── */
+        .grid-bg {
+            position:absolute; inset:0; pointer-events:none; z-index:0;
+            background-image:
+                linear-gradient(rgba(157,120,233,.04) 1px,transparent 1px),
+                linear-gradient(90deg,rgba(157,120,233,.04) 1px,transparent 1px);
+            background-size:3.5rem 3.5rem;
+            mask-image:radial-gradient(ellipse 75% 75% at 50% 50%,black,transparent);
+            -webkit-mask-image:radial-gradient(ellipse 75% 75% at 50% 50%,black,transparent);
+        }
+
+        /* ambient glows / orbs */
+        .glow-purple { background:radial-gradient(circle,rgba(122,50,199,.25) 0%,transparent 70%); }
+        .glow-violet { background:radial-gradient(circle,rgba(157,120,233,.15) 0%,transparent 70%); }
+        .deco-orb {
+            position:absolute; border-radius:50%; pointer-events:none;
+            animation:orbFloat 8s ease-in-out infinite;
+        }
+        .orb {
+            position:absolute; border-radius:50%;
+            pointer-events:none; z-index:0;
+            animation:orbFloat var(--dur,8s) ease-in-out infinite;
+            animation-delay:var(--delay,0s);
+        }
+
+        /* ── Tag pill ── */
+        .tag-pill {
+            display:inline-flex; align-items:center; gap:.5rem;
+            background:rgba(35,20,49,.75);
+            border:1px solid rgba(122,50,199,.4);
+            border-radius:9999px;
+            padding:.375rem 1rem;
+            font-family:'Geist',sans-serif;
+            font-size:.7rem; font-weight:600;
+            letter-spacing:.14em; text-transform:uppercase;
+            color:var(--secondary);
+            backdrop-filter:blur(8px);
+        }
+        .tag-dot {
+            width:6px; height:6px; border-radius:50%;
+            background:var(--primary);
+            animation:dotPulse 2.4s infinite;
+        }
+        .tag-warn {
+            display:inline-flex; align-items:center; gap:.4rem;
+            background:rgba(255,77,77,.1);
+            border:1px solid rgba(255,77,77,.25);
+            border-radius:9999px;
+            padding:.3rem .9rem;
+            font-family:'Geist',sans-serif;
+            font-size:.65rem; font-weight:700;
+            letter-spacing:.12em; text-transform:uppercase;
+            color:#FF7A7A;
+        }
+        .tag-ok {
+            display:inline-flex; align-items:center; gap:.4rem;
+            background:rgba(77,255,180,.07);
+            border:1px solid rgba(77,255,180,.2);
+            border-radius:9999px;
+            padding:.3rem .9rem;
+            font-family:'Geist',sans-serif;
+            font-size:.65rem; font-weight:700;
+            letter-spacing:.12em; text-transform:uppercase;
+            color:var(--green-dim);
+        }
+
+        /* ── CTA primary button ── */
+        .cta-primary {
+            position:relative;
+            display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+            padding:.9rem 2.25rem;
+            border-radius:9999px;
+            font-family:'Geist',sans-serif;
+            font-size:.95rem; font-weight:700;
+            color:#fff; cursor:pointer; border:none; outline:none;
+            transition:transform .2s,filter .2s; text-decoration:none;
+        }
+        .cta-primary::before {
+            content:'';
+            position:absolute; inset:0; border-radius:inherit;
+            background:linear-gradient(135deg,#7A32C7,#9D78E9,#7A32C7);
+            background-size:200%; animation:shimmer 3s linear infinite;
+        }
+        .cta-primary::after {
+            content:'';
+            position:absolute; inset:0; border-radius:inherit;
+            box-shadow:0 0 0 1px rgba(157,120,233,.6),0 0 28px rgba(122,50,199,.55);
+            pointer-events:none;
+        }
+        .cta-primary span { position:relative; z-index:1; }
+        .cta-primary:hover  { transform:scale(1.04); filter:brightness(1.1); }
+        .cta-primary:active { transform:scale(.97); }
+        .cta-glow {
+            position:absolute; bottom:-14px; left:50%; transform:translateX(-50%);
+            width:70%; height:22px;
+            background:rgba(157,120,233,.35);
+            border-radius:50%; filter:blur(14px);
+            pointer-events:none;
+        }
+        .cta-secondary {
+            display:inline-flex; align-items:center; gap:.4rem;
+            font-family:'Geist',sans-serif; font-size:.8rem;
+            color:rgba(157,120,233,.7); text-decoration:none;
+            transition:color .2s;
+        }
+        .cta-secondary:hover { color:#E1D4FB; }
+
+        /* ── Misc shared ── */
+        .badge-free {
+            display:inline-flex; align-items:center; gap:.4rem;
+            background:rgba(122,50,199,.12);
+            border:1px solid rgba(122,50,199,.3);
+            border-radius:6px;
+            padding:.25rem .75rem;
+            font-family:'Geist',sans-serif;
+            font-size:.7rem; font-weight:600;
+            letter-spacing:.08em; text-transform:uppercase;
+            color:#E1D4FB;
+        }
+        .verified-pill {
+            display:inline-flex; align-items:center; gap:.4rem;
+            background:rgba(77,255,180,.07);
+            border:1px solid rgba(77,255,180,.2);
+            border-radius:9999px;
+            padding:.25rem .8rem;
+            font-family:'Geist',sans-serif;
+            font-size:.65rem; font-weight:700;
+            letter-spacing:.1em; text-transform:uppercase;
+            color:#4DFFB4;
+        }
+
+        /* ════════════════════════════════════════════════════════
+           § 1  HERO
+        ════════════════════════════════════════════════════════ */
+        .avatar-ring {
+            width:42px; height:42px; border-radius:50%;
+            border:2px solid rgba(122,50,199,.5);
+            background:var(--card-bg); overflow:hidden;
+            display:flex; align-items:center; justify-content:center;
+            margin-left:-10px; flex-shrink:0;
+        }
+        .avatar-ring:first-child { margin-left:0; }
+        .avatar-initials {
+            font-family:'Geist',sans-serif; font-size:.65rem; font-weight:700; color:var(--secondary);
+        }
+        .glass-card {
+            background:rgba(35,20,49,.55); backdrop-filter:blur(16px);
+            border:1px solid rgba(61,43,74,.7); border-radius:1.5rem;
+        }
+        .visual-wrapper { position:relative; width:100%; height:520px; }
+        .hero-grid-bg {
+            position:absolute; inset:0;
+            background-image:
+                linear-gradient(rgba(157,120,233,.05) 1px,transparent 1px),
+                linear-gradient(90deg,rgba(157,120,233,.05) 1px,transparent 1px);
+            background-size:3rem 3rem;
+            mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%);
+            -webkit-mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%);
+            border-radius:2rem;
+        }
+        .metric-card {
+            position:absolute;
+            background:rgba(35,20,49,.8); backdrop-filter:blur(12px);
+            border:1px solid rgba(122,50,199,.3);
+            border-radius:1rem; padding:1rem 1.25rem;
+            display:flex; align-items:center; gap:.75rem;
+            box-shadow:0 20px 60px rgba(13,7,20,.6);
+        }
+        .scan-line-wrap { position:absolute; inset:0; overflow:hidden; border-radius:2rem; pointer-events:none; }
+        .scan-line {
+            position:absolute; left:0; width:100%; height:80px;
+            background:linear-gradient(to bottom,transparent,rgba(122,50,199,.06),transparent);
+            animation:scan-line 4s linear infinite;
+        }
+        @media (max-width:1024px) { .visual-wrapper { height:400px; } }
+        @media (max-width:768px)  { .visual-wrapper { height:320px; } }
+
+        /* ── Ebook mockup + alpha-masked glow ── */
+        .ebook-mockup-wrap {
+            position:relative;
+            height:88%;
+            display:inline-block; /* shrinks to exact image dimensions */
+            flex-shrink:0;
+        }
+        .ebook-mockup-img {
+            height:100%; width:auto;
+            max-width:480px;
+            display:block;
+            filter:
+                drop-shadow(0 0 40px rgba(122,50,199,.55))
+                drop-shadow(0 30px 60px rgba(13,7,20,.85));
+        }
+        /* Light shimmer — mask-size 100% 100% aligns 1:1 with the rendered image */
+        .ebook-light-overlay {
+            position:absolute; inset:0;
+            background:linear-gradient(
+                135deg,
+                rgba(225,212,251,.22) 0%,
+                transparent            45%,
+                rgba(157,120,233,.14) 72%,
+                rgba(122,50,199,.10)  100%
+            );
+            -webkit-mask-image: url('assets/mockup 01.webp');
+                    mask-image: url('assets/mockup 01.webp');
+            /* 100% 100% = stretch mask to cover the exact div area = image area */
+            -webkit-mask-size: 100% 100%;
+                    mask-size: 100% 100%;
+            -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+            pointer-events:none;
+        }
+
+        /* ════════════════════════════════════════════════════════
+           § 2  PROBLEMA
+        ════════════════════════════════════════════════════════ */
+        .col-card {
+            border-radius:1.5rem; padding:2.5rem 2rem; border:1px solid;
+            position:relative; overflow:hidden;
+            transition:transform .3s,box-shadow .3s;
+        }
+        .col-card:hover { transform:translateY(-4px); }
+        .col-ideal {
+            background:rgba(35,20,49,.55); border-color:rgba(77,255,180,.2);
+            box-shadow:0 0 60px rgba(77,255,180,.04),inset 0 1px 0 rgba(77,255,180,.1);
+        }
+        .col-ideal:hover { box-shadow:0 20px 60px rgba(77,255,180,.08),inset 0 1px 0 rgba(77,255,180,.15); }
+        .col-reality {
+            background:rgba(20,10,28,.7); border-color:var(--red-border);
+            box-shadow:0 0 60px rgba(255,77,77,.04),inset 0 1px 0 rgba(255,77,77,.08);
+        }
+        .col-reality:hover { box-shadow:0 20px 60px rgba(255,77,77,.08),inset 0 1px 0 rgba(255,77,77,.12); }
+        .col-ideal::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:160px;
+            background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(77,255,180,.1) 0%,transparent 70%); pointer-events:none;
+        }
+        .col-reality::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:160px;
+            background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(255,77,77,.08) 0%,transparent 70%); pointer-events:none;
+        }
+        .item-row {
+            display:flex; align-items:flex-start; gap:1rem;
+            padding:1.1rem 1.25rem; border-radius:.875rem;
+            border:1px solid transparent;
+            transition:background .25s,border-color .25s;
+            position:relative; overflow:hidden;
+        }
+        .item-ideal { background:var(--green-muted); border-color:rgba(77,255,180,.12); }
+        .item-ideal:hover { background:rgba(77,255,180,.1); border-color:rgba(77,255,180,.22); }
+        .item-reality { background:var(--red-muted); border-color:var(--red-border); }
+        .item-reality:hover { background:rgba(255,77,77,.12); border-color:rgba(255,77,77,.28); }
+        .icon-badge {
+            width:34px; height:34px; border-radius:.6rem;
+            display:flex; align-items:center; justify-content:center;
+            flex-shrink:0; margin-top:1px;
+        }
+        .icon-badge-ideal   { background:rgba(77,255,180,.12); border:1px solid rgba(77,255,180,.25); color:var(--green-dim); }
+        .icon-badge-reality { background:rgba(255,77,77,.1);   border:1px solid rgba(255,77,77,.25);  color:#FF7A7A; }
+        .vs-badge {
+            width:52px; height:52px; border-radius:50%;
+            display:flex; align-items:center; justify-content:center;
+            font-family:'Geist',sans-serif; font-size:1rem; font-weight:800;
+            letter-spacing:.05em;
+            background:linear-gradient(135deg,#7A32C7,#9D78E9);
+            border:3px solid rgba(13,7,20,1);
+            box-shadow:0 0 0 1px rgba(122,50,199,.5),0 0 24px rgba(122,50,199,.6);
+            animation:pulseGlow 2.5s infinite; color:#fff; flex-shrink:0;
+        }
+        .stat-bar-wrap {
+            flex:1; height:6px; border-radius:99px;
+            background:rgba(61,43,74,.5); overflow:hidden; position:relative;
+        }
+        .stat-bar-fill { height:100%; border-radius:99px; transition:width 1.2s cubic-bezier(.16,1,.3,1); }
+        .stat-ideal  { background:linear-gradient(90deg,#4DFFB4,rgba(77,255,180,.5)); box-shadow:0 0 8px rgba(77,255,180,.5); }
+        .stat-reality{ background:linear-gradient(90deg,#FF4D4D,rgba(255,77,77,.4));  box-shadow:0 0 8px rgba(255,77,77,.4); }
+        .tension-bar {
+            border-radius:1.25rem; padding:1.5rem 2rem;
+            background:rgba(35,20,49,.6);
+            border:1px solid rgba(122,50,199,.2);
+            backdrop-filter:blur(12px);
+            position:relative; overflow:hidden;
+        }
+        .tension-bar::before {
+            content:''; position:absolute; top:0; left:0; width:100%; height:2px;
+            background:linear-gradient(90deg,var(--primary),var(--secondary));
+        }
+
+        /* ════════════════════════════════════════════════════════
+           § 3  SOLUÇÃO
+        ════════════════════════════════════════════════════════ */
+        .fw-card {
+            border-radius:1.5rem; border:1px solid rgba(61,43,74,.7);
+            background:rgba(35,20,49,.5); padding:2.25rem 2rem;
+            position:relative; overflow:hidden;
+            display:flex; flex-direction:column; gap:1.5rem;
+            transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s;
+            cursor:default;
+        }
+        .fw-card:hover {
+            transform:translateY(-6px); border-color:rgba(122,50,199,.45);
+            box-shadow:0 30px 80px -10px rgba(13,7,20,.7),0 0 40px rgba(122,50,199,.12),inset 0 1px 0 rgba(157,120,233,.15);
+        }
+        .fw-card-featured {
+            border-color:rgba(122,50,199,.5);
+            background:linear-gradient(160deg,rgba(61,27,100,.55),rgba(35,20,49,.6));
+            box-shadow:0 0 60px rgba(122,50,199,.15),inset 0 1px 0 rgba(157,120,233,.2);
+        }
+        .fw-card-featured:hover {
+            border-color:rgba(157,120,233,.65);
+            box-shadow:0 30px 80px -10px rgba(13,7,20,.8),0 0 50px rgba(122,50,199,.25),inset 0 1px 0 rgba(157,120,233,.25);
+        }
+        .fw-card::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:180px;
+            background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(122,50,199,.13) 0%,transparent 70%);
+            pointer-events:none;
+        }
+        .fw-card-featured::before {
+            background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(122,50,199,.22) 0%,transparent 70%);
+        }
+        .card-beam {
+            position:absolute; top:0; left:0; right:0; height:2px;
+            animation:beam .8s cubic-bezier(.16,1,.3,1) forwards; opacity:0;
+        }
+        .beam-1 { background:linear-gradient(90deg,transparent,rgba(122,50,199,.6),transparent); animation-delay:.1s; }
+        .beam-2 { background:linear-gradient(90deg,transparent,var(--secondary),transparent);   animation-delay:.2s; }
+        .beam-3 { background:linear-gradient(90deg,transparent,rgba(122,50,199,.5),transparent); animation-delay:.3s; }
+        .card-icon {
+            width:52px; height:52px; border-radius:.875rem;
+            display:flex; align-items:center; justify-content:center;
+            position:relative; flex-shrink:0;
+        }
+        .card-icon-1 { background:rgba(122,50,199,.15); border:1px solid rgba(122,50,199,.3); }
+        .card-icon-2 { background:rgba(157,120,233,.18); border:1px solid rgba(157,120,233,.35); }
+        .card-icon-3 { background:rgba(122,50,199,.12); border:1px solid rgba(122,50,199,.25); }
+        .fw-card-featured .card-icon { box-shadow:0 0 20px rgba(122,50,199,.35); }
+        .card-num {
+            font-family:'Geist',sans-serif; font-size:.65rem; font-weight:700;
+            letter-spacing:.18em; text-transform:uppercase; color:rgba(157,120,233,.4);
+        }
+        .connector { width:32px; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+        .connector-line {
+            width:100%; height:1px;
+            background:linear-gradient(90deg,rgba(122,50,199,.35),rgba(157,120,233,.5),rgba(122,50,199,.35));
+            position:relative;
+        }
+        .connector-arrow {
+            position:absolute; right:-4px; top:-3px;
+            width:7px; height:7px; border-radius:50%;
+            background:var(--secondary); box-shadow:0 0 8px rgba(157,120,233,.7);
+        }
+        .authority-strip {
+            border-radius:1.25rem; padding:1.5rem 2rem;
+            background:rgba(35,20,49,.55); border:1px solid rgba(61,43,74,.7);
+            backdrop-filter:blur(12px); position:relative; overflow:hidden;
+        }
+        .authority-strip::before {
+            content:''; position:absolute; top:0; left:0; width:100%; height:2px;
+            background:linear-gradient(90deg,var(--primary),var(--secondary),rgba(225,212,251,.4));
+        }
+        .stat-pill {
+            display:inline-flex; align-items:center; gap:.6rem;
+            background:rgba(122,50,199,.12); border:1px solid rgba(122,50,199,.25);
+            border-radius:.75rem; padding:.75rem 1.25rem;
+        }
+
+        /* ════════════════════════════════════════════════════════
+           § 4  FUNDADOR
+        ════════════════════════════════════════════════════════ */
+        .portrait-outer { position:relative; width:100%; max-width:360px; margin:0 auto; }
+        .portrait-glow-ring {
+            position:absolute; inset:-20px; border-radius:50%;
+            background:radial-gradient(circle,rgba(122,50,199,.25) 0%,transparent 70%);
+            filter:blur(30px);
+            animation:orbFloat 6s ease-in-out infinite;
+            pointer-events:none; z-index:0;
+        }
+        .portrait-frame {
+            position:relative; z-index:1;
+            border-radius:1.75rem; overflow:hidden;
+            border:1px solid rgba(122,50,199,.35);
+            animation:portraitGlow 5s ease-in-out infinite;
+            aspect-ratio:3/4;
+            background:linear-gradient(160deg,#1e0d33,#0d0714);
+        }
+        .portrait-scan {
+            position:absolute; left:0; right:0; height:60px;
+            background:linear-gradient(to bottom,transparent,rgba(122,50,199,.07),transparent);
+            animation:scanLine 5s linear infinite;
+            pointer-events:none; z-index:3;
+        }
+        .corner {
+            position:absolute; width:20px; height:20px;
+            border-color:rgba(157,120,233,.5); border-style:solid; z-index:4;
+        }
+        .corner-tl { top:12px; left:12px;   border-width:2px 0 0 2px; border-radius:4px 0 0 0; }
+        .corner-tr { top:12px; right:12px;  border-width:2px 2px 0 0; border-radius:0 4px 0 0; }
+        .corner-bl { bottom:12px; left:12px;  border-width:0 0 2px 2px; border-radius:0 0 0 4px; }
+        .corner-br { bottom:12px; right:12px; border-width:0 2px 2px 0; border-radius:0 0 4px 0; }
+        .portrait-ph {
+            width:100%; height:100%;
+            display:flex; flex-direction:column;
+            align-items:center; justify-content:flex-end;
+            position:relative; overflow:hidden;
+        }
+        .portrait-silhouette {
+            position:absolute; bottom:0; left:50%; transform:translateX(-50%);
+            width:75%; opacity:.18;
+        }
+        .portrait-burst {
+            position:absolute; bottom:-30%; left:50%; transform:translateX(-50%);
+            width:120%; aspect-ratio:1;
+            background:radial-gradient(circle,rgba(122,50,199,.45) 0%,transparent 65%);
+            filter:blur(24px);
+        }
+        .portrait-fade {
+            position:absolute; top:0; left:0; right:0; height:45%;
+            background:linear-gradient(to bottom,#0d0714,transparent); z-index:2;
+        }
+        .portrait-fade-bottom {
+            position:absolute; bottom:0; left:0; right:0; height:35%;
+            background:linear-gradient(to top,rgba(13,7,20,.9),transparent); z-index:2;
+        }
+        .photo-hint {
+            position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+            z-index:10; text-align:center;
+            background:rgba(13,7,20,.85); border:1px dashed rgba(122,50,199,.4);
+            border-radius:.75rem; padding:1rem 1.5rem;
+            font-family:'Geist',sans-serif; max-width:200px;
+        }
+        .name-card {
+            margin-top:1.25rem; padding:1.1rem 1.5rem; border-radius:1rem;
+            background:rgba(35,20,49,.7); border:1px solid rgba(61,43,74,.8);
+            backdrop-filter:blur(12px);
+            display:flex; align-items:center; justify-content:space-between; gap:1rem;
+        }
+        .cred-badge {
+            display:inline-flex; align-items:center; gap:.45rem;
+            background:rgba(122,50,199,.1); border:1px solid rgba(122,50,199,.25);
+            border-radius:.6rem; padding:.45rem .9rem;
+            font-family:'Geist',sans-serif; font-size:.72rem; font-weight:600;
+            color:var(--secondary);
+        }
+        .founder-quote {
+            position:relative; padding:1.5rem 1.75rem; border-radius:1.1rem;
+            background:rgba(35,20,49,.5); border:1px solid rgba(61,43,74,.7);
+            border-left:3px solid var(--primary);
+        }
+        .founder-quote::before {
+            content:'\201C';
+            position:absolute; top:-8px; left:16px;
+            font-size:4rem; line-height:1;
+            color:rgba(122,50,199,.3); font-family:Georgia,serif;
+        }
+        .support-card {
+            padding:1.5rem 1.75rem; border-radius:1.1rem;
+            background:rgba(122,50,199,.07); border:1px solid rgba(122,50,199,.2);
+            position:relative; overflow:hidden;
+        }
+        .support-card::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:2px;
+            background:linear-gradient(90deg,var(--primary),var(--secondary),rgba(225,212,251,.4));
+        }
+        .stat-block {
+            text-align:center; padding:1.25rem 1rem; border-radius:.875rem;
+            background:rgba(35,20,49,.5); border:1px solid rgba(61,43,74,.7);
+            transition:border-color .25s,background .25s;
+        }
+        .stat-block:hover { border-color:rgba(122,50,199,.4); background:rgba(35,20,49,.7); }
+
+        /* ════════════════════════════════════════════════════════
+           § 5  CTA FINAL
+        ════════════════════════════════════════════════════════ */
+        .cta-outer-section { position:relative; overflow:hidden; }
+        .cta-bg-gradient {
+            position:absolute; inset:0; z-index:0;
+            background:
+                radial-gradient(ellipse 90% 60% at 50% 0%,rgba(122,50,199,.22) 0%,transparent 65%),
+                radial-gradient(ellipse 70% 50% at 50% 100%,rgba(122,50,199,.12) 0%,transparent 65%),
+                linear-gradient(180deg,#0d0714 0%,#130920 40%,#0d0714 100%);
+        }
+        .cta-ring-spin {
+            position:absolute; top:50%; left:50%;
+            width:700px; height:700px;
+            transform:translate(-50%,-50%);
+            border-radius:50%;
+            background:conic-gradient(
+                from 0deg,
+                transparent 0%,rgba(122,50,199,.07) 20%,rgba(157,120,233,.04) 40%,
+                transparent 60%,rgba(122,50,199,.06) 80%,transparent 100%
+            );
+            animation:rotateBeam 18s linear infinite;
+            pointer-events:none; z-index:0;
+        }
+        .cta-card {
+            position:relative; z-index:10;
+            max-width:740px; width:100%; margin:0 auto;
+            padding:4rem 3rem; border-radius:2rem;
+            background:rgba(35,20,49,.55); border:1px solid rgba(122,50,199,.35);
+            backdrop-filter:blur(20px);
+            box-shadow:0 0 0 1px rgba(157,120,233,.1),0 40px 100px -20px rgba(13,7,20,.9),0 0 80px rgba(122,50,199,.12),inset 0 1px 0 rgba(157,120,233,.15);
+            text-align:center;
+        }
+        .cta-card::before {
+            content:'';
+            position:absolute; top:0; left:10%; right:10%; height:2px;
+            background:linear-gradient(90deg,transparent,var(--secondary),var(--accent),var(--secondary),transparent);
+            border-radius:9999px; animation:shimmer 3s linear infinite; background-size:200%;
+        }
+        .cta-btn {
+            position:relative;
+            display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+            padding:1.1rem 2.75rem; border-radius:9999px;
+            font-family:'Geist',sans-serif; font-size:1rem; font-weight:700;
+            color:#fff; text-decoration:none; border:none; outline:none; cursor:pointer;
+            transition:transform .2s cubic-bezier(.16,1,.3,1),filter .2s; z-index:1;
+        }
+        .cta-btn::before {
+            content:''; position:absolute; inset:0; border-radius:inherit;
+            background:linear-gradient(135deg,#7A32C7,#9D78E9,#7A32C7);
+            background-size:200%; animation:shimmer 2.8s linear infinite;
+        }
+        .cta-btn::after {
+            content:''; position:absolute; inset:0; border-radius:inherit;
+            box-shadow:0 0 0 1px rgba(157,120,233,.6),0 0 40px rgba(122,50,199,.65),0 8px 30px rgba(13,7,20,.5);
+            pointer-events:none;
+        }
+        .cta-btn span { position:relative; z-index:1; display:flex; align-items:center; gap:.55rem; }
+        .cta-btn:hover  { transform:scale(1.05); filter:brightness(1.12); }
+        .cta-btn:active { transform:scale(.97); }
+        .cta-btn-wrap { position:relative; display:inline-flex; }
+        .pulse-ring {
+            position:absolute; inset:-4px; border-radius:9999px;
+            border:1.5px solid rgba(157,120,233,.4);
+            animation:pulseRing 2.4s cubic-bezier(.16,1,.3,1) infinite;
+            pointer-events:none;
+        }
+        .pulse-ring:nth-child(2) { animation-delay:.8s; }
+        .pulse-ring:nth-child(3) { animation-delay:1.6s; }
+        .cta-btn-glow {
+            position:absolute; bottom:-20px; left:50%; transform:translateX(-50%);
+            width:70%; height:28px; background:rgba(157,120,233,.4);
+            border-radius:50%; filter:blur(16px); pointer-events:none; z-index:0;
+        }
+        .trust-pill {
+            display:inline-flex; align-items:center; gap:.45rem;
+            padding:.5rem 1.1rem; border-radius:9999px;
+            font-family:'Geist',sans-serif; font-size:.75rem; font-weight:600;
+            background:rgba(35,20,49,.7); border:1px solid rgba(61,43,74,.8);
+            color:rgba(157,120,233,.75);
+            transition:border-color .2s,color .2s;
+        }
+        .trust-pill:hover { border-color:rgba(122,50,199,.5); color:#E1D4FB; }
+        .stat-mini {
+            padding:.9rem 1.25rem; border-radius:.875rem;
+            background:rgba(122,50,199,.08); border:1px solid rgba(122,50,199,.18);
+            text-align:center; transition:background .25s,border-color .25s;
+        }
+        .stat-mini:hover { background:rgba(122,50,199,.14); border-color:rgba(122,50,199,.35); }
+        .headline-underline { position:relative; display:inline-block; }
+        .headline-underline::after {
+            content:''; position:absolute; bottom:-4px; left:0; right:0; height:2px;
+            background:linear-gradient(90deg,var(--primary),var(--secondary));
+            border-radius:9999px; animation:shimmer 3s linear infinite; background-size:200%;
+        }
+
+        /* ════════════════════════════════════════════════════════
+           § 6  FAQ
+        ════════════════════════════════════════════════════════ */
+        .faq-item {
+            border-radius:1rem; border:1px solid rgba(61,43,74,.7);
+            background:rgba(35,20,49,.45); overflow:hidden;
+            transition:border-color .25s,background .25s,box-shadow .25s;
+        }
+        .faq-item:hover { border-color:rgba(122,50,199,.3); }
+        .faq-item.open {
+            border-color:rgba(122,50,199,.5); background:rgba(35,20,49,.65);
+            box-shadow:0 0 30px rgba(122,50,199,.1),inset 0 1px 0 rgba(157,120,233,.12);
+        }
+        .faq-item.open::before {
+            content:''; display:block; height:2px;
+            background:linear-gradient(90deg,var(--primary),var(--secondary),rgba(225,212,251,.4));
+            animation:shimmer 3s linear infinite; background-size:200%;
+        }
+        .faq-question {
+            width:100%; display:flex; align-items:center;
+            justify-content:space-between; gap:1.5rem;
+            padding:1.5rem 1.75rem;
+            cursor:pointer; border:none; outline:none;
+            background:transparent; text-align:left;
+            transition:background .2s;
+        }
+        .faq-question:hover { background:rgba(122,50,199,.04); }
+        .faq-question-text {
+            font-family:'Plus Jakarta Sans',sans-serif; font-size:1rem; font-weight:700;
+            color:#fff; line-height:1.4; transition:color .2s;
+        }
+        .faq-item.open .faq-question-text { color:var(--accent); }
+        .faq-toggle {
+            width:32px; height:32px; border-radius:.5rem;
+            flex-shrink:0; display:flex; align-items:center; justify-content:center;
+            border:1px solid rgba(61,43,74,.8); background:rgba(35,20,49,.6);
+            transition:background .25s,border-color .25s,transform .35s cubic-bezier(.16,1,.3,1);
+        }
+        .faq-item.open .faq-toggle {
+            background:rgba(122,50,199,.2); border-color:rgba(122,50,199,.45);
+            transform:rotate(45deg);
+        }
+        .faq-toggle iconify-icon { font-size:1rem; color:var(--secondary); transition:color .2s; }
+        .faq-item.open .faq-toggle iconify-icon { color:var(--accent); }
+        .faq-answer {
+            max-height:0; overflow:hidden;
+            transition:max-height .45s cubic-bezier(.16,1,.3,1),opacity .35s;
+            opacity:0;
+        }
+        .faq-item.open .faq-answer { max-height:400px; opacity:1; }
+        .faq-answer-inner { padding:0 1.75rem 1.75rem; animation:slideDown .35s cubic-bezier(.16,1,.3,1); }
+        .faq-answer-text {
+            font-family:'Plus Jakarta Sans',sans-serif;
+            font-size:.95rem; font-weight:400;
+            color:rgba(157,120,233,.75); line-height:1.7;
+            border-left:2px solid rgba(122,50,199,.35); padding-left:1rem;
+        }
+        .faq-num {
+            font-family:'Geist',sans-serif; font-size:.62rem; font-weight:700;
+            letter-spacing:.14em; text-transform:uppercase;
+            color:rgba(122,50,199,.5); flex-shrink:0; margin-right:.25rem; line-height:1;
+        }
+        .faq-cta-strip {
+            border-radius:1.25rem; padding:1.75rem 2rem;
+            background:rgba(35,20,49,.55); border:1px solid rgba(122,50,199,.25);
+            backdrop-filter:blur(12px); position:relative; overflow:hidden;
+        }
+        .faq-cta-strip::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:2px;
+            background:linear-gradient(90deg,var(--primary),var(--secondary),rgba(225,212,251,.4));
+            animation:shimmer 3s linear infinite; background-size:200%;
+        }
+        .faq-cta-btn {
+            display:inline-flex; align-items:center; gap:.45rem;
+            padding:.85rem 2rem; border-radius:9999px;
+            font-family:'Geist',sans-serif; font-size:.875rem; font-weight:700; color:#fff;
+            text-decoration:none; border:none; cursor:pointer;
+            transition:transform .2s,filter .2s; position:relative; flex-shrink:0;
+        }
+        .faq-cta-btn::before {
+            content:''; position:absolute; inset:0; border-radius:inherit;
+            background:linear-gradient(135deg,#7A32C7,#9D78E9); background-size:200%;
+        }
+        .faq-cta-btn::after {
+            content:''; position:absolute; inset:0; border-radius:inherit;
+            box-shadow:0 0 0 1px rgba(157,120,233,.5),0 0 20px rgba(122,50,199,.45);
+        }
+        .faq-cta-btn span { position:relative; z-index:1; display:flex; align-items:center; gap:.45rem; }
+        .faq-cta-btn:hover { transform:scale(1.04); filter:brightness(1.1); }
+
+        /* ════════════════════════════════════════════════════════
+           ■ PREMIUM REFINEMENTS
+        ════════════════════════════════════════════════════════ */
+
+        /* Page enter */
+        @keyframes pageIn { from{opacity:0} to{opacity:1} }
+        body { animation:pageIn .6s ease both; }
+
+        /* Branded scrollbar */
+        ::-webkit-scrollbar { width:5px; }
+        ::-webkit-scrollbar-track { background:var(--bg); }
+        ::-webkit-scrollbar-thumb {
+            background:linear-gradient(180deg,var(--primary),var(--secondary));
+            border-radius:3px;
+        }
+        * { scrollbar-width:thin; scrollbar-color:var(--primary) var(--bg); }
+
+        /* Text selection */
+        ::selection { background:rgba(122,50,199,.4); color:#fff; }
+
+        /* ─ Avatar ring hover lift ─ */
+        .avatar-ring {
+            transition:transform .22s cubic-bezier(.16,1,.3,1), box-shadow .22s;
+        }
+        .avatar-ring:hover {
+            transform:translateY(-4px) scale(1.08);
+            box-shadow:0 8px 20px rgba(122,50,199,.35);
+            z-index:5;
+        }
+
+        /* ─ Card shimmer sweep on hover ─ */
+        @keyframes sweepShimmer {
+            0%   { left:-80%; }
+            100% { left:160%; }
+        }
+        .fw-card, .col-card {
+            overflow:hidden;
+        }
+        .fw-card::after, .col-card::after {
+            content:'';
+            position:absolute; top:0; left:-80%;
+            width:50%; height:100%;
+            background:linear-gradient(90deg,transparent,rgba(157,120,233,.07),transparent);
+            transform:skewX(-15deg);
+            pointer-events:none;
+            opacity:0;
+            transition:opacity .1s;
+        }
+        .fw-card:hover::after, .col-card:hover::after {
+            opacity:1;
+            animation:sweepShimmer .75s cubic-bezier(.16,1,.3,1) forwards;
+        }
+
+        /* ─ CTA floating particles ─ */
+        @keyframes particleRise {
+            0%   { transform:translateY(0) scale(1);   opacity:0; }
+            15% { opacity:.7; }
+            85%  { opacity:.4; }
+            100% { transform:translateY(-110px) scale(.4); opacity:0; }
+        }
+        .cta-particle {
+            position:absolute;
+            width:4px; height:4px;
+            border-radius:50%;
+            background:rgba(157,120,233,.55);
+            pointer-events:none; z-index:1;
+            animation:particleRise var(--dur,5s) ease-in var(--delay,0s) infinite;
+        }
+
+        /* ─ Metric card subtle hover ─ */
+        .metric-card {
+            transition:transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s;
+        }
+        .metric-card:hover {
+            transform:translateY(-4px) scale(1.03);
+            box-shadow:0 20px 50px rgba(122,50,199,.25), 0 0 0 1px rgba(157,120,233,.25);
+        }
+
+        /* ─ Stat block count-up glow ─ */
+        .stat-block.counted {
+            border-color:rgba(122,50,199,.45);
+            background:rgba(35,20,49,.7);
+        }
+        .stat-block.counted .stat-num {
+            animation:pulseGlow .4s ease both;
+        }
+
+        /* ─ Reveal stagger classes (for JS) ─ */
+        .reveal-child { opacity:0; transform:translateY(18px); transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+        .reveal-child.in { opacity:1; transform:none; }
+
+        /* ─ Section gradient spacers enhanced ─ */
+        .h-divider {
+            height:1px;
+            background:linear-gradient(90deg,transparent,rgba(122,50,199,.3),rgba(157,120,233,.2),rgba(122,50,199,.3),transparent);
+            position:relative;
+        }
+        .h-divider::after {
+            content:'';
+            position:absolute; top:-12px; left:50%; transform:translateX(-50%);
+            width:120px; height:24px;
+            background:radial-gradient(ellipse,rgba(122,50,199,.15) 0%,transparent 70%);
+            pointer-events:none;
+        }
+
+        /* ─ Smooth image loading ─ */
+        img { transition:opacity .4s ease; }
+        img[loading='lazy'] { opacity:0; }
+        img.loaded { opacity:1; }
+
+        /* ═══════════════════════════════════════════════════════
+            LEAD POPUP (NÃO MODAL)
+        ═══════════════════════════════════════════════════════ */
+        .lp-wrapper {
+            position:relative;
+            width:calc(100% - 2rem); max-width:520px;
+            max-height:90vh; overflow-y:auto;
+            z-index:9999;
+            transform:scale(0.94);
+            opacity:0;
+            transition:transform .35s cubic-bezier(.16,1,.3,1), opacity .3s cubic-bezier(.16,1,.3,1);
+            border-radius:1.75rem;
+        }
+        .lp-overlay-click.lp-visible .lp-wrapper {
+            transform:scale(1);
+            opacity:1;
+        }
+        @keyframes lpCardIn {
+            from { opacity:0; transform:scale(.96); }
+            to   { opacity:1; transform:scale(1); }
+        }
+        .lp-card {
+            position:relative;
+            background:rgba(22,11,38,.95);
+            border:1px solid rgba(122,50,199,.4);
+            border-radius:1.75rem;
+            padding:2.25rem 1.75rem;
+            box-shadow:
+                0 0 0 1px rgba(157,120,233,.1),
+                0 20px 60px rgba(13,7,20,.85),
+                0 0 50px rgba(122,50,199,.15),
+                inset 0 1px 0 rgba(157,120,233,.12);
+            animation:lpCardIn .4s cubic-bezier(.16,1,.3,1) both;
+        }
+        .lp-card::before {
+            content:'';
+            position:absolute; top:0; left:10%; right:10%; height:2px;
+            background:linear-gradient(90deg,transparent,#9D78E9,#E1D4FB,#9D78E9,transparent);
+            border-radius:9999px;
+            animation:shimmer 3s linear infinite; background-size:200%;
+        }
+        .lp-close {
+            position:absolute; top:1rem; right:1rem;
+            width:30px; height:30px; border-radius:.5rem;
+            display:flex; align-items:center; justify-content:center;
+            background:rgba(61,43,74,.6); border:1px solid rgba(61,43,74,.9);
+            color:rgba(157,120,233,.7); cursor:pointer;
+            transition:background .2s,color .2s,border-color .2s;
+            flex-shrink:0;
+        }
+        .lp-close:hover { background:rgba(122,50,199,.2); border-color:rgba(122,50,199,.5); color:#E1D4FB; }
+        .lp-header { text-align:center; margin-bottom:1.5rem; }
+        .lp-badge {
+            display:inline-flex; align-items:center; gap:.4rem;
+            background:rgba(122,50,199,.15); border:1px solid rgba(122,50,199,.35);
+            border-radius:9999px; padding:.3rem .9rem;
+            font-family:'Geist',sans-serif; font-size:.65rem; font-weight:700;
+            letter-spacing:.12em; text-transform:uppercase;
+            color:#E1D4FB; margin-bottom:.85rem;
+        }
+        .lp-title {
+            font-family:'Plus Jakarta Sans',sans-serif;
+            font-size:1.65rem; font-weight:800;
+            color:#fff; line-height:1.15; margin-bottom:.5rem;
+            letter-spacing:-.02em;
+        }
+        .lp-desc {
+            font-family:'Inter',sans-serif;
+            font-size:.9rem; color:rgba(157,120,233,.75); line-height:1.55;
+        }
+        .lp-form { display:flex; flex-direction:column; gap:.9rem; }
+        .lp-row { display:grid; grid-template-columns:1fr 1fr; gap:.85rem; }
+        @media(max-width:480px) { .lp-row { grid-template-columns:1fr; } }
+        .lp-field { display:flex; flex-direction:column; gap:.4rem; }
+        .lp-label {
+            font-family:'Geist',sans-serif;
+            font-size:.68rem; font-weight:600;
+            letter-spacing:.08em; text-transform:uppercase;
+            color:rgba(157,120,233,.65);
+        }
+        .lp-req { color:rgba(255,100,100,.8); }
+        .lp-input {
+            width:100%;
+            background:rgba(35,20,49,.6);
+            border:1px solid rgba(61,43,74,.9);
+            border-radius:.7rem;
+            padding:.7rem .9rem;
+            font-family:'Inter',sans-serif;
+            font-size:.85rem; color:#fff;
+            outline:none;
+            transition:border-color .2s, box-shadow .2s, background .2s;
+            -webkit-appearance:none; appearance:none;
+        }
+        .lp-input::placeholder { color:rgba(157,120,233,.35); }
+        .lp-input:focus {
+            border-color:rgba(122,50,199,.7);
+            background:rgba(35,20,49,.85);
+            box-shadow:0 0 0 3px rgba(122,50,199,.15);
+        }
+        .lp-select { cursor:pointer; }
+        .lp-select option { background:#231431; color:#fff; }
+        .lp-submit {
+            position:relative; width:100%;
+            padding:.95rem 1.75rem; border-radius:9999px;
+            font-family:'Geist',sans-serif;
+            font-size:.95rem; font-weight:700; color:#fff;
+            border:none; cursor:pointer; margin-top:.4rem;
+            transition:transform .2s cubic-bezier(.16,1,.3,1), filter .2s;
+            overflow:hidden;
+        }
+        .lp-submit::before {
+            content:'';
+            position:absolute; inset:0; border-radius:inherit;
+            background:linear-gradient(135deg,#7A32C7,#9D78E9,#7A32C7);
+            background-size:200%; animation:shimmer 2.8s linear infinite;
+        }
+        .lp-submit::after {
+            content:''; position:absolute; inset:0; border-radius:inherit;
+            box-shadow:0 0 0 1px rgba(157,120,233,.6),0 0 25px rgba(122,50,199,.5);
+            pointer-events:none;
+        }
+        .lp-submit span { position:relative; z-index:1; }
+        .lp-submit:hover  { transform:scale(1.02); filter:brightness(1.1); }
+        .lp-submit:active { transform:scale(.98); }
+        .lp-success {
+            display:none;
+            text-align:center;
+            padding:1.25rem .85rem;
+            animation:fadeIn .5s ease both;
+        }
+        .lp-success-text {
+            font-family:'Plus Jakarta Sans',sans-serif;
+            font-size:1rem; font-weight:700; color:#4DFFB4;
+        }
+        .lp-footer {
+            display:flex; align-items:center; justify-content:center; gap:.45rem;
+            margin-top:1.25rem;
+            font-family:'Geist',sans-serif;
+            font-size:.68rem; color:rgba(157,120,233,.45);
+            letter-spacing:.06em;
+        }
+        .lp-overlay-click {
+            position:fixed;
+            top:0; left:0; right:0; bottom:0;
+            width:100vw; height:100vh;
+            z-index:9998;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:1rem;
+            background:rgba(13,7,20,0.85);
+            backdrop-filter:blur(6px);
+            -webkit-backdrop-filter:blur(6px);
+            opacity:0;
+            visibility:hidden;
+            pointer-events:none;
+            transition:opacity .3s ease, visibility .3s ease;
+        }
+        .lp-overlay-click.lp-visible {
+            opacity:1;
+            visibility:visible;
+            pointer-events:auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════════
+     § 1 — HERO
+════════════════════════════════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-center overflow-hidden" id="inicio">
+
+    <!-- Hero BG Image -->
+    <div class="absolute inset-0 z-0 pointer-events-none" style="
+        background-image: url('https://gruporugido.com/wp-content/uploads/2026/04/Group-56.webp');
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        opacity: 0.32;
+        mix-blend-mode: luminosity;
+    "></div>
+
+    <!-- Dark vignette over the image to keep edges dark -->
+    <div class="absolute inset-0 z-0 pointer-events-none" style="
+        background: radial-gradient(ellipse 100% 100% at 50% 50%, transparent 30%, rgba(13,7,20,0.85) 80%);
+    "></div>
+
+    <!-- Ambient background -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <div class="absolute inset-0" style="background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(122,50,199,.18) 0%,transparent 60%);"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-64" style="background:radial-gradient(ellipse 100% 80% at 50% 100%,rgba(122,50,199,.08) 0%,transparent 70%);"></div>
+        <div class="absolute top-1/4 right-0 w-[600px] h-[600px] opacity-30" style="background:radial-gradient(circle,rgba(122,50,199,.35) 0%,transparent 70%);filter:blur(40px);"></div>
+        <div class="absolute top-1/3 left-0 w-[300px] h-[300px] opacity-20" style="background:radial-gradient(circle,rgba(157,120,233,.3) 0%,transparent 70%);filter:blur(60px);"></div>
+    </div>
+
+    <!-- Grid -->
+    <div class="absolute inset-0 z-0 pointer-events-none" style="background-image:linear-gradient(rgba(157,120,233,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(157,120,233,.04) 1px,transparent 1px);background-size:4rem 4rem;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black,transparent);-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black,transparent);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-36 w-full">
+        <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-12">
+
+            <!-- LEFT -->
+            <div class="flex-1 lg:max-w-[52%] text-center lg:text-left">
+
+                <div class="anim-fade-up d100 flex justify-center lg:justify-start mb-8">
+                    <div class="tag-pill">
+                        <span>Playbook Gratuito</span>
+                        <span class="tag-dot"></span>
+                    </div>
+                </div>
+
+                <div class="anim-fade-up d200 mb-6">
+                    <p class="font-geist text-xs font-semibold uppercase tracking-[.18em] text-secondary/60 mb-3">Geração de Demanda Qualificada</p>
+                    <h1 class="font-jakarta font-bold leading-[1.0] tracking-tight">
+                        <span class="block text-4xl md:text-5xl lg:text-6xl headline-gradient">Transforme seu</span>
+                        <span class="block text-4xl md:text-5xl lg:text-6xl headline-gradient">Negócio em uma</span>
+                        <span class="block text-4xl md:text-5xl lg:text-6xl headline-accent">Máquina de Atração</span>
+                    </h1>
+                </div>
+
+                <div class="anim-fade-up d300 divider mb-8"></div>
+
+                <p class="anim-fade-up d300 font-jakarta text-lg md:text-xl leading-relaxed text-secondary/75 mb-10 max-w-xl mx-auto lg:mx-0">
+                    O Playbook de Geração de Demanda Qualificada da Rugido revela o sistema completo para construir uma máquina de captação que filtra curiosos e entrega ao seu comercial apenas quem tem perfil, recurso e urgência para comprar.
+                </p>
+
+                <div class="anim-fade-up d400 flex flex-col sm:flex-row items-center lg:items-start gap-5 justify-center lg:justify-start mb-10">
+                    <div class="relative">
+                        <a href="#" onclick="openLeadPopup();return false;" class="cta-primary" id="cta-primary-btn">
+                            <span class="flex items-center gap-2">
+                                Acessar o Playbook
+                                <iconify-icon icon="lucide:arrow-right" class="text-lg"></iconify-icon>
+                            </span>
+                        </a>
+                        <div class="cta-glow"></div>
+                    </div>
+                    <div class="hidden sm:block w-px h-10 bg-primary/20"></div>
+                    <div class="flex flex-col items-center sm:items-start gap-2">
+                        <div class="badge-free">
+                            <iconify-icon icon="lucide:lock-open" class="text-sm"></iconify-icon>
+                            100% gratuito
+                        </div>
+                        <a href="#" onclick="openLeadPopup();return false;" class="cta-secondary">
+                            Baixe Gratuitamente
+                            <iconify-icon icon="lucide:download" class="text-sm"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="anim-fade-up d500 flex flex-col sm:flex-row items-center lg:items-start gap-4 justify-center lg:justify-start">
+                    <div class="flex items-center">
+                        <div class="avatar-ring"><img src="https://gruporugido.com/wp-content/uploads/2026/04/c867b9fe-6a6a-4535-8e07-c8b4ed747cb1.jpg" alt="Cliente Rugido" class="w-full h-full object-cover rounded-full"></div>
+                        <div class="avatar-ring"><img src="https://gruporugido.com/wp-content/uploads/2026/04/e4c605a6-7463-47d9-82b7-778c47c7b7eb.jpg" alt="Cliente Rugido" class="w-full h-full object-cover rounded-full"></div>
+                        <div class="avatar-ring"><img src="https://gruporugido.com/wp-content/uploads/2026/04/eec6cf5b-00d3-4e60-adb2-1cb95f36a117.jpg" alt="Cliente Rugido" class="w-full h-full object-cover rounded-full"></div>
+                        <div class="avatar-ring" style="background:rgba(122,50,199,.2);border-color:rgba(122,50,199,.4);"><span class="avatar-initials" style="color:#E1D4FB;">+</span></div>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <p class="font-geist text-sm font-semibold text-white leading-snug">+R$50M gerados em faturamento</p>
+                        <p class="font-geist text-xs text-secondary/60 mt-0.5">Empresários confiam na Rugido</p>
+                    </div>
+                </div>
+
+            </div><!-- /LEFT -->
+
+            <!-- RIGHT -->
+            <div class="flex-1 lg:max-w-[48%] w-full anim-fade-in d300">
+                <div class="visual-wrapper">
+                    <div class="hero-grid-bg"></div>
+                    <div class="scan-line-wrap"><div class="scan-line"></div></div>
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <!-- Ebook mockup — glow follows alpha channel via mask-image -->
+                        <div class="ebook-mockup-wrap float-1">
+                            <img
+                                src="https://gruporugido.com/wp-content/uploads/2026/04/mockup-01.webp"
+                                alt="Playbook Rugido – Geração de Demanda Qualificada"
+                                class="ebook-mockup-img"
+                            >
+                            <!-- Gradient light masked to the visible pixels of the WebP -->
+                            <div class="ebook-light-overlay"></div>
+                        </div>
+                    </div>
+
+                    <!-- Floating metric cards -->
+                    <div class="metric-card float-1 z-20" style="top:8%;left:-2%;">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(122,50,199,.2);border:1px solid rgba(122,50,199,.3);">
+                            <iconify-icon icon="lucide:trending-up" style="font-size:1rem;color:#9D78E9;"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="font-geist text-[.65rem] text-secondary/50 uppercase tracking-wider">Faturamento</p>
+                            <p class="font-jakarta font-bold text-white text-sm">+R$50M</p>
+                        </div>
+                    </div>
+                    <div class="metric-card float-2 z-20" style="bottom:10%;right:-2%;">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(157,120,233,.15);border:1px solid rgba(157,120,233,.25);">
+                            <iconify-icon icon="lucide:users" style="font-size:1rem;color:#E1D4FB;"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="font-geist text-[.65rem] text-secondary/50 uppercase tracking-wider">Empresários</p>
+                            <p class="font-jakarta font-bold text-white text-sm">Confiam</p>
+                        </div>
+                    </div>
+                    <div class="metric-card float-3 z-20" style="top:22%;right:0%;">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(122,50,199,.15);border:1px solid rgba(122,50,199,.25);">
+                            <iconify-icon icon="lucide:zap" style="font-size:1rem;color:#9D78E9;"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="font-geist text-[.65rem] text-secondary/50 uppercase tracking-wider">Acesso</p>
+                            <p class="font-jakarta font-bold text-white text-sm">Imediato</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /RIGHT -->
+
+        </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-px z-10" style="background:linear-gradient(90deg,transparent,rgba(122,50,199,.25),transparent);"></div>
+</section>
+
+<div class="h-divider"></div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     § 2 — O PROBLEMA
+════════════════════════════════════════════════════════════════ -->
+<section class="relative py-28 lg:py-36 overflow-hidden" id="problema">
+
+    <div class="grid-bg"></div>
+    <div class="absolute pointer-events-none z-0" style="top:-10%;left:20%;width:500px;height:500px;background:radial-gradient(circle,rgba(122,50,199,.12) 0%,transparent 70%);filter:blur(50px);"></div>
+    <div class="absolute pointer-events-none z-0" style="bottom:-10%;right:15%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,77,77,.06) 0%,transparent 70%);filter:blur(60px);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="text-center mb-20">
+            <div class="reveal fade-up flex justify-center mb-6">
+                <div class="tag-pill">
+                    <iconify-icon icon="lucide:alert-triangle" style="font-size:.85rem;"></iconify-icon>
+                    O Problema
+                </div>
+            </div>
+            <h2 class="reveal fade-up d100 font-jakarta font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.0] mb-8">
+                <span class="headline-gradient">Volume</span>
+                <span style="color:rgba(61,43,74,.8);" class="mx-3 inline-block">vs.</span>
+                <span class="headline-gradient">Qualificação</span>
+            </h2>
+            <p class="reveal fade-up d200 font-jakarta text-lg md:text-xl text-secondary/70 leading-relaxed max-w-3xl mx-auto">
+                A maioria das empresas investe em tráfego e recebe volume. Mas
+                <span class="desc-highlight">volume sem qualificação é custo disfarçado de resultado.</span>
+                Enquanto você paga por cliques de curiosos, seu concorrente está atraindo decisores com dinheiro e urgência.
+                A diferença não é o orçamento.
+                <strong class="text-white font-semibold">É a comunicação.</strong>
+            </p>
+            <div class="reveal fade-up d300 flex items-center gap-6 max-w-lg mx-auto mt-12">
+                <div class="flex flex-col gap-1.5 flex-1 text-left">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-geist text-xs text-secondary/50 uppercase tracking-wider">Qualidade dos leads</span>
+                        <span class="font-geist text-xs font-bold" style="color:var(--green-dim);">Alta</span>
+                    </div>
+                    <div class="stat-bar-wrap"><div class="stat-bar-fill stat-ideal" style="width:85%;"></div></div>
+                </div>
+                <div class="vs-badge">VS</div>
+                <div class="flex flex-col gap-1.5 flex-1 text-right">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-geist text-xs font-bold" style="color:#FF7A7A;">Baixa</span>
+                        <span class="font-geist text-xs text-secondary/50 uppercase tracking-wider">O que chega</span>
+                    </div>
+                    <div class="stat-bar-wrap"><div class="stat-bar-fill stat-reality" style="width:25%;"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-start">
+
+            <!-- Ideal -->
+            <div class="col-card col-ideal reveal slide-left">
+                <div class="flex items-center justify-between mb-8">
+                    <div>
+                        <div class="tag-ok mb-3"><iconify-icon icon="lucide:sparkles" style="font-size:.8rem;"></iconify-icon> Cenário ideal</div>
+                        <h3 class="font-jakarta font-bold text-2xl lg:text-3xl text-white tracking-tight">O que você queria</h3>
+                    </div>
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(77,255,180,.1);border:1px solid rgba(77,255,180,.2);">
+                        <iconify-icon icon="lucide:target" style="font-size:1.4rem;color:#4DFFB4;"></iconify-icon>
+                    </div>
+                </div>
+                <div style="height:1px;background:linear-gradient(90deg,rgba(77,255,180,.2),transparent);margin-bottom:1.75rem;"></div>
+                <div class="flex flex-col gap-3">
+                    <div class="item-row item-ideal d100"><div class="icon-badge icon-badge-ideal"><iconify-icon icon="lucide:check" style="font-size:1rem;"></iconify-icon></div><div><p class="font-jakarta font-semibold text-white text-[.92rem] leading-snug">Leads com perfil, dinheiro e urgência chegando todos os dias</p></div></div>
+                    <div class="item-row item-ideal d200"><div class="icon-badge icon-badge-ideal"><iconify-icon icon="lucide:check" style="font-size:1rem;"></iconify-icon></div><div><p class="font-jakarta font-semibold text-white text-[.92rem] leading-snug">Vendas convertendo com consistência porque recebe a pessoa certa</p></div></div>
+                    <div class="item-row item-ideal d300"><div class="icon-badge icon-badge-ideal"><iconify-icon icon="lucide:check" style="font-size:1rem;"></iconify-icon></div><div><p class="font-jakarta font-semibold text-white text-[.92rem] leading-snug">Previsibilidade de faturamento mês a mês</p></div></div>
+                    <div class="item-row item-ideal d400"><div class="icon-badge icon-badge-ideal"><iconify-icon icon="lucide:check" style="font-size:1rem;"></iconify-icon></div><div><p class="font-jakarta font-semibold text-white text-[.92rem] leading-snug">Clareza de onde investir cada real para crescer</p></div></div>
+                </div>
+                <div class="mt-8 pt-5 flex items-center gap-3" style="border-top:1px solid rgba(77,255,180,.12);">
+                    <div class="flex-1 stat-bar-wrap" style="height:4px;"><div class="stat-bar-fill stat-ideal" style="width:90%;"></div></div>
+                    <span class="font-geist text-xs font-bold flex-shrink-0" style="color:#4DFFB4;">Conversão alta</span>
+                </div>
+            </div>
+
+            <!-- Reality -->
+            <div class="col-card col-reality reveal slide-right d100">
+                <div class="flex items-center justify-between mb-8">
+                    <div>
+                        <div class="tag-warn mb-3"><iconify-icon icon="lucide:alert-circle" style="font-size:.8rem;"></iconify-icon> Realidade atual</div>
+                        <h3 class="font-jakarta font-bold text-2xl lg:text-3xl text-white tracking-tight">O que você atraiu</h3>
+                    </div>
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(255,77,77,.1);border:1px solid rgba(255,77,77,.2);">
+                        <iconify-icon icon="lucide:users-x" style="font-size:1.4rem;color:#FF7A7A;"></iconify-icon>
+                    </div>
+                </div>
+                <div style="height:1px;background:linear-gradient(90deg,rgba(255,77,77,.2),transparent);margin-bottom:1.75rem;"></div>
+                <div class="flex flex-col gap-3">
+                    <div class="item-row item-reality d100"><div class="icon-badge icon-badge-reality"><iconify-icon icon="lucide:x" style="font-size:1rem;"></iconify-icon></div><div><p class="font-jakarta font-semibold text-white/80 text-[.92rem] leading-snug">Curiosos pedindo preço na primeira mensagem e sumindo depois</p></div></div>
+                    <div class="item-row item-reality d200"><div class="icon-badge icon-badge-reality"><iconify-icon icon="lucide:x" style="font-size:1rem;"></iconify-icon></div><div><p class="font-jakarta font-semibold text-white/80 text-[.92rem] leading-snug">Time de vendas desmotivado reclamando que "lead de internet não presta"</p></div></div>
+                    <div class="item-row item-reality d300"><div class="icon-badge icon-badge-reality"><iconify-icon icon="lucide:x" style="font-size:1rem;"></iconify-icon></div><div><p class="font-jakarta font-semibold text-white/80 text-[.92rem] leading-snug">Mês bom seguido de mês ruim sem saber o que mudou</p></div></div>
+                    <div class="item-row item-reality d400"><div class="icon-badge icon-badge-reality"><iconify-icon icon="lucide:x" style="font-size:1rem;"></iconify-icon></div><div><p class="font-jakarta font-semibold text-white/80 text-[.92rem] leading-snug">Três agências diferentes com a mesma promessa e o mesmo resultado</p></div></div>
+                </div>
+                <div class="mt-8 pt-5 flex items-center gap-3" style="border-top:1px solid rgba(255,77,77,.12);">
+                    <span class="font-geist text-xs font-bold flex-shrink-0" style="color:#FF7A7A;">Conversão baixa</span>
+                    <div class="flex-1 stat-bar-wrap" style="height:4px;"><div class="stat-bar-fill stat-reality" style="width:18%;"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tension-bar reveal fade-up d300 mt-10">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="flex items-start gap-4 text-center sm:text-left">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:rgba(122,50,199,.2);border:1px solid rgba(122,50,199,.35);">
+                        <iconify-icon icon="lucide:lightbulb" style="font-size:1.1rem;color:#9D78E9;"></iconify-icon>
+                    </div>
+                    <div>
+                        <p class="font-geist text-xs font-semibold uppercase tracking-widest text-secondary/50 mb-1">Raiz do problema</p>
+                        <p class="font-jakarta font-semibold text-white text-base leading-snug max-w-xl">Sem qualificação na comunicação, qualquer volume é desperdício de orçamento, energia e oportunidade.</p>
+                    </div>
+                </div>
+                <a href="#solucao" class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full font-geist font-semibold text-sm text-white transition-all hover:brightness-110 hover:scale-105 active:scale-95" style="background:linear-gradient(135deg,#7A32C7,#9D78E9);box-shadow:0 0 0 1px rgba(157,120,233,.5),0 0 20px rgba(122,50,199,.4);">
+                    Ver a solução
+                    <iconify-icon icon="lucide:arrow-right" style="font-size:1rem;"></iconify-icon>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="h-divider"></div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     § 3 — A SOLUÇÃO
+════════════════════════════════════════════════════════════════ -->
+<section class="relative py-28 lg:py-36 overflow-hidden" id="solucao">
+
+    <div class="grid-bg"></div>
+    <div class="deco-orb" style="top:5%;left:5%;width:420px;height:420px;background:radial-gradient(circle,rgba(122,50,199,.14) 0%,transparent 70%);filter:blur(50px);animation-delay:0s;"></div>
+    <div class="deco-orb" style="bottom:10%;right:8%;width:320px;height:320px;background:radial-gradient(circle,rgba(157,120,233,.1) 0%,transparent 70%);filter:blur(60px);animation-delay:3s;"></div>
+    <div class="deco-orb" style="top:40%;left:50%;width:600px;height:300px;background:radial-gradient(ellipse,rgba(122,50,199,.07) 0%,transparent 70%);filter:blur(70px);animation-delay:1.5s;"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="text-center mb-20 lg:mb-24">
+            <div class="reveal is-visible flex justify-center mb-6 d0">
+                <div class="tag-pill">
+                    <iconify-icon icon="lucide:zap" style="font-size:.85rem;"></iconify-icon>
+                    A Solução
+                    <span class="tag-dot"></span>
+                </div>
+            </div>
+            <h2 class="reveal is-visible d100 font-jakarta font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.0] mb-6">
+                <span class="headline-gradient">O Playbook da Rugido</span><br>
+                <span class="headline-gradient">Revela</span>
+            </h2>
+            <p class="reveal is-visible d200 font-jakarta text-lg md:text-xl text-secondary/70 leading-relaxed max-w-2xl mx-auto">
+                O sistema de captação aplicado em operações que já geraram mais de
+                <strong class="font-semibold" style="color:#E1D4FB;">R$50 milhões</strong>
+                em faturamento.
+            </p>
+            <div class="reveal is-visible d300 flex flex-wrap items-center justify-center gap-3 mt-8">
+                <div class="stat-pill"><iconify-icon icon="lucide:trending-up" style="font-size:1.1rem;color:#9D78E9;"></iconify-icon><span class="font-geist text-sm font-bold text-white">+R$50M</span><span class="font-geist text-xs text-secondary/50">em faturamento gerado</span></div>
+                <div class="stat-pill"><iconify-icon icon="lucide:users" style="font-size:1.1rem;color:#9D78E9;"></iconify-icon><span class="font-geist text-sm font-bold text-white">Empresários</span><span class="font-geist text-xs text-secondary/50">já validaram o método</span></div>
+                <div class="stat-pill"><iconify-icon icon="lucide:shield-check" style="font-size:1.1rem;color:#9D78E9;"></iconify-icon><span class="font-geist text-sm font-bold text-white">100% gratuito</span><span class="font-geist text-xs text-secondary/50">acesso imediato</span></div>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-stretch gap-6 mb-14">
+
+            <!-- Card 1 -->
+            <div class="fw-card flex-1 reveal is-visible d100">
+                <div class="card-beam beam-1"></div>
+                <div class="flex items-start justify-between gap-4">
+                    <div class="card-icon card-icon-1"><iconify-icon icon="lucide:filter" style="font-size:1.5rem;color:#9D78E9;"></iconify-icon></div>
+                         <span class="card-num">01 / Framework</span>
+                     </div>
+                 <div class="flex flex-col gap-3 flex-1">
+                     <h3 class="font-jakarta font-bold text-2xl lg:text-3xl text-white tracking-tight leading-tight">Comunicação<br>que Filtra</h3>
+                     <p class="font-jakarta text-base text-secondary/70 leading-relaxed">Atrai compradores e afasta curiosos <strong class="text-white/90 font-semibold">antes do primeiro contato</strong> com o comercial.</p>
+                 </div>
+                 <div class="flex items-center gap-2 pt-4" style="border-top:1px solid rgba(61,43,74,.6);">
+                     <iconify-icon icon="lucide:arrow-right" style="font-size:.85rem;color:rgba(157,120,233,.5);"></iconify-icon>
+                     <span class="font-geist text-xs text-secondary/40 uppercase tracking-widest">Topo do funil</span>
+                </div>
+            </div>
+
+            <div class="connector hidden lg:flex"><div class="connector-line"><div class="connector-arrow"></div></div></div>
+
+            <!-- Card 2 (featured) -->
+            <div class="fw-card fw-card-featured flex-1 reveal is-visible d200">
+                <div class="card-beam beam-2"></div>
+                <div class="absolute top-4 right-4 px-2.5 py-1 rounded-full font-geist text-[.6rem] font-bold uppercase tracking-widest" style="background:rgba(122,50,199,.25);border:1px solid rgba(157,120,233,.35);color:#E1D4FB;">Core</div>
+                <div class="flex items-start justify-between gap-4">
+                    <div class="card-icon card-icon-2"><iconify-icon icon="lucide:git-branch" style="font-size:1.5rem;color:#E1D4FB;"></iconify-icon></div>
+                         <span class="card-num">02 / Framework</span>
+                     </div>
+                 <div class="flex flex-col gap-3 flex-1">
+                     <h3 class="font-jakarta font-bold text-2xl lg:text-3xl tracking-tight leading-tight">
+                         <span class="accent-text">Funis que</span><br><span class="accent-text">Qualificam</span>
+                     </h3>
+                     <p class="font-jakarta text-base text-secondary/75 leading-relaxed">Entregue ao seu time apenas quem tem <strong class="text-white/90 font-semibold">dinheiro, urgência e autoridade</strong> para fechar.</p>
+                 </div>
+                 <div class="flex items-center gap-2 pt-4" style="border-top:1px solid rgba(122,50,199,.25);">
+                     <iconify-icon icon="lucide:arrow-right" style="font-size:.85rem;color:rgba(157,120,233,.6);"></iconify-icon>
+                     <span class="font-geist text-xs uppercase tracking-widest" style="color:rgba(157,120,233,.55);">Meio do funil</span>
+                </div>
+            </div>
+
+            <div class="connector hidden lg:flex"><div class="connector-line"><div class="connector-arrow"></div></div></div>
+
+            <!-- Card 3 -->
+            <div class="fw-card flex-1 reveal is-visible d300">
+                <div class="card-beam beam-3"></div>
+                <div class="flex items-start justify-between gap-4">
+                    <div class="card-icon card-icon-3"><iconify-icon icon="lucide:bar-chart-3" style="font-size:1.5rem;color:#9D78E9;"></iconify-icon></div>
+                         <span class="card-num">03 / Framework</span>
+                     </div>
+                 <div class="flex flex-col gap-3 flex-1">
+                     <h3 class="font-jakarta font-bold text-2xl lg:text-3xl text-white tracking-tight leading-tight">Métricas que<br>Importam</h3>
+                     <p class="font-jakarta text-base text-secondary/70 leading-relaxed">Pare de olhar o custo por lead e comece a medir <strong class="text-white/90 font-semibold">custo por cliente de verdade</strong>.</p>
+                 </div>
+                 <div class="flex items-center gap-2 pt-4" style="border-top:1px solid rgba(61,43,74,.6);">
+                     <iconify-icon icon="lucide:arrow-right" style="font-size:.85rem;color:rgba(157,120,233,.5);"></iconify-icon>
+                     <span class="font-geist text-xs text-secondary/40 uppercase tracking-widest">Fundo do funil</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex lg:hidden justify-center mb-10">
+            <div style="width:1px;height:48px;background:linear-gradient(to bottom,rgba(122,50,199,.5),transparent);"></div>
+        </div>
+
+        <div class="reveal is-visible d400 flex flex-col items-center gap-6 text-center">
+            <p class="font-geist text-sm text-secondary/50 uppercase tracking-widest">Pronto para estruturar sua captação?</p>
+            <div class="relative inline-flex">
+                <a href="#" onclick="openLeadPopup();return false;" class="cta-primary" id="cta-solucao">
+                    <span class="flex items-center gap-2.5">
+                        <iconify-icon icon="lucide:book-open" style="font-size:1.1rem;"></iconify-icon>
+                        Acessar o Playbook
+                        <iconify-icon icon="lucide:arrow-right" style="font-size:1.1rem;"></iconify-icon>
+                    </span>
+                </a>
+                <div class="cta-glow"></div>
+            </div>
+            <p class="font-geist text-xs text-secondary/35 flex items-center gap-2">
+                <iconify-icon icon="lucide:lock-open" style="font-size:.9rem;"></iconify-icon>
+                100% gratuito · Acesso imediato · Sem cadastro complicado
+            </p>
+        </div>
+
+        <div class="authority-strip reveal is-visible d500 mt-16">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4 text-center md:text-left">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(122,50,199,.2);border:1px solid rgba(122,50,199,.35);">
+                        <iconify-icon icon="lucide:cpu" style="font-size:1.1rem;color:#9D78E9;"></iconify-icon>
+                    </div>
+                    <div>
+                        <p class="font-geist text-[.6rem] font-bold uppercase tracking-[.18em] text-secondary/40 mb-1">Método validado</p>
+                        <p class="font-jakarta font-semibold text-white text-sm leading-snug">Comunicação → Qualificação → Conversão</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full" style="background:rgba(122,50,199,.6);"></div>
+                    <div class="w-16 h-px" style="background:linear-gradient(90deg,rgba(122,50,199,.4),rgba(157,120,233,.6));"></div>
+                    <div class="w-2 h-2 rounded-full" style="background:rgba(157,120,233,.8);"></div>
+                    <div class="w-16 h-px" style="background:linear-gradient(90deg,rgba(157,120,233,.6),rgba(225,212,251,.5));"></div>
+                    <div class="w-2 h-2 rounded-full" style="background:rgba(225,212,251,.6);"></div>
+                </div>
+                <div class="flex items-center gap-2 flex-shrink-0">
+                    <iconify-icon icon="lucide:check-circle-2" style="font-size:1.1rem;color:#9D78E9;"></iconify-icon>
+                    <span class="font-geist text-sm font-semibold" style="color:#E1D4FB;">Pipeline de qualidade, não de volume</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="h-divider"></div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     § 4 — FUNDADOR
+════════════════════════════════════════════════════════════════ -->
+<section class="relative py-28 lg:py-36 overflow-hidden" id="fundador">
+
+    <div class="grid-bg"></div>
+    <div class="absolute pointer-events-none z-0" style="top:-5%;right:5%;width:480px;height:480px;background:radial-gradient(circle,rgba(122,50,199,.14) 0%,transparent 70%);filter:blur(60px);"></div>
+    <div class="absolute pointer-events-none z-0" style="bottom:5%;left:10%;width:360px;height:360px;background:radial-gradient(circle,rgba(157,120,233,.09) 0%,transparent 70%);filter:blur(70px);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="text-center mb-16 lg:mb-20">
+            <div class="reveal fade-up flex justify-center">
+                <div class="tag-pill">
+                    <iconify-icon icon="lucide:user-check" style="font-size:.85rem;"></iconify-icon>
+                    Quem está por trás do Método?
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
+
+            <!-- Portrait -->
+            <div class="w-full lg:w-[42%] flex flex-col items-center reveal slide-left">
+                <div class="portrait-outer">
+                    <div class="portrait-glow-ring"></div>
+                    <div class="portrait-frame">
+                        <div class="portrait-scan"></div>
+                        <div class="corner corner-tl"></div>
+                        <div class="corner corner-tr"></div>
+                        <div class="corner corner-bl"></div>
+                        <div class="corner corner-br"></div>
+                        <!--
+                            SUBSTITUIR: troque a div abaixo por:
+                            <img src="foto-lucas.jpg" alt="Lucas Felix" class="w-full h-full object-cover object-top">
+                        -->
+                        <!-- Foto real do fundador -->
+                        <img
+                            src="https://gruporugido.com/wp-content/uploads/2026/04/dsc2166_1.webp"
+                            alt="Lucas Felix – Fundador da Rugido"
+                            class="w-full h-full object-cover object-top"
+                        >
+                    </div>
+                </div>
+                <div class="name-card w-full max-w-[360px]">
+                    <div>
+                        <p class="font-jakarta font-bold text-xl text-white tracking-tight leading-none mb-1">Lucas Felix</p>
+                        <p class="font-geist text-xs text-secondary/55 uppercase tracking-widest">Fundador da Rugido</p>
+                    </div>
+                    <div class="verified-pill flex-shrink-0">
+                        <iconify-icon icon="lucide:badge-check" style="font-size:.85rem;"></iconify-icon>
+                        Verificado
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4 justify-center max-w-[360px] w-full">
+                    <div class="cred-badge"><iconify-icon icon="lucide:hard-hat" style="font-size:.9rem;"></iconify-icon> Eng. Civil</div>
+                    <div class="cred-badge"><iconify-icon icon="lucide:rocket" style="font-size:.9rem;"></iconify-icon> Empreendedor desde os 17</div>
+                    <div class="cred-badge"><iconify-icon icon="lucide:building-2" style="font-size:.9rem;"></iconify-icon> Agência Rugido</div>
+                </div>
+            </div>
+
+            <!-- Authority text -->
+            <div class="flex-1 flex flex-col gap-7 reveal slide-right d100">
+                <div>
+                    <h2 class="font-jakarta font-bold text-3xl md:text-4xl lg:text-5xl tracking-tight leading-[1.08] mb-4">
+                        <span class="headline-gradient">Não é teoria.</span><br>
+                        <span class="text-white/90">É o que funciona</span><br>
+                        <span class="accent-text">todos os dias.</span>
+                    </h2>
+                    <div style="height:1px;background:linear-gradient(90deg,rgba(122,50,199,.4),transparent);width:80%;"></div>
+                </div>
+
+                <div class="founder-quote reveal fade-up d200">
+                    <p class="font-jakarta text-lg text-white/90 leading-relaxed relative z-10">
+                        Engenheiro civil de formação, empreendedor desde os 17 anos.
+                        Fundei a Agência Rugido que fatura múltiplos 6 dígitos mensais
+                        atendendo clientes reais —
+                        <strong class="text-accent font-semibold">de software a confeitarias.</strong>
+                        Tudo que eu mostro aqui não é teoria.
+                        É baseado no que funciona todos os dias dentro da minha e nas empresas dos meus clientes.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 reveal fade-up d300">
+                    <div class="stat-block"><p class="font-jakarta font-extrabold text-2xl text-white mb-1" style="background:linear-gradient(90deg,#7A32C7,#9D78E9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">+R$50M</p><p class="font-geist text-[.65rem] text-secondary/45 uppercase tracking-wider leading-tight">Faturamento<br>gerado</p></div>
+                    <div class="stat-block"><p class="font-jakarta font-extrabold text-2xl text-white mb-1" style="background:linear-gradient(90deg,#7A32C7,#9D78E9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">6 dígitos</p><p class="font-geist text-[.65rem] text-secondary/45 uppercase tracking-wider leading-tight">Faturamento<br>mensal</p></div>
+                    <div class="stat-block"><p class="font-jakarta font-extrabold text-2xl text-white mb-1" style="background:linear-gradient(90deg,#7A32C7,#9D78E9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">17 anos</p><p class="font-geist text-[.65rem] text-secondary/45 uppercase tracking-wider leading-tight">Empreendendo<br>desde</p></div>
+                </div>
+
+                <div class="support-card reveal fade-up d400">
+                    <div class="flex items-start gap-4">
+                        <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background:rgba(122,50,199,.2);border:1px solid rgba(122,50,199,.35);">
+                            <iconify-icon icon="lucide:shield-check" style="font-size:1rem;color:#9D78E9;"></iconify-icon>
+                        </div>
+                        <p class="font-jakarta text-base text-secondary/80 leading-relaxed">
+                            Tudo o que você verá neste Playbook foi
+                            <strong class="text-white font-semibold">testado e validado em operações reais</strong>
+                            que geraram mais de R$50 milhões em faturamento.
+                            Não é teoria acadêmica.
+                            É o que funciona na prática, todos os dias.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-3 reveal fade-up d500">
+                    <div class="flex items-center gap-2 font-geist text-xs text-secondary/50"><iconify-icon icon="lucide:check-circle" style="font-size:1rem;color:#4DFFB4;"></iconify-icon> Método validado em clientes reais</div>
+                    <div class="flex items-center gap-2 font-geist text-xs text-secondary/50"><iconify-icon icon="lucide:check-circle" style="font-size:1rem;color:#4DFFB4;"></iconify-icon> Múltiplos setores atendidos</div>
+                    <div class="flex items-center gap-2 font-geist text-xs text-secondary/50"><iconify-icon icon="lucide:check-circle" style="font-size:1rem;color:#4DFFB4;"></iconify-icon> Resultados documentados</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="h-divider"></div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     § 5 — CTA FINAL
+════════════════════════════════════════════════════════════════ -->
+<section class="cta-outer-section py-28 lg:py-40" id="cta-final">
+
+    <div class="cta-bg-gradient"></div>
+    <div class="grid-bg"></div>
+    <div class="cta-ring-spin"></div>
+    <div class="orb" style="top:10%;left:8%;width:320px;height:320px;background:radial-gradient(circle,rgba(122,50,199,.18) 0%,transparent 70%);filter:blur(50px);--dur:9s;--delay:0s;"></div>
+    <div class="orb" style="bottom:5%;right:6%;width:280px;height:280px;background:radial-gradient(circle,rgba(157,120,233,.12) 0%,transparent 70%);filter:blur(60px);--dur:11s;--delay:2s;"></div>
+    <div class="orb" style="top:40%;right:15%;width:200px;height:200px;background:radial-gradient(circle,rgba(122,50,199,.1) 0%,transparent 70%);filter:blur(40px);--dur:7s;--delay:1s;"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="cta-card reveal fade-up">
+            <div class="flex justify-center mb-8">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background:rgba(122,50,199,.2);border:1px solid rgba(122,50,199,.4);box-shadow:0 0 24px rgba(122,50,199,.35);">
+                    <iconify-icon icon="lucide:book-open-check" style="font-size:1.75rem;color:#E1D4FB;"></iconify-icon>
+                </div>
+            </div>
+            <h2 class="font-jakarta font-extrabold text-3xl md:text-4xl lg:text-5xl tracking-tight leading-[1.05] mb-6 reveal fade-up d100">
+                <span class="headline-gradient">Comece a Atrair Apenas</span><br>
+                <span class="headline-gradient headline-underline">Clientes Prontos</span>
+                <span class="headline-gradient"> para Comprar</span>
+            </h2>
+            <p class="font-jakarta text-lg md:text-xl text-secondary/70 leading-relaxed max-w-xl mx-auto mb-10 reveal fade-up d200">
+                Baixe agora o Playbook Interno de Geração de Demanda Qualificada e comece a atrair apenas clientes
+                <strong class="text-white font-semibold">prontos para comprar.</strong>
+            </p>
+            <div class="flex justify-center mb-8 reveal fade-up d300">
+                <div class="cta-btn-wrap">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <a href="#" onclick="openLeadPopup();return false;" class="cta-btn" id="cta-download-btn">
+                        <span>
+                            <iconify-icon icon="lucide:download" style="font-size:1.15rem;"></iconify-icon>
+                            Baixar Playbook Gratuito
+                            <iconify-icon icon="lucide:arrow-right" style="font-size:1.15rem;"></iconify-icon>
+                        </span>
+                    </a>
+                    <div class="cta-btn-glow"></div>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-3 reveal fade-up d400">
+                <div class="trust-pill"><iconify-icon icon="lucide:lock-open" style="font-size:1rem;color:#4DFFB4;"></iconify-icon><span style="color:#4DFFB4;">100% Gratuito</span></div>
+                <div class="trust-pill"><iconify-icon icon="lucide:shield-check" style="font-size:1rem;"></iconify-icon> Sem SPAM</div>
+                <div class="trust-pill"><iconify-icon icon="lucide:zap" style="font-size:1rem;"></iconify-icon> Material Prático</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 max-w-xl mx-auto mt-10 reveal fade-up d400">
+            <div class="stat-mini"><p class="font-jakarta font-extrabold text-xl mb-0.5" style="background:linear-gradient(90deg,#7A32C7,#9D78E9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">+R$50M</p><p class="font-geist text-[.62rem] text-secondary/40 uppercase tracking-wider">Faturamento gerado</p></div>
+            <div class="stat-mini"><p class="font-jakarta font-extrabold text-xl mb-0.5" style="background:linear-gradient(90deg,#7A32C7,#9D78E9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Imediato</p><p class="font-geist text-[.62rem] text-secondary/40 uppercase tracking-wider">Acesso ao material</p></div>
+            <div class="stat-mini"><p class="font-jakarta font-extrabold text-xl mb-0.5" style="background:linear-gradient(90deg,#7A32C7,#9D78E9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">100%</p><p class="font-geist text-[.62rem] text-secondary/40 uppercase tracking-wider">Baseado em resultado</p></div>
+        </div>
+
+    </div>
+</section>
+
+<div class="h-divider"></div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     § 6 — FAQ
+════════════════════════════════════════════════════════════════ -->
+<section class="relative py-28 lg:py-36 overflow-hidden" id="faq">
+
+    <div class="grid-bg"></div>
+    <div class="absolute pointer-events-none z-0" style="top:0;left:0;right:0;height:400px;background:radial-gradient(ellipse 70% 60% at 50% -10%,rgba(122,50,199,.12) 0%,transparent 70%);"></div>
+    <div class="absolute pointer-events-none z-0" style="bottom:0;left:20%;width:380px;height:380px;background:radial-gradient(circle,rgba(157,120,233,.07) 0%,transparent 70%);filter:blur(60px);"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
+
+        <div class="text-center mb-14">
+            <div class="reveal fade-up flex justify-center mb-6">
+                <div class="tag-pill">
+                    <iconify-icon icon="lucide:message-circle-question" style="font-size:.85rem;"></iconify-icon>
+                    Dúvidas Frequentes
+                    <span class="tag-dot"></span>
+                </div>
+            </div>
+            <h2 class="reveal fade-up d100 font-jakarta font-bold text-5xl md:text-6xl tracking-tight leading-[1.0]">
+                <span class="headline-gradient">FAQ</span>
+            </h2>
+            <p class="reveal fade-up d200 font-jakarta text-base text-secondary/55 mt-4 max-w-md mx-auto leading-relaxed">
+                Respostas diretas pra você decidir com clareza antes de acessar o Playbook.
+            </p>
+        </div>
+
+        <div class="flex flex-col gap-3 mb-12">
+
+            <div class="faq-item reveal fade-up d0">
+                <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+                    <div class="flex items-start gap-3 flex-1"><span class="faq-num mt-0.5">01</span><span class="faq-question-text">O Playbook é pago?</span></div>
+                    <div class="faq-toggle"><iconify-icon icon="lucide:plus"></iconify-icon></div>
+                </button>
+                <div class="faq-answer" role="region">
+                    <div class="faq-answer-inner"><p class="faq-answer-text">Não. O Playbook Interno de Geração de Demanda Qualificada é <strong style="color:#E1D4FB;font-weight:700;">100% gratuito.</strong></p></div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal fade-up d100">
+                <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+                    <div class="flex items-start gap-3 flex-1"><span class="faq-num mt-0.5">02</span><span class="faq-question-text">Isso funciona para qualquer tipo de negócio?</span></div>
+                    <div class="faq-toggle"><iconify-icon icon="lucide:plus"></iconify-icon></div>
+                </button>
+                <div class="faq-answer" role="region">
+                    <div class="faq-answer-inner"><p class="faq-answer-text">Sim. O conteúdo foi desenvolvido para ser aplicável em qualquer operação que depende de gerar demanda, independentemente do porte ou segmento. Empresas de serviços, comércio, saúde, educação, tecnologia, consultorias e indústrias — tanto <strong style="color:#E1D4FB;">B2B quanto B2C.</strong> O método se adapta à realidade e ao momento de cada negócio.</p></div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal fade-up d200">
+                <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+                    <div class="flex items-start gap-3 flex-1"><span class="faq-num mt-0.5">03</span><span class="faq-question-text">O conteúdo é teórico ou prático?</span></div>
+                    <div class="faq-toggle"><iconify-icon icon="lucide:plus"></iconify-icon></div>
+                </button>
+                <div class="faq-answer" role="region">
+                    <div class="faq-answer-inner"><p class="faq-answer-text">O material é <strong style="color:#E1D4FB;">100% prático e orientado à ação.</strong> Você encontrará frameworks, matrizes, checklists e modelos prontos usados na operação da Rugido e de nossos clientes. A ideia é que você possa aplicar o método imediatamente.</p></div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal fade-up d300">
+                <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+                    <div class="flex items-start gap-3 flex-1"><span class="faq-num mt-0.5">04</span><span class="faq-question-text">Em quanto tempo vejo resultado?</span></div>
+                    <div class="faq-toggle"><iconify-icon icon="lucide:plus"></iconify-icon></div>
+                </button>
+                <div class="faq-answer" role="region">
+                    <div class="faq-answer-inner"><p class="faq-answer-text">Depende da maturidade atual do seu negócio, mas em <strong style="color:#E1D4FB;">poucos dias</strong> já é possível sentir ganhos na qualidade dos leads, na taxa de conversão e na previsibilidade da captação.</p></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="faq-cta-strip reveal fade-up d300">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="text-center sm:text-left">
+                    <p class="font-geist text-[.65rem] font-bold uppercase tracking-widest text-secondary/40 mb-1">Ainda tem dúvidas?</p>
+                    <p class="font-jakarta font-semibold text-white text-base leading-snug">Acesse o material e tire suas dúvidas no conteúdo.</p>
+                </div>
+                <a href="#" onclick="openLeadPopup();return false;" class="faq-cta-btn flex-shrink-0">
+                    <span>
+                        <iconify-icon icon="lucide:book-open" style="font-size:1rem;"></iconify-icon>
+                        Acessar o Playbook
+                        <iconify-icon icon="lucide:arrow-right" style="font-size:1rem;"></iconify-icon>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="h-divider"></div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════════ -->
+<footer class="py-10 text-center">
+    <p class="font-geist text-xs text-secondary/30 tracking-wider">
+        © 2025 Rugido Assessoria · Todos os direitos reservados
+    </p>
+</footer>
+
+<!-- ════════════════════════════════════════════════════════════════
+     UNIFIED JAVASCRIPT
+════════════════════════════════════════════════════════════════ -->
+<script>
+    /* ── Scroll Reveal ─────────────────────────────────────── */
+    (function() {
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                const el = e.target;
+                /* Detect direction class set by the element */
+                if (el.classList.contains('slide-left'))       { el.classList.add('is-visible'); }
+                else if (el.classList.contains('slide-right')) { el.classList.add('is-visible'); }
+                else if (el.classList.contains('fade-up'))     { el.classList.add('is-visible'); }
+                else { el.classList.add('is-visible', 'visible'); }
+                io.unobserve(el);
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            /* Elements that were pre-marked visible during section build keep their state */
+            if (!el.classList.contains('is-visible') && !el.classList.contains('visible')) {
+                io.observe(el);
+            }
+        });
+
+        /* Trigger for elements already in viewport on load */
+        setTimeout(() => {
+            document.querySelectorAll('.reveal').forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight) {
+                    if (el.classList.contains('slide-left') || el.classList.contains('slide-right') || el.classList.contains('fade-up')) {
+                        el.classList.add('is-visible');
+                    } else {
+                        el.classList.add('is-visible', 'visible');
+                    }
+                }
+            });
+        }, 80);
+    })();
+
+    /* ── FAQ Accordion ─────────────────────────────────────── */
+    function toggleFaq(btn) {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => {
+            el.classList.remove('open');
+            el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+        }
+    }
+
+    /* Open first FAQ item by default */
+    const firstFaq = document.querySelector('.faq-item');
+    if (firstFaq) {
+        firstFaq.classList.add('open');
+        firstFaq.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    }
+
+    /* ── CTA floating particles ───────────────────────────────── */
+    (function spawnParticles() {
+        const ctaSection = document.querySelector('.cta-outer-section');
+        if (!ctaSection) return;
+        const configs = [
+            {left:'10%',  dur:'5.5s', delay:'0s'},
+            {left:'25%',  dur:'7s',   delay:'1.2s'},
+            {left:'40%',  dur:'6s',   delay:'0.6s'},
+            {left:'58%',  dur:'8s',   delay:'2.1s'},
+            {left:'72%',  dur:'5s',   delay:'0.3s'},
+            {left:'85%',  dur:'6.5s', delay:'1.8s'},
+            {left:'93%',  dur:'7.5s', delay:'3s'},
+        ];
+        configs.forEach(c => {
+            const p = document.createElement('div');
+            p.className = 'cta-particle';
+            p.style.cssText = `left:${c.left};bottom:10%;--dur:${c.dur};--delay:${c.delay};`;
+            ctaSection.appendChild(p);
+        });
+    })();
+
+    /* ── Lazy image loaded class ──────────────────────────────── */
+    document.querySelectorAll('img').forEach(img => {
+        if (img.complete) { img.classList.add('loaded'); }
+        else { img.addEventListener('load', () => img.classList.add('loaded')); }
+    });
+
+    /* ── Stat number count-up ───────────────────────────────── */
+    (function countUpStats() {
+        const els = document.querySelectorAll('[data-count]');
+        if (!els.length) return;
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                io.unobserve(e.target);
+                const el = e.target;
+                const target = parseFloat(el.dataset.count);
+                const prefix = el.dataset.prefix || '';
+                const suffix = el.dataset.suffix || '';
+                const dur = 1400;
+                const start = performance.now();
+                function step(now) {
+                    const p = Math.min((now - start) / dur, 1);
+                    const val = Math.round(p * target * 10) / 10;
+                    el.textContent = prefix + (Number.isInteger(val) ? val : val.toFixed(1)) + suffix;
+                    if (p < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            });
+        }, {threshold: 0.5});
+        els.forEach(el => io.observe(el));
+    })();
+
+    /* ── Stagger children of .stagger-wrap ───────────────────── */
+    (function staggerReveal() {
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                io.unobserve(e.target);
+                Array.from(e.target.children).forEach((child, i) => {
+                    setTimeout(() => child.classList.add('in'), i * 110);
+                });
+            });
+        }, {threshold: 0.15});
+        document.querySelectorAll('.stagger-wrap').forEach(el => {
+            Array.from(el.children).forEach(c => c.classList.add('reveal-child'));
+            io.observe(el);
+        });
+    })();
+
+    /* ── LEAD POPUP ────────────────────────────────────────── */
+    /* Define openLeadPopup globalmente já (os botões inline chamam antes do DOMContentLoaded) */
+    window.openLeadPopup = function() {
+        const overlay = document.getElementById('lp-overlay-click');
+        if (!overlay) return;
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        overlay.classList.add('lp-visible');
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const overlay     = document.getElementById('lp-overlay-click');
+        const closeBtn    = document.getElementById('lp-close-btn');
+        const form        = document.getElementById('lp-form');
+        const success     = document.getElementById('lp-success');
+        const submitLabel = document.getElementById('lp-submit-label');
+
+        if (!overlay || !closeBtn || !form) return;
+
+        /* ── Máscara de telefone BR: (00) 00000-0000 ── */
+        const phoneInput = document.getElementById('lp-phone');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', function(e) {
+                let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+                if (v.length === 0) { e.target.value = ''; return; }
+                if (v.length <= 2)  { e.target.value = '(' + v; return; }
+                if (v.length <= 7)  { e.target.value = '(' + v.slice(0,2) + ') ' + v.slice(2); return; }
+                if (v.length <= 10) { e.target.value = '(' + v.slice(0,2) + ') ' + v.slice(2,6) + '-' + v.slice(6); return; }
+                e.target.value = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+            });
+            phoneInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Backspace') {
+                    /* permite apagar normalmente sem travar na máscara */
+                    const val = e.target.value;
+                    if (val.endsWith(') ') || val.endsWith('-')) {
+                        e.target.value = val.slice(0, -2);
+                        e.preventDefault();
+                    }
+                }
+            });
+        }
+
+        function closePopup() {
+            overlay.classList.remove('lp-visible');
+            document.documentElement.style.overflow = '';
+            document.body.style.overflow = '';
+            setTimeout(() => {
+                form.reset();
+                if (success) success.style.display = 'none';
+                form.querySelectorAll('.lp-row').forEach(el => el.style.display = '');
+                const submitBtn = form.querySelector('.lp-submit');
+                if (submitBtn) submitBtn.style.display = '';
+                if (submitLabel) submitLabel.style.display = '';
+            }, 350);
+        }
+
+        closeBtn.addEventListener('click', closePopup);
+        /* Fecha apenas se clicar no fundo escuro, não no card */
+        overlay.addEventListener('click', e => {
+            if (e.target === overlay) closePopup();
+        });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && overlay.classList.contains('lp-visible')) closePopup();
+        });
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            form.querySelectorAll('.lp-row').forEach(r => r.style.display = 'none');
+            const submitBtn = form.querySelector('.lp-submit');
+            if (submitBtn) submitBtn.style.display = 'none';
+            if (success) success.style.display = 'block';
+            setTimeout(() => {
+                window.location.href = 'https://gruporugido.com/obrigado/';
+            }, 1500);
+        });
+    });
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════
+      LEAD CAPTURE POPUP (NÃO MODAL)
+══════════════════════════════════════════════════════════ -->
+<div id="lp-overlay-click" class="lp-overlay-click">
+<div id="lead-popup" class="lp-wrapper">
+    <div class="lp-card" id="lp-card">
+
+        <button class="lp-close" id="lp-close-btn" aria-label="Fechar">
+            <iconify-icon icon="lucide:x" style="font-size:1rem;"></iconify-icon>
+        </button>
+
+        <div class="lp-header">
+            <div class="lp-badge">
+                <iconify-icon icon="lucide:book-open-check" style="font-size:.85rem;color:#E1D4FB;"></iconify-icon>
+                Acesso Imediato
+            </div>
+            <h2 class="lp-title">Quase lá! <span>🎯</span></h2>
+            <p class="lp-desc">Preencha os dados abaixo para liberar seu Playbook Gratuito agora mesmo.</p>
+        </div>
+
+        <form id="lp-form" class="lp-form" novalidate autocomplete="on">
+
+            <div class="lp-row">
+                <div class="lp-field">
+                    <label class="lp-label" for="lp-nome">Nome completo <span class="lp-req">*</span></label>
+                    <input class="lp-input" id="lp-nome" name="name" type="text" placeholder="Seu nome" required autocomplete="name">
+                </div>
+                <div class="lp-field">
+                    <label class="lp-label" for="lp-email">E-mail corporativo <span class="lp-req">*</span></label>
+                    <input class="lp-input" id="lp-email" name="email" type="email" placeholder="seu@email.com" required autocomplete="email">
+                </div>
+            </div>
+
+            <div class="lp-row">
+                <div class="lp-field">
+                    <label class="lp-label" for="lp-phone">WhatsApp <span class="lp-req">*</span></label>
+                    <input class="lp-input" id="lp-phone" name="tel" type="tel" placeholder="(00) 00000-0000" required autocomplete="tel" inputmode="numeric" maxlength="15">
+                </div>
+                <div class="lp-field">
+                    <label class="lp-label" for="lp-empresa">Nome da Empresa <span class="lp-req">*</span></label>
+                    <input class="lp-input" id="lp-empresa" name="organization" type="text" placeholder="Nome do negócio" required autocomplete="organization">
+                </div>
+            </div>
+
+            <div class="lp-row">
+                <div class="lp-field">
+                    <label class="lp-label" for="lp-setor">Setor de Atuação <span class="lp-req">*</span></label>
+                    <select class="lp-input lp-select" id="lp-setor" required>
+                        <option value="" disabled selected>Selecione um setor...</option>
+                        <option value="servico">Serviço</option>
+                        <option value="varejo">Varejo</option>
+                        <option value="industria">Indústria</option>
+                        <option value="ecommerce">E-commerce</option>
+                        <option value="saas">SAAS</option>
+                        <option value="educacao">Educação</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="lp-field">
+                    <label class="lp-label" for="lp-fat">Faturamento Mensal <span class="lp-req">*</span></label>
+                    <select class="lp-input lp-select" id="lp-fat" required>
+                        <option value="" disabled selected>Aproximado...</option>
+                        <option value="ate30k">Até 30 mil</option>
+                        <option value="31-50k">De 31 mil a 50 mil</option>
+                        <option value="51-100k">De 51 mil a 100 mil</option>
+                        <option value="101-300k">De 101 mil a 300 mil</option>
+                        <option value="301k-1m">De 301 mil a 1 milhão</option>
+                        <option value="1m-4m">De 1 milhão a 4 milhões</option>
+                        <option value="acima4m">Mais de 4 milhões</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="lp-submit" id="lp-submit-btn">
+                <span id="lp-submit-label" class="flex items-center justify-center gap-2">
+                    <iconify-icon icon="lucide:unlock" style="font-size:1rem;"></iconify-icon>
+                    Liberar Meu Playbook Agora
+                </span>
+            </button>
+
+            <div id="lp-success" class="lp-success" aria-live="polite">
+                <iconify-icon icon="lucide:check-circle-2" style="font-size:1.8rem;color:#4DFFB4;display:block;margin:0 auto .6rem;"></iconify-icon>
+                <p class="lp-success-text">Pronto! Seu acesso será liberado.</p>
+            </div>
+
+        </form>
+
+        <div class="lp-footer">
+            <iconify-icon icon="lucide:shield-check" style="font-size:.85rem;color:#4DFFB4;"></iconify-icon>
+            <span>Seus dados estão 100% protegidos</span>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<!-- Supabase Integration - Código integrado no HTML -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+/* Supabase Integration - Grupo Rugido */
+
+// Máscara de telefone brasileiro (00) 00000-0000
+function setupPhoneMask() {
+    const phoneInput = document.getElementById('lp-phone');
+    if (!phoneInput) return;
+
+    phoneInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '').slice(0, 11);
+
+        if (value.length === 0) {
+            e.target.value = '';
+            return;
+        }
+        if (value.length <= 2) {
+            e.target.value = '(' + value;
+            return;
+        }
+        if (value.length <= 7) {
+            e.target.value = '(' + value.slice(0, 2) + ') ' + value.slice(2);
+            return;
+        }
+        if (value.length <= 10) {
+            e.target.value = '(' + value.slice(0, 2) + ') ' + value.slice(2, 6) + '-' + value.slice(6);
+            return;
+        }
+        e.target.value = '(' + value.slice(0, 2) + ') ' + value.slice(2, 7) + '-' + value.slice(7);
+    });
+
+    phoneInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Backspace') {
+            const val = e.target.value;
+            if (val.endsWith(') ') || val.endsWith('-')) {
+                e.target.value = val.slice(0, -2);
+                e.preventDefault();
+            }
+        }
+    });
+}
+
+// Configuração do Supabase
+const supabaseUrl = 'https://zyflizbsdbzowcgoiyaj.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5ZmxpemJzZGJ6b3d3em9jZ29peWFqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYzMjk5NTIsImV4cCI6MjA5MTkwNTk1Mn0.bC9cVjyhPnUOYrHJofHy99RbF6B5I4vgMZSfwmhsPyg';
+
+// Aguarda o DOM estar pronto e o Supabase carregado
+function initSupabaseIntegration() {
+    // Verifica se o Supabase está disponível
+    if (typeof window.supabase === 'undefined') {
+        setTimeout(initSupabaseIntegration, 1000);
+        return;
+    }
+
+    try {
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+        // Encontra o formulário
+        const form = document.getElementById('lp-form');
+        if (!form) return;
+
+        // Remove listener anterior se existir
+        const newForm = form.cloneNode(true);
+        form.parentNode.replaceChild(newForm, form);
+
+        // Configura máscara de telefone DEPOIS de clonar o formulário
+        setupPhoneMask();
+
+        // Adiciona listener ao formulário
+        newForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitBtn = newForm.querySelector('.lp-submit');
+            const submitBtnOriginalContent = submitBtn.innerHTML;
+
+            submitBtn.innerHTML = '<span style="display:flex;align-items:center;gap:8px;">Enviando...</span>';
+            submitBtn.disabled = true;
+
+            const leadData = {
+                nome: document.getElementById('lp-nome').value,
+                email: document.getElementById('lp-email').value,
+                phone: document.getElementById('lp-phone').value,
+                empresa: document.getElementById('lp-empresa').value,
+                setor: document.getElementById('lp-setor').value,
+                faturamento: document.getElementById('lp-fat').value
+            };
+
+            try {
+                console.log('📤 Enviando dados para Supabase:', leadData);
+
+                const { data, error } = await supabase
+                    .from('leads')
+                    .insert([leadData]);
+
+                if (error) throw error;
+
+                console.log('✅ Dados enviados com sucesso:', data);
+
+                // Esconde o formulário e mostra sucesso
+                newForm.querySelectorAll('.lp-row').forEach(r => r.style.display = 'none');
+                submitBtn.style.display = 'none';
+
+                const success = document.getElementById('lp-success');
+                if (success) success.style.display = 'block';
+
+                // Redireciona para o playbookdemanda.vercel.app após 1.5 segundos
+                setTimeout(() => {
+                    window.location.href = 'https://playbookdemanda.vercel.app/';
+                }, 1500);
+
+            } catch (error) {
+                console.error('❌ Erro ao enviar para Supabase:', error);
+                console.error('Detalhes do erro:', {
+                    message: error.message,
+                    code: error.code,
+                    details: error.details,
+                    hint: error.hint,
+                    name: error.name,
+                    stack: error.stack
+                });
+
+                submitBtn.innerHTML = submitBtnOriginalContent;
+                submitBtn.disabled = false;
+
+                let errorMessage = 'Erro ao enviar. Tente novamente ou entre em contato.\n\n\nCódigo do erro: ' + (error.code || 'DESCONHECIDO') + '\nMensagem: ' + (error.message || 'Sem detalhes');
+                alert(errorMessage);
+            }
+        });
+    } catch (error) {
+        console.error('Erro ao inicializar Supabase:', error);
+    }
+}
+
+// Inicializa quando a página carrega
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSupabaseIntegration);
+} else {
+    initSupabaseIntegration();
+}
+</script>
+
+</body>
+</html>

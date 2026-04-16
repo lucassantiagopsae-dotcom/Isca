@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/favicon.webp">
+  <link rel="shortcut icon" type="image/webp" href="assets/favicon.webp">
+  <link rel="apple-touch-icon" type="image/webp" href="assets/favicon.webp">
+
+  <!-- Metadados SEO -->
+  <title>Obrigado! Seu Playbook está pronto | Rugido</title>
+  <meta name="title" content="Obrigado! Seu Playbook está pronto">
+  <meta name="description" content="Tudo certo. Seu Playbook de Geração de Demanda Qualificada da Rugido está disponível para acesso imediato. Comece a transformar seu negócio agora!" />
+  <meta name="keywords" content="obrigado, playbook rugido, geração de demanda, download, acesso imediato">
+  <meta name="author" content="Rugido Assessoria">
+  <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://gruporugido.com/obrigado/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gruporugido.com/obrigado/">
+  <meta property="og:title" content="Obrigado! Seu Playbook está pronto">
+  <meta property="og:description" content="Tudo certo. Seu Playbook de Geração de Demanda Qualificada da Rugido está disponível para acesso imediato.">
+  <meta property="og:image" content="https://isca-chi.vercel.app/assets/Group 56.webp">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gruporugido.com/obrigado/">
+  <meta property="twitter:title" content="Obrigado! Seu Playbook está pronto">
+  <meta property="twitter:description" content="Tudo certo. Seu Playbook de Geração de Demanda Qualificada da Rugido está disponível para acesso imediato.">
+  <meta property="twitter:image" content="https://isca-chi.vercel.app/assets/Group 56.webp">
+
+  <!-- Tailwind + Fonts + Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:   '#7A32C7',
+            secondary: '#9D78E9',
+            accent:    '#E1D4FB',
+            dark:      '#231431',
+            surface:   '#0d0714',
+            border:    '#3D2B4A',
+          },
+          fontFamily: {
+            jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+            geist:   ['Geist', 'sans-serif'],
+            inter:   ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* ═══════════════════════════════════════════
+       TOKENS
+    ═══════════════════════════════════════════ */
+    :root {
+      --bg:        #0d0714;
+      --card:      #231431;
+      --border:    #3D2B4A;
+      --primary:   #7A32C7;
+      --secondary: #9D78E9;
+      --accent:    #E1D4FB;
+      --green:     #4DFFB4;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: #fff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══════════════════════════════════════════
+       KEYFRAMES
+    ═══════════════════════════════════════════ */
+    @keyframes pageEnter {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position:  200% center; }
+    }
+    @keyframes pulse-dot {
+      0%, 100% { box-shadow: 0 0 6px 2px rgba(122,50,199,.55); }
+      50%       { box-shadow: 0 0 18px 5px rgba(122,50,199,.9); }
+    }
+    @keyframes orb-float {
+      0%, 100% { transform: translateY(0)   scale(1); }
+      50%       { transform: translateY(-18px) scale(1.04); }
+    }
+    @keyframes spin-slow {
+      from { transform: translate(-50%,-50%) rotate(0deg); }
+      to   { transform: translate(-50%,-50%) rotate(360deg); }
+    }
+    @keyframes check-pop {
+      0%   { transform: scale(0) rotate(-15deg); opacity: 0; }
+      65%  { transform: scale(1.2) rotate(4deg); opacity: 1; }
+      100% { transform: scale(1) rotate(0); opacity: 1; }
+    }
+    @keyframes pulse-ring {
+      0%   { transform: scale(1);   opacity: .6; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+    @keyframes beam {
+      from { opacity: 0; transform: scaleX(0); transform-origin: left; }
+      to   { opacity: 1; transform: scaleX(1); }
+    }
+    @keyframes float-book {
+      0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+      50%       { transform: translateY(-14px) rotate(1deg); }
+    }
+    @keyframes rise-particle {
+      0%   { transform: translateY(0); opacity: 0; }
+      15%  { opacity: .7; }
+      85%  { opacity: .3; }
+      100% { transform: translateY(-130px); opacity: 0; }
+    }
+
+    body { animation: pageEnter .65s cubic-bezier(.16,1,.3,1) both; }
+
+    /* ═══════════════════════════════════════════
+       SCROLL REVEAL
+    ═══════════════════════════════════════════ */
+    .sr { opacity: 0; }
+    .sr.in            { animation: fadeUp .9s cubic-bezier(.16,1,.3,1) forwards; }
+    .sr.in.from-left  { animation: slideL .9s cubic-bezier(.16,1,.3,1) forwards; }
+    .sr.in.from-right { animation: slideR .9s cubic-bezier(.16,1,.3,1) forwards; }
+
+    @keyframes slideL { from{opacity:0;transform:translateX(-32px)} to{opacity:1;transform:none} }
+    @keyframes slideR { from{opacity:0;transform:translateX( 32px)} to{opacity:1;transform:none} }
+
+    .delay-1 { animation-delay: 100ms; }
+    .delay-2 { animation-delay: 200ms; }
+    .delay-3 { animation-delay: 300ms; }
+    .delay-4 { animation-delay: 400ms; }
+    .delay-5 { animation-delay: 500ms; }
+    .delay-6 { animation-delay: 600ms; }
+
+    /* hero immediate animations */
+    .h-anim-1 { animation: fadeUp .85s cubic-bezier(.16,1,.3,1) .05s both; }
+    .h-anim-2 { animation: fadeUp .85s cubic-bezier(.16,1,.3,1) .15s both; }
+    .h-anim-3 { animation: fadeUp .85s cubic-bezier(.16,1,.3,1) .28s both; }
+    .h-anim-4 { animation: fadeUp .85s cubic-bezier(.16,1,.3,1) .42s both; }
+    .h-anim-5 { animation: fadeUp .85s cubic-bezier(.16,1,.3,1) .55s both; }
+
+    /* ═══════════════════════════════════════════
+       TYPOGRAPHY HELPERS
+    ═══════════════════════════════════════════ */
+    .text-grad {
+      background: linear-gradient(135deg, #fff 20%, #E1D4FB 60%, #9D78E9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .text-grad-purple {
+      background: linear-gradient(90deg, #9D78E9, #E1D4FB);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .section-label {
+      font-family: 'Geist', sans-serif;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: rgba(157,120,233,.6);
+    }
+
+    /* ═══════════════════════════════════════════
+       LAYOUT / BACKGROUND UTILITIES
+    ═══════════════════════════════════════════ */
+    .grid-veil {
+      position: absolute; inset: 0; pointer-events: none; z-index: 0;
+      background-image:
+        linear-gradient(rgba(157,120,233,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(157,120,233,.045) 1px, transparent 1px);
+      background-size: 3.75rem 3.75rem;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+      -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+    }
+    .orb {
+      position: absolute; border-radius: 50%; pointer-events: none;
+      animation: orb-float var(--dur,9s) ease-in-out var(--dl,0s) infinite;
+    }
+    .divider-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(122,50,199,.35), transparent);
+    }
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(122,50,199,.28), rgba(157,120,233,.18), rgba(122,50,199,.28), transparent);
+      position: relative;
+    }
+    .section-divider::after {
+      content: '';
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      width: 100px; height: 28px;
+      background: radial-gradient(ellipse, rgba(122,50,199,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ═══════════════════════════════════════════
+       PILL / TAG
+    ═══════════════════════════════════════════ */
+    .pill {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .35rem 1rem;
+      border-radius: 9999px;
+      font-family: 'Geist', sans-serif;
+      font-size: .68rem; font-weight: 700;
+      letter-spacing: .13em; text-transform: uppercase;
+      background: rgba(35,20,49,.8);
+      border: 1px solid rgba(122,50,199,.45);
+      color: var(--secondary);
+      backdrop-filter: blur(10px);
+    }
+    .pill-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--primary);
+      animation: pulse-dot 2.5s infinite;
+    }
+    .pill-green {
+      background: rgba(77,255,180,.07);
+      border: 1px solid rgba(77,255,180,.22);
+      color: var(--green);
+    }
+
+    /* ═══════════════════════════════════════════
+       HERO CHECK CIRCLE
+    ═══════════════════════════════════════════ */
+    .check-wrap {
+      position: relative; display: inline-flex;
+      align-items: center; justify-content: center;
+    }
+    .check-circle {
+      width: 96px; height: 96px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(122,50,199,.12);
+      border: 1.5px solid rgba(122,50,199,.5);
+      box-shadow: 0 0 0 1px rgba(157,120,233,.12), 0 0 60px rgba(122,50,199,.25);
+      animation: check-pop .85s cubic-bezier(.16,1,.3,1) .4s both;
+      position: relative; z-index: 2;
+    }
+    .check-ring {
+      position: absolute; inset: -10px; border-radius: 50%;
+      border: 1.5px solid rgba(157,120,233,.35);
+      animation: pulse-ring 2.6s cubic-bezier(.16,1,.3,1) infinite;
+      pointer-events: none;
+    }
+    .check-ring:nth-child(2) { animation-delay: .9s; }
+    .check-ring:nth-child(3) { animation-delay: 1.8s; }
+
+    /* ═══════════════════════════════════════════
+       PRIMARY BUTTON
+    ═══════════════════════════════════════════ */
+    .btn-primary {
+      position: relative;
+      display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+      padding: .95rem 2.5rem;
+      border-radius: 9999px;
+      font-family: 'Geist', sans-serif; font-size: .95rem; font-weight: 700;
+      color: #fff; text-decoration: none; cursor: pointer; border: none; outline: none;
+      transition: transform .2s, filter .2s;
+      isolation: isolate;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute; inset: 0; border-radius: inherit;
+      background: linear-gradient(135deg, #7A32C7, #9D78E9, #7A32C7);
+      background-size: 200%;
+      animation: shimmer 3s linear infinite;
+    }
+    .btn-primary::after {
+      content: '';
+      position: absolute; inset: 0; border-radius: inherit;
+      box-shadow: 0 0 0 1px rgba(157,120,233,.65), 0 0 32px rgba(122,50,199,.55);
+      pointer-events: none;
+    }
+    .btn-primary > span { position: relative; z-index: 1; display: flex; align-items: center; gap: .5rem; }
+    .btn-primary:hover  { transform: scale(1.04); filter: brightness(1.1); }
+    .btn-primary:active { transform: scale(.97); }
+
+    .btn-glow {
+      position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%);
+      width: 72%; height: 24px;
+      background: rgba(157,120,233,.38);
+      border-radius: 50%; filter: blur(16px); pointer-events: none;
+    }
+    .btn-wrap { position: relative; display: inline-flex; }
+
+    /* pulse rings around button */
+    .btn-pulse {
+      position: absolute; inset: -5px; border-radius: 9999px;
+      border: 1.5px solid rgba(157,120,233,.4);
+      animation: pulse-ring 2.5s cubic-bezier(.16,1,.3,1) infinite;
+      pointer-events: none;
+    }
+    .btn-pulse:nth-child(2){ animation-delay: .85s; }
+    .btn-pulse:nth-child(3){ animation-delay: 1.7s; }
+
+    /* secondary / ghost button */
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .8rem 2rem; border-radius: 9999px;
+      font-family: 'Geist', sans-serif; font-size: .875rem; font-weight: 700;
+      color: var(--accent); text-decoration: none;
+      border: 1px solid rgba(122,50,199,.45);
+      background: rgba(122,50,199,.1);
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+    .btn-ghost:hover { background: rgba(122,50,199,.22); border-color: rgba(157,120,233,.65); transform: scale(1.03); }
+
+    /* ═══════════════════════════════════════════
+       TRUST BADGE ROW
+    ═══════════════════════════════════════════ */
+    .trust-item {
+      display: inline-flex; align-items: center; gap: .4rem;
+      font-family: 'Geist', sans-serif; font-size: .72rem; font-weight: 600;
+      color: rgba(157,120,233,.7);
+      padding: .4rem .9rem; border-radius: 9999px;
+      background: rgba(35,20,49,.6); border: 1px solid rgba(61,43,74,.8);
+      transition: color .2s, border-color .2s;
+    }
+    .trust-item:hover { color: var(--accent); border-color: rgba(122,50,199,.5); }
+
+    /* ═══════════════════════════════════════════
+       STEP CARDS
+    ═══════════════════════════════════════════ */
+    .step-card {
+      position: relative;
+      background: rgba(35,20,49,.52);
+      border: 1px solid rgba(61,43,74,.75);
+      border-radius: 1.5rem;
+      padding: 2.25rem 2rem;
+      overflow: hidden;
+      transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .3s, box-shadow .3s;
+      display: flex; flex-direction: column; gap: 1.25rem;
+    }
+    .step-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 180px;
+      background: radial-gradient(ellipse 80% 70% at 50% -15%, rgba(122,50,199,.14) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .step-card::after {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(122,50,199,.55), transparent);
+      animation: beam .9s cubic-bezier(.16,1,.3,1) both;
+    }
+    .step-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(122,50,199,.5);
+      box-shadow: 0 32px 80px -12px rgba(13,7,20,.75),
+                  0 0 45px rgba(122,50,199,.14),
+                  inset 0 1px 0 rgba(157,120,233,.18);
+    }
+    .step-card.featured {
+      border-color: rgba(122,50,199,.55);
+      background: linear-gradient(155deg, rgba(61,27,100,.55), rgba(35,20,49,.62));
+      box-shadow: 0 0 60px rgba(122,50,199,.16), inset 0 1px 0 rgba(157,120,233,.22);
+    }
+    .step-card.featured::after {
+      background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+    }
+    .step-card.featured:hover {
+      border-color: rgba(157,120,233,.7);
+      box-shadow: 0 32px 80px -12px rgba(13,7,20,.85),
+                  0 0 60px rgba(122,50,199,.28),
+                  inset 0 1px 0 rgba(157,120,233,.28);
+    }
+    .step-num {
+      font-family: 'Geist', sans-serif;
+      font-size: 2.5rem; font-weight: 800; line-height: 1;
+      background: linear-gradient(135deg, rgba(122,50,199,.5), rgba(157,120,233,.25));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .step-icon {
+      width: 52px; height: 52px; border-radius: .875rem; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(122,50,199,.15); border: 1px solid rgba(122,50,199,.3);
+    }
+    .step-icon.alt { background: rgba(157,120,233,.18); border-color: rgba(157,120,233,.35); }
+
+    /* arrow connector */
+    .arrow-conn {
+      display: none;
+      width: 28px; flex-shrink: 0; align-items: center; justify-content: center;
+    }
+    @media(min-width:1024px){ .arrow-conn{ display:flex; } }
+    .arrow-line {
+      width: 100%; height: 1px; position: relative;
+      background: linear-gradient(90deg, rgba(122,50,199,.3), rgba(157,120,233,.5), rgba(122,50,199,.3));
+    }
+    .arrow-dot {
+      position: absolute; right: -4px; top: -3.5px;
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--secondary); box-shadow: 0 0 10px rgba(157,120,233,.7);
+    }
+
+    /* ═══════════════════════════════════════════
+       SPECIAL MESSAGE SECTION
+    ═══════════════════════════════════════════ */
+    .quote-bar {
+      position: relative;
+      padding: 1.75rem 2rem;
+      background: rgba(35,20,49,.5);
+      border: 1px solid rgba(61,43,74,.7);
+      border-left: 3px solid var(--primary);
+      border-radius: 1.1rem;
+    }
+    .quote-bar::before {
+      content: '\201C';
+      position: absolute; top: -10px; left: 18px;
+      font-size: 4.5rem; line-height: 1;
+      color: rgba(122,50,199,.28); font-family: Georgia, serif;
+      pointer-events: none;
+    }
+
+    /* ═══════════════════════════════════════════
+       MODULE CARDS
+    ═══════════════════════════════════════════ */
+    .mod-card {
+      position: relative;
+      padding: 1.75rem 1.5rem;
+      background: rgba(35,20,49,.45);
+      border: 1px solid rgba(61,43,74,.7);
+      border-radius: 1.25rem;
+      overflow: hidden;
+      transition: transform .3s, border-color .3s, box-shadow .3s;
+    }
+    .mod-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 100px;
+      background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(122,50,199,.11) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .mod-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(122,50,199,.45);
+      box-shadow: 0 20px 50px rgba(13,7,20,.5), 0 0 28px rgba(122,50,199,.1);
+    }
+    .mod-card.accent-card {
+      border-color: rgba(122,50,199,.45);
+      background: linear-gradient(155deg, rgba(61,27,100,.5), rgba(35,20,49,.55));
+      box-shadow: 0 0 40px rgba(122,50,199,.12), inset 0 1px 0 rgba(157,120,233,.18);
+    }
+    .mod-num {
+      font-family: 'Geist', sans-serif;
+      font-size: .58rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: rgba(122,50,199,.5); margin-bottom: .75rem;
+    }
+
+    /* ═══════════════════════════════════════════
+       CTA SECTION
+    ═══════════════════════════════════════════ */
+    .cta-section-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 90% 60% at 50% 0%,   rgba(122,50,199,.22) 0%, transparent 65%),
+        radial-gradient(ellipse 70% 50% at 50% 100%%, rgba(122,50,199,.12) 0%, transparent 65%),
+        linear-gradient(180deg, #0d0714 0%, #120820 45%, #0d0714 100%);
+    }
+    .cta-spinner {
+      position: absolute; top: 50%; left: 50%;
+      width: 720px; height: 720px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: conic-gradient(from 0deg,
+        transparent 0%, rgba(122,50,199,.07) 20%, rgba(157,120,233,.04) 40%,
+        transparent 60%, rgba(122,50,199,.06) 80%, transparent 100%
+      );
+      animation: spin-slow 20s linear infinite;
+      pointer-events: none; z-index: 0;
+    }
+    .cta-glass {
+      position: relative; z-index: 2;
+      max-width: 760px; margin: 0 auto;
+      padding: 4.5rem 3.5rem;
+      border-radius: 2rem;
+      background: rgba(35,20,49,.55);
+      border: 1px solid rgba(122,50,199,.38);
+      backdrop-filter: blur(22px);
+      box-shadow:
+        0 0 0 1px rgba(157,120,233,.1),
+        0 40px 100px -20px rgba(13,7,20,.9),
+        0 0 90px rgba(122,50,199,.13),
+        inset 0 1px 0 rgba(157,120,233,.17);
+      text-align: center;
+    }
+    .cta-glass::before {
+      content: '';
+      position: absolute; top: 0; left: 8%; right: 8%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--secondary), var(--accent), var(--secondary), transparent);
+      border-radius: 9999px;
+      animation: shimmer 3s linear infinite; background-size: 200%;
+    }
+    .particle {
+      position: absolute; width: 4px; height: 4px; border-radius: 50%;
+      background: rgba(157,120,233,.55); pointer-events: none; z-index: 1;
+      animation: rise-particle var(--d,5s) ease-in var(--dl,0s) infinite;
+    }
+
+    /* ═══════════════════════════════════════════
+       GLASS SURFACE
+    ═══════════════════════════════════════════ */
+    .glass {
+      background: rgba(35,20,49,.6);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    /* ═══════════════════════════════════════════
+       SCROLLBAR
+    ═══════════════════════════════════════════ */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--primary), var(--secondary)); border-radius: 3px; }
+    * { scrollbar-width: thin; scrollbar-color: var(--primary) var(--bg); }
+    ::selection { background: rgba(122,50,199,.4); color: #fff; }
+
+    @media(max-width:640px){ .cta-glass{ padding:2.5rem 1.5rem; } }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     §1  HERO
+═══════════════════════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-center overflow-hidden" id="topo">
+
+  <!-- Background orbs -->
+  <div class="orb" style="width:560px;height:560px;top:5%;right:-5%;background:radial-gradient(circle,rgba(122,50,199,.28) 0%,transparent 68%);filter:blur(48px);--dur:9s;--dl:0s;"></div>
+  <div class="orb" style="width:340px;height:340px;top:40%;left:-4%;background:radial-gradient(circle,rgba(157,120,233,.22) 0%,transparent 68%);filter:blur(56px);--dur:11s;--dl:2s;"></div>
+  <div class="orb" style="width:260px;height:260px;bottom:8%;left:35%;background:radial-gradient(circle,rgba(122,50,199,.16) 0%,transparent 70%);filter:blur(50px);--dur:7s;--dl:1s;"></div>
+
+  <!-- Grid -->
+  <div class="grid-veil" style="mask-image:radial-gradient(ellipse 65% 65% at 50% 50%,black,transparent);-webkit-mask-image:radial-gradient(ellipse 65% 65% at 50% 50%,black,transparent);"></div>
+
+  <div class="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-8 py-28 lg:py-40 flex flex-col items-center text-center">
+
+    <!-- pill -->
+    <div class="h-anim-1 mb-8">
+      <div class="pill">
+        <iconify-icon icon="lucide:check-circle-2" style="font-size:.85rem;"></iconify-icon>
+        Tudo certo — seu material está disponível
+        <span class="pill-dot"></span>
+      </div>
+    </div>
+
+    <!-- Check circle -->
+    <div class="check-wrap h-anim-2 mb-10">
+      <div class="check-ring"></div>
+      <div class="check-ring"></div>
+      <div class="check-ring"></div>
+      <div class="check-circle">
+        <iconify-icon icon="lucide:check" style="font-size:2.75rem;color:#9D78E9;"></iconify-icon>
+      </div>
+    </div>
+
+    <!-- Headline -->
+    <div class="h-anim-3 mb-6">
+      <p class="font-geist text-[.7rem] font-semibold uppercase tracking-[.18em] text-secondary/55 mb-3">
+        Playbook de Geração de Demanda Qualificada
+      </p>
+      <h1 class="font-jakarta font-bold leading-[1.0] tracking-tight">
+        <span class="block text-4xl md:text-5xl lg:text-[3.75rem] text-grad">Obrigado.</span>
+        <span class="block text-4xl md:text-5xl lg:text-[3.75rem] text-grad-purple">Seu Playbook está pronto.</span>
+      </h1>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-anim-4 w-full max-w-md mb-8">
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Sub copy -->
+    <p class="h-anim-4 font-jakarta text-lg md:text-xl leading-relaxed text-secondary/70 mb-10 max-w-xl">
+      Você está a um clique de ter acesso ao sistema completo para atrair clientes com dinheiro, urgência e perfil — e parar de queimar orçamento com quem nunca vai comprar.
+    </p>
+
+    <!-- CTA -->
+    <div class="h-anim-5 flex flex-col items-center gap-8">
+      <div class="btn-wrap">
+        <div class="btn-pulse"></div>
+        <div class="btn-pulse"></div>
+        <div class="btn-pulse"></div>
+        <a href="https://gruporugido.com/wp-content/uploads/2026/04/Playbook_interno_degeracao_de_demanda_qualificada.pdf" download="Playbook_Rugido_Geracao_de_Demanda_Qualificada.pdf" target="_blank" class="btn-primary" id="cta-hero">
+          <span>
+            <iconify-icon icon="lucide:download" style="font-size:1.1rem;"></iconify-icon>
+            Acessar o Playbook Agora
+            <iconify-icon icon="lucide:arrow-right" style="font-size:1rem;"></iconify-icon>
+          </span>
+        </a>
+        <div class="btn-glow"></div>
+      </div>
+
+      <!-- trust row -->
+      <div class="flex flex-wrap gap-3 justify-center">
+        <span class="trust-item">
+          <iconify-icon icon="lucide:shield-check" style="font-size:.9rem;color:#4DFFB4;"></iconify-icon>
+          PDF seguro
+        </span>
+        <span class="trust-item">
+          <iconify-icon icon="lucide:zap" style="font-size:.9rem;color:#9D78E9;"></iconify-icon>
+          Download imediato
+        </span>
+        <span class="trust-item">
+          <iconify-icon icon="lucide:book-open" style="font-size:.9rem;color:#9D78E9;"></iconify-icon>
+          32 páginas de conteúdo prático
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- bottom edge line -->
+  <div class="absolute bottom-0 left-0 right-0 h-px" style="background:linear-gradient(90deg,transparent,rgba(122,50,199,.28),transparent);"></div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     §2  PRÓXIMOS PASSOS
+═══════════════════════════════════════════════════════ -->
+<section class="relative py-28 lg:py-36 overflow-hidden" id="proximos-passos">
+
+  <div class="grid-veil"></div>
+  <div class="orb" style="width:440px;height:440px;top:0;left:5%;background:radial-gradient(circle,rgba(122,50,199,.13) 0%,transparent 70%);filter:blur(55px);--dur:10s;"></div>
+  <div class="orb" style="width:320px;height:320px;bottom:5%;right:8%;background:radial-gradient(circle,rgba(157,120,233,.1) 0%,transparent 70%);filter:blur(60px);--dur:8s;--dl:2s;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- heading -->
+    <div class="text-center mb-20">
+      <div class="sr flex justify-center mb-5">
+        <div class="pill">
+          <iconify-icon icon="lucide:list-checks" style="font-size:.8rem;"></iconify-icon>
+          O que fazer agora
+        </div>
+      </div>
+      <h2 class="sr delay-1 font-jakarta font-bold text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.0]">
+        <span class="text-grad">Próximos Passos</span>
+      </h2>
+    </div>
+
+    <!-- 3 cards row -->
+    <div class="flex flex-col lg:flex-row items-stretch gap-6">
+
+      <!-- 01 -->
+      <div class="step-card flex-1 sr delay-1" id="step-1">
+        <div class="flex items-start justify-between gap-3">
+          <div class="step-icon">
+            <iconify-icon icon="lucide:download" style="font-size:1.5rem;color:#9D78E9;"></iconify-icon>
+          </div>
+          <span class="step-num">01</span>
+        </div>
+        <div class="flex-1 flex flex-col gap-3">
+          <h3 class="font-jakarta font-bold text-2xl lg:text-3xl text-white tracking-tight leading-snug">
+            Baixe o Playbook
+          </h3>
+          <p class="font-jakarta text-[.95rem] text-secondary/65 leading-relaxed">
+            Clique no botão de download e salve o PDF em um lugar de fácil acesso. Ele tem <strong class="text-white/85 font-semibold">32 páginas</strong> — planeje ler em uma sentada.
+          </p>
+        </div>
+        <div class="pt-4 flex items-center gap-2" style="border-top:1px solid rgba(61,43,74,.6);">
+          <iconify-icon icon="lucide:arrow-right" style="font-size:.8rem;color:rgba(157,120,233,.45);"></iconify-icon>
+          <span class="font-geist text-[.65rem] uppercase tracking-widest text-secondary/35">Primeiro passo</span>
+        </div>
+      </div>
+
+      <!-- connector -->
+      <div class="arrow-conn">
+        <div class="arrow-line"><div class="arrow-dot"></div></div>
+      </div>
+
+      <!-- 02 (featured) -->
+      <div class="step-card flex-1 sr delay-2" id="step-2">
+
+        <div class="flex items-start justify-between gap-3">
+          <div class="step-icon alt">
+            <iconify-icon icon="lucide:zap" style="font-size:1.5rem;color:#E1D4FB;"></iconify-icon>
+          </div>
+          <span class="step-num">02</span>
+        </div>
+        <div class="flex-1 flex flex-col gap-3">
+          <h3 class="font-jakarta font-bold text-2xl lg:text-3xl text-white tracking-tight leading-snug">
+            Execute a Ação Imediata de cada módulo
+          </h3>
+          <p class="font-jakarta text-[.95rem] text-secondary/70 leading-relaxed">
+            Cada módulo termina com uma <strong class="font-bold text-white">⚡ Ação Imediata</strong>. Não pule. Elas transformam leitura em resultado real.
+          </p>
+        </div>
+        <div class="pt-4 flex items-center gap-2" style="border-top:1px solid rgba(122,50,199,.28);">
+          <iconify-icon icon="lucide:arrow-right" style="font-size:.8rem;color:rgba(157,120,233,.55);"></iconify-icon>
+          <span class="font-geist text-[.65rem] uppercase tracking-widest" style="color:rgba(157,120,233,.5);">Não pule essa etapa</span>
+        </div>
+      </div>
+
+      <!-- connector -->
+      <div class="arrow-conn">
+        <div class="arrow-line"><div class="arrow-dot"></div></div>
+      </div>
+
+      <!-- 03 -->
+      <div class="step-card featured flex-1 sr delay-3" id="step-3">
+        <div class="absolute top-4 right-4 px-2.5 py-1 rounded-full font-geist text-[.58rem] font-bold uppercase tracking-widest"
+          style="background:rgba(122,50,199,.25);border:1px solid rgba(157,120,233,.38);color:#E1D4FB;">Ação recomendada</div>
+        <div class="flex items-start justify-between gap-3">
+          <div class="step-icon alt">
+            <iconify-icon icon="lucide:target" style="font-size:1.5rem;color:#E1D4FB;"></iconify-icon>
+          </div>
+          <span class="step-num" style="background:linear-gradient(135deg,rgba(157,120,233,.6),rgba(225,212,251,.3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">03</span>
+        </div>
+        <div class="flex-1 flex flex-col gap-3">
+          <h3 class="font-jakarta font-bold text-2xl lg:text-3xl tracking-tight leading-snug">
+            <span class="text-grad-purple">Agende seu Diagnóstico</span>
+            <span class="block text-grad-purple">com a Rugido</span>
+          </h3>
+          <p class="font-jakarta text-[.95rem] text-secondary/65 leading-relaxed">
+            Se quiser aplicar tudo com acompanhamento especializado, a equipe da Rugido pode mapear o <strong class="text-white/85 font-semibold">gargalo específico da sua captação</strong> e mostrar o caminho mais direto.
+          </p>
+        </div>
+        <div class="pt-4 flex items-center gap-2" style="border-top:1px solid rgba(61,43,74,.6);">
+          <iconify-icon icon="lucide:external-link" style="font-size:.8rem;color:rgba(157,120,233,.5);"></iconify-icon>
+          <a href="https://gruporugido.com/diagnostico" target="_blank" class="font-geist text-[.7rem] uppercase tracking-widest transition-colors"
+            style="color:rgba(157,120,233,.55);text-decoration:none;"
+            onmouseover="this.style.color='#E1D4FB'" onmouseout="this.style.color='rgba(157,120,233,.55)'">
+            rugido.com/diagnostico
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     §3  UM RECADO ESPECIAL
+═══════════════════════════════════════════════════════ -->
+<section class="relative py-28 lg:py-36 overflow-hidden" id="recado">
+
+  <div class="grid-veil"></div>
+  <div class="orb" style="width:480px;height:480px;top:10%;left:-5%;background:radial-gradient(circle,rgba(122,50,199,.12) 0%,transparent 70%);filter:blur(55px);--dur:12s;--dl:1s;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+
+      <!-- Left -->
+      <div class="sr from-left flex flex-col gap-7">
+        <div>
+          <div class="pill mb-6">
+            <iconify-icon icon="lucide:heart" style="font-size:.8rem;"></iconify-icon>
+            Um recado especial
+          </div>
+          <h2 class="font-jakarta font-bold text-4xl md:text-5xl tracking-tight leading-[1.05]">
+            <span class="text-grad">Você não é só</span><br>
+            <span class="text-grad">mais um lead.</span>
+          </h2>
+          <p class="font-jakarta text-lg text-secondary/50 mt-2">E nós levamos isso a sério.</p>
+        </div>
+
+        <div class="quote-bar">
+          <div class="flex flex-col gap-4 mt-2">
+            <p class="font-jakarta text-[.97rem] text-secondary/75 leading-relaxed">
+              Ao acessar este Playbook, você deu um passo concreto para transformar a forma como o seu negócio atrai clientes. Isso exige coragem — e a Rugido respeita muito isso.
+            </p>
+            <p class="font-jakarta text-[.97rem] text-secondary/75 leading-relaxed">
+              O material foi construído com tudo o que aprendemos em anos de operação real, atendendo empresas de todos os tamanhos. Leia com calma, execute as ações de cada módulo e, se em algum momento quiser ir mais fundo, a nossa equipe está aqui.
+            </p>
+            <p class="font-jakarta text-[.97rem] text-white/90 leading-relaxed font-semibold">
+              Muito obrigado pela confiança. Agora vai — a máquina de captação que você merece está esperando.
+            </p>
+          </div>
+          <p class="font-geist text-sm text-secondary/45 mt-5">— Time Rugido</p>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="sr from-right delay-1 flex flex-col gap-5">
+
+        <!-- Stats glass -->
+        <div class="glass rounded-2xl p-7">
+          <p class="section-label mb-5">Operações reais. Resultado comprovado.</p>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="text-center rounded-xl py-5 px-3" style="background:rgba(122,50,199,.08);border:1px solid rgba(122,50,199,.2);">
+              <p class="font-jakarta font-bold text-[1.6rem] text-grad leading-none mb-2">+R$50M</p>
+              <p class="font-geist text-[.62rem] text-secondary/45 leading-snug">faturamento<br>gerado</p>
+            </div>
+            <div class="text-center rounded-xl py-5 px-3" style="background:rgba(122,50,199,.08);border:1px solid rgba(122,50,199,.2);">
+              <p class="font-jakarta font-bold text-[1.6rem] text-grad leading-none mb-2">32</p>
+              <p class="font-geist text-[.62rem] text-secondary/45 leading-snug">páginas de<br>conteúdo</p>
+            </div>
+            <div class="text-center rounded-xl py-5 px-3" style="background:rgba(122,50,199,.08);border:1px solid rgba(122,50,199,.2);">
+              <p class="font-jakarta font-bold text-[1.6rem] text-grad leading-none mb-2">8</p>
+              <p class="font-geist text-[.62rem] text-secondary/45 leading-snug">módulos<br>com ação</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real operations badge -->
+        <div class="glass rounded-xl p-5 flex items-center gap-4">
+          <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
+            style="background:rgba(77,255,180,.1);border:1px solid rgba(77,255,180,.28);">
+            <iconify-icon icon="lucide:shield-check" style="font-size:1.25rem;color:#4DFFB4;"></iconify-icon>
+          </div>
+          <div>
+            <p class="font-jakarta font-bold text-white text-[.95rem]">100% baseado em operações reais</p>
+            <p class="font-jakarta text-sm text-secondary/60 mt-0.5 leading-snug">Não é teoria. É o que funciona todos os dias.</p>
+          </div>
+        </div>
+
+        <!-- WhatsApp CTA -->
+        <div class="flex justify-center lg:justify-start pt-2">
+          <div class="btn-wrap">
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="btn-primary" id="cta-whatsapp">
+              <span>
+                <iconify-icon icon="lucide:message-circle" style="font-size:1.1rem;"></iconify-icon>
+                Falar pelo WhatsApp
+              </span>
+            </a>
+            <div class="btn-glow"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     §4  O QUE ESTÁ DENTRO — 8 MÓDULOS
+═══════════════════════════════════════════════════════ -->
+<section class="relative py-28 lg:py-36 overflow-hidden" id="modulos">
+
+  <div class="grid-veil"></div>
+  <div class="orb" style="width:500px;height:500px;top:15%;right:-2%;background:radial-gradient(circle,rgba(122,50,199,.11) 0%,transparent 70%);filter:blur(58px);--dur:11s;--dl:.5s;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- heading -->
+    <div class="text-center mb-20">
+      <div class="sr flex justify-center mb-5">
+        <div class="pill">
+          <iconify-icon icon="lucide:layers" style="font-size:.8rem;"></iconify-icon>
+          O que está dentro
+          <span class="pill-dot"></span>
+        </div>
+      </div>
+      <h2 class="sr delay-1 font-jakarta font-bold text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.0] mb-3">
+        <span class="text-grad">8 módulos.</span>
+      </h2>
+      <p class="sr delay-2 font-jakarta font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight text-grad-purple">
+        Resultado imediato.
+      </p>
+    </div>
+
+    <!-- 4×2 grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <div class="mod-card sr delay-1">
+        <div class="mod-num">Módulo 01</div>
+        <h3 class="font-jakarta font-bold text-lg text-white tracking-tight mb-3 leading-snug">A Lógica da Demanda</h3>
+        <p class="font-jakarta text-sm text-secondary/60 leading-relaxed">O que qualificação de verdade significa — e por que você está resolvendo o problema errado.</p>
+      </div>
+
+      <div class="mod-card sr delay-2">
+        <div class="mod-num">Módulo 02</div>
+        <h3 class="font-jakarta font-bold text-lg text-white tracking-tight mb-3 leading-snug">ICP com Precisão Cirúrgica</h3>
+        <p class="font-jakarta text-sm text-secondary/60 leading-relaxed">Mapeie o cliente que paga bem, decide rápido e vira prova social.</p>
+      </div>
+
+      <div class="mod-card sr delay-3">
+        <div class="mod-num">Módulo 03</div>
+        <h3 class="font-jakarta font-bold text-lg text-white tracking-tight mb-3 leading-snug">Jornada de Compra</h3>
+        <p class="font-jakarta text-sm text-secondary/60 leading-relaxed">Por que o caminho importa tanto quanto o destino — e como mapear cada etapa.</p>
+      </div>
+
+      <div class="mod-card accent-card sr delay-4">
+        <div class="mod-num">Módulo 04</div>
+        <h3 class="font-jakarta font-bold text-lg tracking-tight mb-3 leading-snug text-grad-purple">Árvore de Situações</h3>
+        <p class="font-jakarta text-sm text-secondary/65 leading-relaxed">A ferramenta que define exatamente o que dizer para atrair decisores e afastar curiosos.</p>
+      </div>
+
+      <div class="mod-card sr delay-1">
+        <div class="mod-num">Módulo 05</div>
+        <h3 class="font-jakarta font-bold text-lg text-white tracking-tight mb-3 leading-snug">Hook nos Primeiros 3s</h3>
+        <p class="font-jakarta text-sm text-secondary/60 leading-relaxed">Como qualificar e filtrar o cliente certo nos primeiros segundos de contato.</p>
+      </div>
+
+      <div class="mod-card sr delay-2">
+        <div class="mod-num">Módulo 06</div>
+        <h3 class="font-jakarta font-bold text-lg text-white tracking-tight mb-3 leading-snug">Mecanismo Intrigante</h3>
+        <p class="font-jakarta text-sm text-secondary/60 leading-relaxed">Gere curiosidade genuína sem prometer nada — e faça o ICP pedir mais.</p>
+      </div>
+
+      <div class="mod-card accent-card sr delay-3">
+        <div class="mod-num">Módulo 07</div>
+        <h3 class="font-jakarta font-bold text-lg tracking-tight mb-3 leading-snug text-grad-purple">Funis que Qualificam</h3>
+        <p class="font-jakarta text-sm text-secondary/65 leading-relaxed">A estrutura certa para cada temperatura de cliente — do frio ao pronto para fechar.</p>
+      </div>
+
+      <div class="mod-card sr delay-4">
+        <div class="mod-num">Módulo 08</div>
+        <h3 class="font-jakarta font-bold text-lg text-white tracking-tight mb-3 leading-snug">Operação e Iteração</h3>
+        <p class="font-jakarta text-sm text-secondary/60 leading-relaxed">Como subir, testar e calibrar a máquina de captação em 30 dias.</p>
+      </div>
+
+    </div>
+
+    <!-- CTA under modules -->
+    <div class="flex justify-center mt-14 sr delay-5">
+      <div class="btn-wrap">
+        <a href="https://gruporugido.com/wp-content/uploads/2026/04/Playbook_interno_degeracao_de_demanda_qualificada.pdf" download="Playbook_Rugido_Geracao_de_Demanda_Qualificada.pdf" target="_blank" class="btn-primary" id="cta-modulos">
+          <span>
+            <iconify-icon icon="lucide:download" style="font-size:1.05rem;"></iconify-icon>
+            Acessar o Playbook Agora
+          </span>
+        </a>
+        <div class="btn-glow"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     §5  SECONDARY CTA — WHATSAPP
+═══════════════════════════════════════════════════════ -->
+<section class="relative py-28 lg:py-40 overflow-hidden cta-section" id="cta-final">
+
+  <div class="cta-section-bg"></div>
+  <div class="cta-spinner"></div>
+
+  <!-- particles -->
+  <div class="particle" style="left:12%;bottom:22%;--d:6s;--dl:0s;"></div>
+  <div class="particle" style="left:28%;bottom:16%;--d:8s;--dl:1.4s;"></div>
+  <div class="particle" style="left:52%;bottom:28%;--d:5s;--dl:.7s;"></div>
+  <div class="particle" style="left:69%;bottom:19%;--d:7s;--dl:2s;"></div>
+  <div class="particle" style="left:84%;bottom:24%;--d:9s;--dl:.3s;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="cta-glass sr">
+
+      <div class="flex justify-center mb-8">
+        <div class="pill">
+          <iconify-icon icon="lucide:message-circle" style="font-size:.8rem;"></iconify-icon>
+          Entre em contato
+          <span class="pill-dot"></span>
+        </div>
+      </div>
+
+      <h2 class="font-jakarta font-bold text-4xl md:text-5xl lg:text-[3.25rem] tracking-tight leading-[1.05] mb-5">
+        <span class="text-grad">Quer ir mais fundo?</span><br>
+        <span class="text-grad-purple">A equipe está aqui.</span>
+      </h2>
+
+      <p class="font-jakarta text-lg md:text-xl text-secondary/65 leading-relaxed max-w-xl mx-auto mb-10">
+        Se em algum momento você quiser aplicar tudo com acompanhamento especializado, é só falar com a equipe da <strong style="color:#E1D4FB;">Rugido</strong> pelo WhatsApp.
+      </p>
+
+      <div class="flex flex-col items-center gap-6">
+        <div class="btn-wrap">
+          <div class="btn-pulse"></div>
+          <div class="btn-pulse"></div>
+          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="btn-primary" id="cta-wa-final">
+            <span>
+              <iconify-icon icon="lucide:message-circle" style="font-size:1.1rem;"></iconify-icon>
+              Falar pelo WhatsApp
+              <iconify-icon icon="lucide:arrow-right" style="font-size:1rem;"></iconify-icon>
+            </span>
+          </a>
+          <div class="btn-glow"></div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 justify-center">
+          <span class="trust-item">
+            <iconify-icon icon="lucide:shield-check" style="font-size:.85rem;color:#4DFFB4;"></iconify-icon>
+            Sem compromisso
+          </span>
+          <span class="trust-item">
+            <iconify-icon icon="lucide:clock" style="font-size:.85rem;color:#9D78E9;"></iconify-icon>
+            Resposta rápida
+          </span>
+          <span class="trust-item">
+            <iconify-icon icon="lucide:lock" style="font-size:.85rem;color:#9D78E9;"></iconify-icon>
+            Sem SPAM
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════ -->
+<footer class="relative py-10" style="border-top:1px solid rgba(61,43,74,.5);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-5">
+
+    <div>
+      <p class="font-jakarta font-bold text-xl text-white tracking-tight mb-1">Rugido</p>
+      <p class="font-geist text-xs text-secondary/35">
+        © 2026 Grupo Rugido. Todos os direitos reservados.&nbsp;
+        <a href="https://rugido.com" target="_blank"
+          style="color:rgba(157,120,233,.45);text-decoration:none;transition:color .2s;"
+          onmouseover="this.style.color='#E1D4FB'"
+          onmouseout="this.style.color='rgba(157,120,233,.45)'">rugido.com</a>
+      </p>
+    </div>
+
+    <a href="https://rugido.com/diagnostico" target="_blank" class="btn-ghost">
+      <iconify-icon icon="lucide:calendar" style="font-size:1rem;"></iconify-icon>
+      Agendar Diagnóstico
+      <iconify-icon icon="lucide:arrow-right" style="font-size:.9rem;"></iconify-icon>
+    </a>
+
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════
+     SCROLL REVEAL SCRIPT
+═══════════════════════════════════════════════════════ -->
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.sr').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

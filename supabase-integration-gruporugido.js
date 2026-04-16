@@ -1,4 +1,4 @@
-/* Supabase Integration - Arquivo separado para não mexer no código principal */
+/* Supabase Integration - Grupo Rugido */
 
 // Máscara de telefone brasileiro (00) 00000-0000
 function setupPhoneMask() {
@@ -40,7 +40,7 @@ function setupPhoneMask() {
 
 // Configuração do Supabase
 const supabaseUrl = 'https://zyflizbsdbzowcgoiyaj.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5ZmxpemJzZGJ6b3djZ29peWFqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYzMjk5NTIsImV4cCI6MjA5MTkwNTk1Mn0.bC9cVjyhPnUOYrHJofHy99RbF6B5I4vgMZSfwmhsPyg';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5ZmxpemJzZGJ6b3d3em9jZ29peWFqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYzMjk5NTIsImV4cCI6MjA5MTkwNTk1Mn0.bC9cVjyhPnUOYrHJofHy99RbF6B5I4vgMZSfwmhsPyg';
 
 // Aguarda o DOM estar pronto e o Supabase carregado
 function initSupabaseIntegration() {
@@ -97,7 +97,7 @@ function initSupabaseIntegration() {
                 const success = document.getElementById('lp-success');
                 if (success) success.style.display = 'block';
 
-                // Redireciona após 1.5 segundos
+                // Redireciona para o Grupo Rugido após 1.5 segundos
                 setTimeout(() => {
                     window.location.href = 'https://gruporugido.com/obrigado/';
                 }, 1500);
@@ -115,7 +115,7 @@ function initSupabaseIntegration() {
     }
 }
 
-// Inicializa quando a página carregar
+// Inicializa quando a página carrega
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initSupabaseIntegration);
 } else {
