@@ -56,7 +56,7 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        html { scroll-behavior: smooth; overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -865,8 +865,8 @@
         ════════════════════════════════════════════════════════ */
 
         /* Page enter */
-        @keyframes pageIn { from{opacity:0} to{opacity:1} }
-        body { animation:pageIn .6s ease both; }
+        @keyframes pageIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
+        body { animation:pageIn .6s cubic-bezier(.16,1,.3,1) both; }
 
         /* Branded scrollbar */
         ::-webkit-scrollbar { width:5px; }
@@ -971,167 +971,152 @@
         img.loaded { opacity:1; }
 
         /* ═══════════════════════════════════════════════════════
-            LEAD POPUP (NÃO MODAL)
+           LEAD MODAL
         ═══════════════════════════════════════════════════════ */
-        .lp-wrapper {
-            position:relative;
-            width:calc(100% - 2rem); max-width:520px;
-            max-height:90vh; overflow-y:auto;
-            z-index:9999;
-            transform:scale(0.94);
+        .lm-overlay {
+            display:none;
+            position:fixed; inset:0; z-index:9999;
+            background:rgba(7,3,14,.8);
+            backdrop-filter:blur(12px);
+            -webkit-backdrop-filter:blur(12px);
+            align-items:center; justify-content:center;
+            padding:1.5rem;
             opacity:0;
-            transition:transform .35s cubic-bezier(.16,1,.3,1), opacity .3s cubic-bezier(.16,1,.3,1);
-            border-radius:1.75rem;
+            transition:opacity .35s cubic-bezier(.16,1,.3,1);
         }
-        .lp-overlay-click.lp-visible .lp-wrapper {
-            transform:scale(1);
+        .lm-overlay.lm-visible {
+            display:flex;
             opacity:1;
         }
-        @keyframes lpCardIn {
-            from { opacity:0; transform:scale(.96); }
-            to   { opacity:1; transform:scale(1); }
+        .lm-overlay.lm-hiding {
+            opacity:0;
         }
-        .lp-card {
+        @keyframes lmCardIn {
+            from { opacity:0; transform:scale(.94) translateY(16px); }
+            to   { opacity:1; transform:scale(1)  translateY(0); }
+        }
+        .lm-card {
             position:relative;
-            background:rgba(22,11,38,.95);
+            width:100%; max-width:680px;
+            max-height:90vh; overflow-y:auto;
+            background:rgba(22,11,38,.9);
             border:1px solid rgba(122,50,199,.4);
             border-radius:1.75rem;
-            padding:2.25rem 1.75rem;
+            padding:2.5rem 2.25rem;
             box-shadow:
                 0 0 0 1px rgba(157,120,233,.1),
-                0 20px 60px rgba(13,7,20,.85),
-                0 0 50px rgba(122,50,199,.15),
-                inset 0 1px 0 rgba(157,120,233,.12);
-            animation:lpCardIn .4s cubic-bezier(.16,1,.3,1) both;
+                0 40px 100px rgba(13,7,20,.95),
+                0 0 80px rgba(122,50,199,.18),
+                inset 0 1px 0 rgba(157,120,233,.15);
+            animation:lmCardIn .45s cubic-bezier(.16,1,.3,1) both;
         }
-        .lp-card::before {
+        .lm-card::before {
             content:'';
-            position:absolute; top:0; left:10%; right:10%; height:2px;
+            position:absolute; top:0; left:8%; right:8%; height:2px;
             background:linear-gradient(90deg,transparent,#9D78E9,#E1D4FB,#9D78E9,transparent);
             border-radius:9999px;
             animation:shimmer 3s linear infinite; background-size:200%;
         }
-        .lp-close {
-            position:absolute; top:1rem; right:1rem;
-            width:30px; height:30px; border-radius:.5rem;
+        .lm-close {
+            position:absolute; top:1.25rem; right:1.25rem;
+            width:32px; height:32px; border-radius:.5rem;
             display:flex; align-items:center; justify-content:center;
             background:rgba(61,43,74,.6); border:1px solid rgba(61,43,74,.9);
             color:rgba(157,120,233,.7); cursor:pointer;
             transition:background .2s,color .2s,border-color .2s;
             flex-shrink:0;
         }
-        .lp-close:hover { background:rgba(122,50,199,.2); border-color:rgba(122,50,199,.5); color:#E1D4FB; }
-        .lp-header { text-align:center; margin-bottom:1.5rem; }
-        .lp-badge {
-            display:inline-flex; align-items:center; gap:.4rem;
+        .lm-close:hover { background:rgba(122,50,199,.2); border-color:rgba(122,50,199,.5); color:#E1D4FB; }
+        .lm-header { text-align:center; margin-bottom:2rem; }
+        .lm-badge {
+            display:inline-flex; align-items:center; gap:.5rem;
             background:rgba(122,50,199,.15); border:1px solid rgba(122,50,199,.35);
-            border-radius:9999px; padding:.3rem .9rem;
-            font-family:'Geist',sans-serif; font-size:.65rem; font-weight:700;
-            letter-spacing:.12em; text-transform:uppercase;
-            color:#E1D4FB; margin-bottom:.85rem;
+            border-radius:9999px; padding:.35rem 1rem;
+            font-family:'Geist',sans-serif; font-size:.7rem; font-weight:700;
+            letter-spacing:.14em; text-transform:uppercase;
+            color:#E1D4FB; margin-bottom:1rem;
         }
-        .lp-title {
+        .lm-title {
             font-family:'Plus Jakarta Sans',sans-serif;
-            font-size:1.65rem; font-weight:800;
-            color:#fff; line-height:1.15; margin-bottom:.5rem;
+            font-size:1.85rem; font-weight:800;
+            color:#fff; line-height:1.15; margin-bottom:.6rem;
             letter-spacing:-.02em;
         }
-        .lp-desc {
+        .lm-emoji { font-style:normal; }
+        .lm-desc {
             font-family:'Inter',sans-serif;
-            font-size:.9rem; color:rgba(157,120,233,.75); line-height:1.55;
+            font-size:.95rem; color:rgba(157,120,233,.75); line-height:1.6;
         }
-        .lp-form { display:flex; flex-direction:column; gap:.9rem; }
-        .lp-row { display:grid; grid-template-columns:1fr 1fr; gap:.85rem; }
-        @media(max-width:480px) { .lp-row { grid-template-columns:1fr; } }
-        .lp-field { display:flex; flex-direction:column; gap:.4rem; }
-        .lp-label {
+        .lm-form { display:flex; flex-direction:column; gap:1rem; }
+        .lm-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+        @media(max-width:540px) { .lm-row { grid-template-columns:1fr; } }
+        .lm-field { display:flex; flex-direction:column; gap:.45rem; }
+        .lm-label {
             font-family:'Geist',sans-serif;
-            font-size:.68rem; font-weight:600;
+            font-size:.72rem; font-weight:600;
             letter-spacing:.08em; text-transform:uppercase;
             color:rgba(157,120,233,.65);
         }
-        .lp-req { color:rgba(255,100,100,.8); }
-        .lp-input {
+        .lm-req { color:rgba(255,100,100,.8); }
+        .lm-input {
             width:100%;
             background:rgba(35,20,49,.6);
             border:1px solid rgba(61,43,74,.9);
-            border-radius:.7rem;
-            padding:.7rem .9rem;
+            border-radius:.75rem;
+            padding:.75rem 1rem;
             font-family:'Inter',sans-serif;
-            font-size:.85rem; color:#fff;
+            font-size:.9rem; color:#fff;
             outline:none;
             transition:border-color .2s, box-shadow .2s, background .2s;
             -webkit-appearance:none; appearance:none;
         }
-        .lp-input::placeholder { color:rgba(157,120,233,.35); }
-        .lp-input:focus {
+        .lm-input::placeholder { color:rgba(157,120,233,.35); }
+        .lm-input:focus {
             border-color:rgba(122,50,199,.7);
             background:rgba(35,20,49,.85);
             box-shadow:0 0 0 3px rgba(122,50,199,.15);
         }
-        .lp-select { cursor:pointer; }
-        .lp-select option { background:#231431; color:#fff; }
-        .lp-submit {
+        .lm-select { cursor:pointer; }
+        .lm-select option { background:#231431; color:#fff; }
+        .lm-submit {
             position:relative; width:100%;
-            padding:.95rem 1.75rem; border-radius:9999px;
+            padding:1rem 2rem; border-radius:9999px;
             font-family:'Geist',sans-serif;
-            font-size:.95rem; font-weight:700; color:#fff;
-            border:none; cursor:pointer; margin-top:.4rem;
+            font-size:1rem; font-weight:700; color:#fff;
+            border:none; cursor:pointer; margin-top:.5rem;
             transition:transform .2s cubic-bezier(.16,1,.3,1), filter .2s;
             overflow:hidden;
         }
-        .lp-submit::before {
+        .lm-submit::before {
             content:'';
             position:absolute; inset:0; border-radius:inherit;
             background:linear-gradient(135deg,#7A32C7,#9D78E9,#7A32C7);
             background-size:200%; animation:shimmer 2.8s linear infinite;
         }
-        .lp-submit::after {
+        .lm-submit::after {
             content:''; position:absolute; inset:0; border-radius:inherit;
-            box-shadow:0 0 0 1px rgba(157,120,233,.6),0 0 25px rgba(122,50,199,.5);
+            box-shadow:0 0 0 1px rgba(157,120,233,.6),0 0 30px rgba(122,50,199,.55);
             pointer-events:none;
         }
-        .lp-submit span { position:relative; z-index:1; }
-        .lp-submit:hover  { transform:scale(1.02); filter:brightness(1.1); }
-        .lp-submit:active { transform:scale(.98); }
-        .lp-success {
+        .lm-submit span { position:relative; z-index:1; }
+        .lm-submit:hover  { transform:scale(1.02); filter:brightness(1.1); }
+        .lm-submit:active { transform:scale(.98); }
+        .lm-success {
             display:none;
             text-align:center;
-            padding:1.25rem .85rem;
+            padding:1.5rem 1rem;
             animation:fadeIn .5s ease both;
         }
-        .lp-success-text {
+        .lm-success-text {
             font-family:'Plus Jakarta Sans',sans-serif;
-            font-size:1rem; font-weight:700; color:#4DFFB4;
+            font-size:1.1rem; font-weight:700; color:#4DFFB4;
         }
-        .lp-footer {
-            display:flex; align-items:center; justify-content:center; gap:.45rem;
-            margin-top:1.25rem;
+        .lm-footer {
+            display:flex; align-items:center; justify-content:center; gap:.5rem;
+            margin-top:1.5rem;
             font-family:'Geist',sans-serif;
-            font-size:.68rem; color:rgba(157,120,233,.45);
+            font-size:.72rem; color:rgba(157,120,233,.45);
             letter-spacing:.06em;
-        }
-        .lp-overlay-click {
-            position:fixed;
-            top:0; left:0; right:0; bottom:0;
-            width:100vw; height:100vh;
-            z-index:9998;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            padding:1rem;
-            background:rgba(13,7,20,0.85);
-            backdrop-filter:blur(6px);
-            -webkit-backdrop-filter:blur(6px);
-            opacity:0;
-            visibility:hidden;
-            pointer-events:none;
-            transition:opacity .3s ease, visibility .3s ease;
-        }
-        .lp-overlay-click.lp-visible {
-            opacity:1;
-            visibility:visible;
-            pointer-events:auto;
         }
     </style>
 </head>
@@ -1198,7 +1183,7 @@
 
                 <div class="anim-fade-up d400 flex flex-col sm:flex-row items-center lg:items-start gap-5 justify-center lg:justify-start mb-10">
                     <div class="relative">
-                        <a href="#" onclick="openLeadPopup();return false;" class="cta-primary" id="cta-primary-btn">
+                        <a href="#" onclick="openLeadModal();return false;" class="cta-primary" id="cta-primary-btn">
                             <span class="flex items-center gap-2">
                                 Acessar o Playbook
                                 <iconify-icon icon="lucide:arrow-right" class="text-lg"></iconify-icon>
@@ -1212,7 +1197,7 @@
                             <iconify-icon icon="lucide:lock-open" class="text-sm"></iconify-icon>
                             100% gratuito
                         </div>
-                        <a href="#" onclick="openLeadPopup();return false;" class="cta-secondary">
+                        <a href="#cta-final" class="cta-secondary">
                             Baixe Gratuitamente
                             <iconify-icon icon="lucide:download" class="text-sm"></iconify-icon>
                         </a>
@@ -1518,7 +1503,7 @@
         <div class="reveal is-visible d400 flex flex-col items-center gap-6 text-center">
             <p class="font-geist text-sm text-secondary/50 uppercase tracking-widest">Pronto para estruturar sua captação?</p>
             <div class="relative inline-flex">
-                <a href="#" onclick="openLeadPopup();return false;" class="cta-primary" id="cta-solucao">
+                <a href="#cta-final" class="cta-primary" id="cta-solucao">
                     <span class="flex items-center gap-2.5">
                         <iconify-icon icon="lucide:book-open" style="font-size:1.1rem;"></iconify-icon>
                         Acessar o Playbook
@@ -1714,7 +1699,7 @@
                     <div class="pulse-ring"></div>
                     <div class="pulse-ring"></div>
                     <div class="pulse-ring"></div>
-                    <a href="#" onclick="openLeadPopup();return false;" class="cta-btn" id="cta-download-btn">
+                    <a href="#" onclick="openLeadModal();return false;" class="cta-btn" id="cta-download-btn">
                         <span>
                             <iconify-icon icon="lucide:download" style="font-size:1.15rem;"></iconify-icon>
                             Baixar Playbook Gratuito
@@ -1819,7 +1804,7 @@
                     <p class="font-geist text-[.65rem] font-bold uppercase tracking-widest text-secondary/40 mb-1">Ainda tem dúvidas?</p>
                     <p class="font-jakarta font-semibold text-white text-base leading-snug">Acesse o material e tire suas dúvidas no conteúdo.</p>
                 </div>
-                <a href="#" onclick="openLeadPopup();return false;" class="faq-cta-btn flex-shrink-0">
+                <a href="#cta-final" class="faq-cta-btn flex-shrink-0">
                     <span>
                         <iconify-icon icon="lucide:book-open" style="font-size:1rem;"></iconify-icon>
                         Acessar o Playbook
@@ -1974,155 +1959,169 @@
         });
     })();
 
-    /* ── LEAD POPUP ────────────────────────────────────────── */
-    /* Define openLeadPopup globalmente já (os botões inline chamam antes do DOMContentLoaded) */
-    window.openLeadPopup = function() {
-        const overlay = document.getElementById('lp-overlay-click');
-        if (!overlay) return;
-        document.documentElement.style.overflow = 'hidden';
-        document.body.style.overflow = 'hidden';
-        overlay.classList.add('lp-visible');
-    };
+    /* ── LEAD MODAL ────────────────────────────────────────── */
+    (function initLeadModal() {
+        const overlay  = document.getElementById('lead-modal');
+        const card     = document.getElementById('lead-modal-card');
+        const closeBtn = document.getElementById('lm-close-btn');
+        const form     = document.getElementById('lead-form');
+        const success  = document.getElementById('lm-success');
+        const submitLabel = document.getElementById('lm-submit-label');
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const overlay     = document.getElementById('lp-overlay-click');
-        const closeBtn    = document.getElementById('lp-close-btn');
-        const form        = document.getElementById('lp-form');
-        const success     = document.getElementById('lp-success');
-        const submitLabel = document.getElementById('lp-submit-label');
+        function openModal() {
+            overlay.style.display = 'flex';
+            /* force reflow before adding visible so transition plays */
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => overlay.classList.add('lm-visible'));
+            });
+            document.body.style.overflow = 'hidden';
+            overlay.focus();
+        }
+        window.openLeadModal = openModal;
 
-        if (!overlay || !closeBtn || !form) return;
-
-        function closePopup() {
-            overlay.classList.remove('lp-visible');
-            document.documentElement.style.overflow = '';
-            document.body.style.overflow = '';
+        function closeModal() {
+            overlay.classList.add('lm-hiding');
+            overlay.classList.remove('lm-visible');
             setTimeout(() => {
+                overlay.style.display = 'none';
+                overlay.classList.remove('lm-hiding');
+                document.body.style.overflow = '';
+                /* reset form for next open */
                 form.reset();
-                if (success) success.style.display = 'none';
-                form.querySelectorAll('.lp-row').forEach(el => el.style.display = '');
-                const submitBtn = form.querySelector('.lp-submit');
-                if (submitBtn) submitBtn.style.display = '';
+                success.style.display = 'none';
+                form.querySelectorAll('.lm-input,.lm-submit').forEach(el => el.style.display = '');
                 if (submitLabel) submitLabel.style.display = '';
-            }, 350);
+            }, 380);
         }
 
-        closeBtn.addEventListener('click', closePopup);
-        /* Fecha apenas se clicar no fundo escuro, não no card */
+        /* Close on X */
+        closeBtn.addEventListener('click', closeModal);
+
+        /* Close on overlay click (outside card) */
         overlay.addEventListener('click', e => {
-            if (e.target === overlay) closePopup();
-        });
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape' && overlay.classList.contains('lp-visible')) closePopup();
+            if (e.target === overlay) closeModal();
         });
 
+        /* Close on Escape */
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && overlay.classList.contains('lm-visible')) closeModal();
+        });
+
+        /* Form submit */
         form.addEventListener('submit', e => {
             e.preventDefault();
-            form.querySelectorAll('.lp-row').forEach(r => r.style.display = 'none');
-            const submitBtn = form.querySelector('.lp-submit');
-            if (submitBtn) submitBtn.style.display = 'none';
-            if (success) success.style.display = 'block';
+            /* Hide fields + button */
+            form.querySelectorAll('.lm-row').forEach(r => r.style.display = 'none');
+            form.querySelector('.lm-submit').style.display = 'none';
+            /* Show success */
+            success.style.display = 'block';
+            /* Redirect to obrigado page after 1.5s */
             setTimeout(() => {
-                window.location.href = 'https://isca-chi.vercel.app/obrigado.html';
+                window.location.href = 'obrigado.html';
             }, 1500);
         });
-    });
+    })();
 </script>
 
 <!-- ═══════════════════════════════════════════════════════════
-      LEAD CAPTURE POPUP (NÃO MODAL)
-══════════════════════════════════════════════════════════ -->
-<div id="lp-overlay-click" class="lp-overlay-click">
-<div id="lead-popup" class="lp-wrapper">
-    <div class="lp-card" id="lp-card">
+     LEAD CAPTURE MODAL
+═══════════════════════════════════════════════════════════ -->
+<div id="lead-modal" class="lm-overlay" aria-modal="true" role="dialog" aria-label="Captura de Lead" tabindex="-1">
+    <div class="lm-card" id="lead-modal-card">
 
-        <button class="lp-close" id="lp-close-btn" aria-label="Fechar">
-            <iconify-icon icon="lucide:x" style="font-size:1rem;"></iconify-icon>
+        <!-- Close button -->
+        <button class="lm-close" id="lm-close-btn" aria-label="Fechar">
+            <iconify-icon icon="lucide:x" style="font-size:1.1rem;"></iconify-icon>
         </button>
 
-        <div class="lp-header">
-            <div class="lp-badge">
-                <iconify-icon icon="lucide:book-open-check" style="font-size:.85rem;color:#E1D4FB;"></iconify-icon>
+        <!-- Header -->
+        <div class="lm-header">
+            <div class="lm-badge">
+                <iconify-icon icon="lucide:book-open-check" style="font-size:.9rem;color:#E1D4FB;"></iconify-icon>
                 Acesso Imediato
             </div>
-            <h2 class="lp-title">Quase lá! <span>🎯</span></h2>
-            <p class="lp-desc">Preencha os dados abaixo para liberar seu Playbook Gratuito agora mesmo.</p>
+            <h2 class="lm-title">Quase lá! <span class="lm-emoji">🎯</span></h2>
+            <p class="lm-desc">Preencha os dados abaixo para liberar seu Playbook Gratuito agora mesmo.</p>
         </div>
 
-        <form id="lp-form" class="lp-form" novalidate>
+        <!-- Form -->
+        <form id="lead-form" class="lm-form" novalidate>
 
-            <div class="lp-row">
-                <div class="lp-field">
-                    <label class="lp-label" for="lp-nome">Nome completo <span class="lp-req">*</span></label>
-                    <input class="lp-input" id="lp-nome" type="text" placeholder="Seu nome" required autocomplete="name">
+            <div class="lm-row">
+                <div class="lm-field">
+                    <label class="lm-label" for="lm-nome">Nome completo <span class="lm-req">*</span></label>
+                    <input class="lm-input" id="lm-nome" type="text" placeholder="Seu nome" required autocomplete="name">
                 </div>
-                <div class="lp-field">
-                    <label class="lp-label" for="lp-email">E-mail corporativo <span class="lp-req">*</span></label>
-                    <input class="lp-input" id="lp-email" type="email" placeholder="seu@email.com" required autocomplete="email">
+                <div class="lm-field">
+                    <label class="lm-label" for="lm-email">E-mail corporativo <span class="lm-req">*</span></label>
+                    <input class="lm-input" id="lm-email" type="email" placeholder="seu@email.com" required autocomplete="email">
                 </div>
             </div>
 
-            <div class="lp-row">
-                <div class="lp-field">
-                    <label class="lp-label" for="lp-phone">WhatsApp <span class="lp-req">*</span></label>
-                    <input class="lp-input" id="lp-phone" type="tel" placeholder="(00) 00000-0000" required autocomplete="tel">
+            <div class="lm-row">
+                <div class="lm-field">
+                    <label class="lm-label" for="lm-phone">WhatsApp <span class="lm-req">*</span></label>
+                    <input class="lm-input" id="lm-phone" type="tel" placeholder="(00) 00000-0000" required autocomplete="tel">
                 </div>
-                <div class="lp-field">
-                    <label class="lp-label" for="lp-empresa">Nome da Empresa <span class="lp-req">*</span></label>
-                    <input class="lp-input" id="lp-empresa" type="text" placeholder="Nome do negócio" required autocomplete="organization">
+                <div class="lm-field">
+                    <label class="lm-label" for="lm-empresa">Nome da Empresa <span class="lm-req">*</span></label>
+                    <input class="lm-input" id="lm-empresa" type="text" placeholder="Nome do negócio" required autocomplete="organization">
                 </div>
             </div>
 
-            <div class="lp-row">
-                <div class="lp-field">
-                    <label class="lp-label" for="lp-setor">Setor de Atuação <span class="lp-req">*</span></label>
-                    <select class="lp-input lp-select" id="lp-setor" required>
+            <div class="lm-row">
+                <div class="lm-field">
+                    <label class="lm-label" for="lm-setor">Setor de Atuação <span class="lm-req">*</span></label>
+                    <select class="lm-input lm-select" id="lm-setor" required>
                         <option value="" disabled selected>Selecione um setor...</option>
-                        <option value="servico">Serviço</option>
-                        <option value="varejo">Varejo</option>
-                        <option value="industria">Indústria</option>
-                        <option value="ecommerce">E-commerce</option>
-                        <option value="saas">SAAS</option>
+                        <option value="construcao">Construção Civil</option>
+                        <option value="saude">Saúde e Bem-estar</option>
                         <option value="educacao">Educação</option>
+                        <option value="tecnologia">Tecnologia</option>
+                        <option value="varejo">Varejo</option>
+                        <option value="servicos">Serviços B2B</option>
+                        <option value="industria">Indústria</option>
+                        <option value="imobiliario">Imobiliário</option>
+                        <option value="financeiro">Financeiro</option>
                         <option value="outro">Outro</option>
                     </select>
                 </div>
-                <div class="lp-field">
-                    <label class="lp-label" for="lp-fat">Faturamento Mensal <span class="lp-req">*</span></label>
-                    <select class="lp-input lp-select" id="lp-fat" required>
+                <div class="lm-field">
+                    <label class="lm-label" for="lm-fat">Faturamento Mensal <span class="lm-req">*</span></label>
+                    <select class="lm-input lm-select" id="lm-fat" required>
                         <option value="" disabled selected>Aproximado...</option>
-                        <option value="ate30k">Até 30 mil</option>
-                        <option value="31-50k">De 31 mil a 50 mil</option>
-                        <option value="51-100k">De 51 mil a 100 mil</option>
-                        <option value="101-300k">De 101 mil a 300 mil</option>
-                        <option value="301k-1m">De 301 mil a 1 milhão</option>
-                        <option value="1m-4m">De 1 milhão a 4 milhões</option>
-                        <option value="acima4m">Mais de 4 milhões</option>
+                        <option value="ate30k">Até R$30.000</option>
+                        <option value="30-100k">R$30.000 – R$100.000</option>
+                        <option value="100-300k">R$100.000 – R$300.000</option>
+                        <option value="300k-1m">R$300.000 – R$1 milhão</option>
+                        <option value="acima1m">Acima de R$1 milhão</option>
                     </select>
                 </div>
             </div>
 
-            <button type="submit" class="lp-submit" id="lp-submit-btn">
-                <span id="lp-submit-label" class="flex items-center justify-center gap-2">
-                    <iconify-icon icon="lucide:unlock" style="font-size:1rem;"></iconify-icon>
+            <!-- Submit -->
+            <button type="submit" class="lm-submit" id="lm-submit-btn">
+                <span id="lm-submit-label" class="flex items-center justify-center gap-2">
+                    <iconify-icon icon="lucide:unlock" style="font-size:1.1rem;"></iconify-icon>
                     Liberar Meu Playbook Agora
                 </span>
             </button>
 
-            <div id="lp-success" class="lp-success" aria-live="polite">
-                <iconify-icon icon="lucide:check-circle-2" style="font-size:1.8rem;color:#4DFFB4;display:block;margin:0 auto .6rem;"></iconify-icon>
-                <p class="lp-success-text">Pronto! Seu acesso será liberado.</p>
+            <!-- Success message (hidden by default) -->
+            <div id="lm-success" class="lm-success" aria-live="polite">
+                <iconify-icon icon="lucide:check-circle-2" style="font-size:2rem;color:#4DFFB4;display:block;margin:0 auto .75rem;"></iconify-icon>
+                <p class="lm-success-text">Pronto! Seu acesso será liberado.</p>
             </div>
 
         </form>
 
-        <div class="lp-footer">
-            <iconify-icon icon="lucide:shield-check" style="font-size:.85rem;color:#4DFFB4;"></iconify-icon>
+        <!-- Footer -->
+        <div class="lm-footer">
+            <iconify-icon icon="lucide:shield-check" style="font-size:.9rem;color:#4DFFB4;"></iconify-icon>
             <span>Seus dados estão 100% protegidos</span>
         </div>
 
     </div>
-</div>
 </div>
 
 </body>
