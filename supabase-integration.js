@@ -3,12 +3,7 @@
 // Máscara de telefone brasileiro (00) 00000-0000
 function setupPhoneMask() {
     const phoneInput = document.getElementById('lp-phone');
-    if (!phoneInput) {
-        console.warn('Campo de telefone não encontrado');
-        return;
-    }
-
-    console.log('✅ Máscara de telefone configurada no campo:', phoneInput);
+    if (!phoneInput) return;
 
     phoneInput.addEventListener('input', function(e) {
         let value = e.target.value.replace(/\D/g, '').slice(0, 11);
@@ -51,7 +46,6 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 function initSupabaseIntegration() {
     // Verifica se o Supabase está disponível
     if (typeof window.supabase === 'undefined') {
-        console.warn('Supabase não carregado ainda. Tentando novamente em 1s...');
         setTimeout(initSupabaseIntegration, 1000);
         return;
     }
@@ -61,10 +55,7 @@ function initSupabaseIntegration() {
 
         // Encontra o formulário
         const form = document.getElementById('lp-form');
-        if (!form) {
-            console.log('Formulário não encontrado');
-            return;
-        }
+        if (!form) return;
 
         // Remove listener anterior se existir
         const newForm = form.cloneNode(true);
@@ -93,16 +84,11 @@ function initSupabaseIntegration() {
             };
 
             try {
-                console.log('📤 Enviando dados para Supabase:', leadData);
-
                 const { data, error } = await supabase
                     .from('leads')
-                    .insert([leadData])
-                    .select();
+                    .insert([leadData]);
 
                 if (error) throw error;
-
-                console.log('✅ Dados enviados com sucesso:', data);
 
                 // Esconde o formulário e mostra sucesso
                 newForm.querySelectorAll('.lp-row').forEach(r => r.style.display = 'none');
@@ -117,26 +103,13 @@ function initSupabaseIntegration() {
                 }, 1500);
 
             } catch (error) {
-                console.error('❌ Erro ao enviar para Supabase:', error);
-                console.error('Detalhes do erro:', {
-                    message: error.message,
-                    code: error.code,
-                    details: error.details,
-                    hint: error.hint
-                });
-
                 submitBtn.innerHTML = submitBtnOriginalContent;
                 submitBtn.disabled = false;
 
                 let errorMessage = 'Erro ao enviar. Tente novamente ou entre em contato.';
-                if (error.message) {
-                    errorMessage += '\n\nErro: ' + error.message;
-                }
                 alert(errorMessage);
             }
         });
-
-        console.log('✅ Integração Supabase carregada com sucesso!');
     } catch (error) {
         console.error('Erro ao inicializar Supabase:', error);
     }
