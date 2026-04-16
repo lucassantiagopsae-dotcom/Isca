@@ -1993,6 +1993,29 @@
 
         if (!overlay || !closeBtn || !form) return;
 
+        /* ── Máscara de telefone BR: (00) 00000-0000 ── */
+        const phoneInput = document.getElementById('lp-phone');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', function(e) {
+                let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+                if (v.length === 0) { e.target.value = ''; return; }
+                if (v.length <= 2)  { e.target.value = '(' + v; return; }
+                if (v.length <= 7)  { e.target.value = '(' + v.slice(0,2) + ') ' + v.slice(2); return; }
+                if (v.length <= 10) { e.target.value = '(' + v.slice(0,2) + ') ' + v.slice(2,6) + '-' + v.slice(6); return; }
+                e.target.value = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+            });
+            phoneInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Backspace') {
+                    /* permite apagar normalmente sem travar na máscara */
+                    const val = e.target.value;
+                    if (val.endsWith(') ') || val.endsWith('-')) {
+                        e.target.value = val.slice(0, -2);
+                        e.preventDefault();
+                    }
+                }
+            });
+        }
+
         function closePopup() {
             overlay.classList.remove('lp-visible');
             document.documentElement.style.overflow = '';
@@ -2049,27 +2072,27 @@
             <p class="lp-desc">Preencha os dados abaixo para liberar seu Playbook Gratuito agora mesmo.</p>
         </div>
 
-        <form id="lp-form" class="lp-form" novalidate>
+        <form id="lp-form" class="lp-form" novalidate autocomplete="on">
 
             <div class="lp-row">
                 <div class="lp-field">
                     <label class="lp-label" for="lp-nome">Nome completo <span class="lp-req">*</span></label>
-                    <input class="lp-input" id="lp-nome" type="text" placeholder="Seu nome" required autocomplete="name">
+                    <input class="lp-input" id="lp-nome" name="name" type="text" placeholder="Seu nome" required autocomplete="name">
                 </div>
                 <div class="lp-field">
                     <label class="lp-label" for="lp-email">E-mail corporativo <span class="lp-req">*</span></label>
-                    <input class="lp-input" id="lp-email" type="email" placeholder="seu@email.com" required autocomplete="email">
+                    <input class="lp-input" id="lp-email" name="email" type="email" placeholder="seu@email.com" required autocomplete="email">
                 </div>
             </div>
 
             <div class="lp-row">
                 <div class="lp-field">
                     <label class="lp-label" for="lp-phone">WhatsApp <span class="lp-req">*</span></label>
-                    <input class="lp-input" id="lp-phone" type="tel" placeholder="(00) 00000-0000" required autocomplete="tel">
+                    <input class="lp-input" id="lp-phone" name="tel" type="tel" placeholder="(00) 00000-0000" required autocomplete="tel" inputmode="numeric" maxlength="15">
                 </div>
                 <div class="lp-field">
                     <label class="lp-label" for="lp-empresa">Nome da Empresa <span class="lp-req">*</span></label>
-                    <input class="lp-input" id="lp-empresa" type="text" placeholder="Nome do negócio" required autocomplete="organization">
+                    <input class="lp-input" id="lp-empresa" name="organization" type="text" placeholder="Nome do negócio" required autocomplete="organization">
                 </div>
             </div>
 
