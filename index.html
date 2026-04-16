@@ -8,6 +8,7 @@
 
     <!-- Scripts & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -1974,6 +1975,11 @@
         });
     })();
 
+    /* ── SUPABASE CONFIGURATION ───────────────────────────── */
+    const supabaseUrl = 'https://zyflizbsdbzowcgoiyaj.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5ZmxpemJzZGJ6b3djZ29peWFqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYzMjk5NTIsImV4cCI6MjA5MTkwNTk1Mn0.bC9cVjyhPnUOYrHJofHy99RbF6B5I4vgMZSfwmhsPyg';
+    const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
     /* ── LEAD POPUP ────────────────────────────────────────── */
     /* Define openLeadPopup globalmente já (os botões inline chamam antes do DOMContentLoaded) */
     window.openLeadPopup = function() {
@@ -2006,7 +2012,6 @@
             });
             phoneInput.addEventListener('keydown', function(e) {
                 if (e.key === 'Backspace') {
-                    /* permite apagar normalmente sem travar na máscara */
                     const val = e.target.value;
                     if (val.endsWith(') ') || val.endsWith('-')) {
                         e.target.value = val.slice(0, -2);
@@ -2031,7 +2036,6 @@
         }
 
         closeBtn.addEventListener('click', closePopup);
-        /* Fecha apenas se clicar no fundo escuro, não no card */
         overlay.addEventListener('click', e => {
             if (e.target === overlay) closePopup();
         });
@@ -2039,15 +2043,45 @@
             if (e.key === 'Escape' && overlay.classList.contains('lp-visible')) closePopup();
         });
 
-        form.addEventListener('submit', e => {
+        form.addEventListener('submit', async function(e) {
             e.preventDefault();
-            form.querySelectorAll('.lp-row').forEach(r => r.style.display = 'none');
+
             const submitBtn = form.querySelector('.lp-submit');
-            if (submitBtn) submitBtn.style.display = 'none';
-            if (success) success.style.display = 'block';
-            setTimeout(() => {
-                window.location.href = 'https://isca-chi.vercel.app/obrigado.html';
-            }, 1500);
+            const submitBtnOriginalContent = submitBtn.innerHTML;
+
+            submitBtn.innerHTML = '<span style="display:flex;align-items:center;gap:8px;">Enviando...</span>';
+            submitBtn.disabled = true;
+
+            const leadData = {
+                nome: document.getElementById('lp-nome').value,
+                email: document.getElementById('lp-email').value,
+                phone: document.getElementById('lp-phone').value,
+                empresa: document.getElementById('lp-empresa').value,
+                setor: document.getElementById('lp-setor').value,
+                faturamento: document.getElementById('lp-fat').value
+            };
+
+            try {
+                const { error } = await supabase
+                    .from('leads')
+                    .insert([leadData]);
+
+                if (error) throw error;
+
+                form.querySelectorAll('.lp-row').forEach(r => r.style.display = 'none');
+                submitBtn.style.display = 'none';
+                if (success) success.style.display = 'block';
+
+                setTimeout(() => {
+                    window.location.href = 'https://isca-chi.vercel.app/obrigado.html';
+                }, 1500);
+
+            } catch (error) {
+                console.error('Erro ao enviar para Supabase:', error);
+                submitBtn.innerHTML = submitBtnOriginalContent;
+                submitBtn.disabled = false;
+                alert('Erro ao enviar. Tente novamente ou entre em contato.');
+            }
         });
     });
 </script>
